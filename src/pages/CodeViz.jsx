@@ -294,6 +294,48 @@ export default function CodeViz() {
 
             {/* Metrics */}
             <div style={{ flex: 1, overflowY: "auto", padding: "14px 16px" }}>
+              {/* Last Modified */}
+              {selected.last_modified && (
+                <div style={{ marginBottom: 14, padding: "8px 10px", background: "#0a1628", borderRadius: 6, border: "1px solid #0f2040" }}>
+                  <div style={{ fontSize: 9, color: "#334155", textTransform: "uppercase", letterSpacing: "0.1em" }}>LAST MODIFIED</div>
+                  <div style={{ fontSize: 11, color: "#64748b", marginTop: 3, fontFamily: "monospace" }}>
+                    {new Date(selected.last_modified).toLocaleDateString('it-IT', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                  </div>
+                </div>
+              )}
+
+              {/* Risk Score */}
+              {selected.risk_score > 0 && (
+                <div style={{ marginBottom: 14, padding: "8px 10px", background: selected.risk_score > 50 ? "#7f1d1d" : "#0a1628", borderRadius: 6, border: `1px solid ${selected.risk_score > 50 ? "#991b1b" : "#0f2040"}` }}>
+                  <div style={{ fontSize: 9, color: "#334155", textTransform: "uppercase", letterSpacing: "0.1em" }}>RISK SCORE</div>
+                  <div style={{ fontSize: 14, color: selected.risk_score > 50 ? "#EF4444" : "#F59E0B", marginTop: 3, fontWeight: 700 }}>
+                    {selected.risk_score}/100
+                  </div>
+                  <div style={{ fontSize: 9, color: "#64748b", marginTop: 2 }}>
+                    {selected.risk_score > 70 ? "High complexity + churn" : selected.risk_score > 30 ? "Moderate risk" : "Low risk"}
+                  </div>
+                </div>
+              )}
+
+              {/* Exports */}
+              {selected.exports && selected.exports.length > 0 && (
+                <div style={{ marginBottom: 14, padding: "8px 10px", background: "#0a1628", borderRadius: 6, border: "1px solid #0f2040" }}>
+                  <div style={{ fontSize: 9, color: "#334155", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>
+                    EXPORTS ({selected.exports.length})
+                  </div>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+                    {selected.exports.map((exp, i) => (
+                      <span key={i} style={{
+                        fontSize: 10, color: "#10B981", background: "#064e3b",
+                        padding: "3px 7px", borderRadius: 4, fontFamily: "monospace", border: "1px solid #065f46"
+                      }}>
+                        {exp}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
                 <Metric label="SLOC" value={selected.sloc} />
                 <Metric label="Methods" value={selected.methods} />

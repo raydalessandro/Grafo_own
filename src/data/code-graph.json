@@ -30,7 +30,12 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:defineConfig"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 7
     },
     {
       "id": "server",
@@ -46,7 +51,10 @@
       "nesting": 1,
       "commits": 3,
       "authors": 2,
-      "bugs": 1
+      "bugs": 1,
+      "exports": [],
+      "last_modified": "2026-03-25T10:33:07+01:00",
+      "risk_score": 32
     },
     {
       "id": "models",
@@ -62,7 +70,19 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "setAgentModels",
+        "setApiKey",
+        "getKeyStatus",
+        "MODEL_CATALOG",
+        "getApiKeys",
+        "PROVIDER_CONFIGS",
+        "getAgentModels",
+        "DEFAULTS"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 23
     },
     {
       "id": "auth",
@@ -78,7 +98,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "authMiddleware"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 11
     },
     {
       "id": "chat",
@@ -94,7 +119,12 @@
       "nesting": 2,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "createChatRoute"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 28
     },
     {
       "id": "config",
@@ -110,7 +140,12 @@
       "nesting": 2,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "createConfigRoute"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 30
     },
     {
       "id": "files",
@@ -126,7 +161,12 @@
       "nesting": 2,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "createFilesRoute"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 22
     },
     {
       "id": "flow",
@@ -142,7 +182,12 @@
       "nesting": 2,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "createFlowRoute"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 32
     },
     {
       "id": "groupchat",
@@ -158,7 +203,12 @@
       "nesting": 2,
       "commits": 4,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "createGroupChatRoute"
+      ],
+      "last_modified": "2026-03-25T11:08:25+01:00",
+      "risk_score": 58
     },
     {
       "id": "sync",
@@ -174,7 +224,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "createSyncRoute"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 13
     },
     {
       "id": "ApiRouter",
@@ -190,7 +245,12 @@
       "nesting": 2,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "ApiRouter"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 26
     },
     {
       "id": "CheckpointManager",
@@ -206,7 +266,12 @@
       "nesting": 2,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "CheckpointManager"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 28
     },
     {
       "id": "ContextLoader",
@@ -222,7 +287,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "ContextLoader"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 21
     },
     {
       "id": "FileManager",
@@ -238,7 +308,12 @@
       "nesting": 3,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "FileManager"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 29
     },
     {
       "id": "FlowEngine",
@@ -254,7 +329,12 @@
       "nesting": 2,
       "commits": 4,
       "authors": 2,
-      "bugs": 1
+      "bugs": 1,
+      "exports": [
+        "FlowEngine"
+      ],
+      "last_modified": "2026-03-24T11:47:11+01:00",
+      "risk_score": 73
     },
     {
       "id": "GitSync",
@@ -270,7 +350,12 @@
       "nesting": 2,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "GitSync"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 46
     },
     {
       "id": "GroupChatEngine",
@@ -286,7 +371,12 @@
       "nesting": 2,
       "commits": 5,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "GroupChatEngine"
+      ],
+      "last_modified": "2026-03-25T11:08:25+01:00",
+      "risk_score": 60
     },
     {
       "id": "PromptAssembler",
@@ -302,7 +392,12 @@
       "nesting": 2,
       "commits": 3,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "PromptAssembler"
+      ],
+      "last_modified": "2026-03-23T16:34:45+01:00",
+      "risk_score": 40
     },
     {
       "id": "SessionStore",
@@ -318,7 +413,12 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "SessionStore"
+      ],
+      "last_modified": "2026-03-24T11:47:11+01:00",
+      "risk_score": 26
     },
     {
       "id": "Whiteboard",
@@ -334,7 +434,12 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "Whiteboard"
+      ],
+      "last_modified": "2026-03-24T12:34:03+01:00",
+      "risk_score": 32
     },
     {
       "id": "AnthropicProvider",
@@ -350,7 +455,12 @@
       "nesting": 3,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "AnthropicProvider"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 35
     },
     {
       "id": "BaseProvider",
@@ -366,7 +476,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "BaseProvider"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 9
     },
     {
       "id": "DeepSeekProvider",
@@ -382,7 +497,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "DeepSeekProvider"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 9
     },
     {
       "id": "OpenAICompatibleProvider",
@@ -398,7 +518,12 @@
       "nesting": 2,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "OpenAICompatibleProvider"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 32
     },
     {
       "id": "OpenAIProvider",
@@ -414,7 +539,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "OpenAIProvider"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 9
     },
     {
       "id": "SQLiteStore",
@@ -430,7 +560,12 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "SQLiteStore"
+      ],
+      "last_modified": "2026-03-24T11:47:11+01:00",
+      "risk_score": 18
     },
     {
       "id": "SupabaseStore",
@@ -446,7 +581,12 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "SupabaseStore"
+      ],
+      "last_modified": "2026-03-24T11:47:11+01:00",
+      "risk_score": 25
     },
     {
       "id": "vite.config",
@@ -462,7 +602,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:defineConfig"
+      ],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 9
     },
     {
       "id": "App",
@@ -478,7 +623,12 @@
       "nesting": 4,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 38
     },
     {
       "id": "main",
@@ -494,7 +644,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 7
     },
     {
       "id": "AgentBadge",
@@ -510,7 +663,12 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 9
     },
     {
       "id": "CheckpointDialog",
@@ -526,7 +684,12 @@
       "nesting": 5,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 33
     },
     {
       "id": "Sidebar",
@@ -542,7 +705,12 @@
       "nesting": 5,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 29
     },
     {
       "id": "SyncBar",
@@ -558,7 +726,12 @@
       "nesting": 3,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 23
     },
     {
       "id": "WhiteboardPanel",
@@ -574,7 +747,12 @@
       "nesting": 6,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-24T13:31:28+01:00",
+      "risk_score": 40
     },
     {
       "id": "useAuth",
@@ -590,7 +768,12 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 7
     },
     {
       "id": "useChat",
@@ -606,7 +789,12 @@
       "nesting": 4,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 48
     },
     {
       "id": "useFlow",
@@ -622,7 +810,12 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 52
     },
     {
       "id": "useGroupChat",
@@ -638,7 +831,12 @@
       "nesting": 2,
       "commits": 3,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-24T20:16:22+01:00",
+      "risk_score": 56
     },
     {
       "id": "BibliotecaView",
@@ -654,7 +852,12 @@
       "nesting": 6,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 34
     },
     {
       "id": "ChatView",
@@ -670,7 +873,12 @@
       "nesting": 4,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 28
     },
     {
       "id": "ConfigView",
@@ -686,7 +894,12 @@
       "nesting": 7,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 54
     },
     {
       "id": "FlowView",
@@ -702,7 +915,12 @@
       "nesting": 8,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 52
     },
     {
       "id": "GroupChatView",
@@ -718,7 +936,12 @@
       "nesting": 5,
       "commits": 4,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-25T10:43:18+01:00",
+      "risk_score": 51
     },
     {
       "id": "StatusView",
@@ -734,7 +957,12 @@
       "nesting": 3,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 19
     },
     {
       "id": "SupervisioneView",
@@ -750,7 +978,12 @@
       "nesting": 3,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "default:function"
+      ],
+      "last_modified": "2026-03-21T00:28:26+01:00",
+      "risk_score": 21
     },
     {
       "id": "agents",
@@ -766,7 +999,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "AGENTS"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 11
     },
     {
       "id": "flows",
@@ -782,7 +1020,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "FLOWS"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 11
     },
     {
       "id": "types",
@@ -798,7 +1041,14 @@
       "nesting": 0,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "FlowStatus",
+        "CheckpointAction",
+        "ViewType"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 6
     },
     {
       "id": "users",
@@ -814,7 +1064,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "USERS"
+      ],
+      "last_modified": "2026-03-23T14:42:38+01:00",
+      "risk_score": 9
     },
     {
       "id": "GroupChatView.test",
@@ -830,7 +1085,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-24T20:16:22+01:00",
+      "risk_score": 7
     },
     {
       "id": "groupchat-semi-manual.e2e",
@@ -846,7 +1104,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-24T20:16:22+01:00",
+      "risk_score": 14
     },
     {
       "id": "mockProvider",
@@ -862,7 +1123,12 @@
       "nesting": 2,
       "commits": 4,
       "authors": 2,
-      "bugs": 1
+      "bugs": 1,
+      "exports": [
+        "MockProvider"
+      ],
+      "last_modified": "2026-03-24T20:16:22+01:00",
+      "risk_score": 73
     },
     {
       "id": "testServer",
@@ -878,7 +1144,12 @@
       "nesting": 1,
       "commits": 2,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [
+        "createTestApp"
+      ],
+      "last_modified": "2026-03-24T20:16:22+01:00",
+      "risk_score": 9
     },
     {
       "id": "useGroupChat.test",
@@ -894,7 +1165,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-24T20:16:22+01:00",
+      "risk_score": 12
     },
     {
       "id": "auth.middleware.test",
@@ -910,7 +1184,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 7
     },
     {
       "id": "chat-robustness.test",
@@ -926,7 +1203,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 18
     },
     {
       "id": "chat.route.test",
@@ -942,7 +1222,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 14
     },
     {
       "id": "config.route.test",
@@ -958,7 +1241,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 14
     },
     {
       "id": "files.route.test",
@@ -974,7 +1260,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 7
     },
     {
       "id": "flow.route.test",
@@ -990,7 +1279,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 7
     },
     {
       "id": "groupchat-human-loop.test",
@@ -1006,7 +1298,10 @@
       "nesting": 2,
       "commits": 2,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T11:08:25+01:00",
+      "risk_score": 22
     },
     {
       "id": "groupchat-semi-manual.test",
@@ -1022,7 +1317,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-24T20:16:22+01:00",
+      "risk_score": 14
     },
     {
       "id": "groupchat.route.test",
@@ -1038,7 +1336,10 @@
       "nesting": 2,
       "commits": 2,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T11:08:25+01:00",
+      "risk_score": 22
     },
     {
       "id": "2026-03-24_config-model-ids.test",
@@ -1054,7 +1355,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 26
     },
     {
       "id": "2026-03-24_groupchat-provider-error.test",
@@ -1070,7 +1374,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 16
     },
     {
       "id": "2026-03-24_model-catalog-ids.test",
@@ -1086,7 +1393,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 24
     },
     {
       "id": "2026-03-24_provider-fallback.test",
@@ -1102,7 +1412,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 20
     },
     {
       "id": "2026-03-24_vite-config.test",
@@ -1118,7 +1431,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 7
     },
     {
       "id": "2026-03-25_sessionstore-connected.test",
@@ -1134,7 +1450,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 1
+      "bugs": 1,
+      "exports": [],
+      "last_modified": "2026-03-25T10:33:07+01:00",
+      "risk_score": 22
     },
     {
       "id": "ApiRouter.test",
@@ -1150,7 +1469,10 @@
       "nesting": 1,
       "commits": 3,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 25
     },
     {
       "id": "CheckpointManager.test",
@@ -1166,7 +1488,10 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 9
     },
     {
       "id": "config-runtime-sync.test",
@@ -1182,7 +1507,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 15
     },
     {
       "id": "config-validation.test",
@@ -1198,7 +1526,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 40
     },
     {
       "id": "ContextLoader.test",
@@ -1214,7 +1545,10 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 9
     },
     {
       "id": "data-layer.test",
@@ -1230,7 +1564,10 @@
       "nesting": 2,
       "commits": 3,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 42
     },
     {
       "id": "FileManager.test",
@@ -1246,7 +1583,10 @@
       "nesting": 1,
       "commits": 2,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 13
     },
     {
       "id": "FlowEngine.test",
@@ -1262,7 +1602,10 @@
       "nesting": 1,
       "commits": 4,
       "authors": 2,
-      "bugs": 1
+      "bugs": 1,
+      "exports": [],
+      "last_modified": "2026-03-24T11:47:11+01:00",
+      "risk_score": 40
     },
     {
       "id": "GitSync.test",
@@ -1278,7 +1621,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:03:05+01:00",
+      "risk_score": 7
     },
     {
       "id": "GroupChatEngine.extended.test",
@@ -1294,7 +1640,10 @@
       "nesting": 2,
       "commits": 2,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T11:08:25+01:00",
+      "risk_score": 38
     },
     {
       "id": "GroupChatEngine.semi-manual.test",
@@ -1310,7 +1659,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-24T20:16:22+01:00",
+      "risk_score": 12
     },
     {
       "id": "GroupChatEngine.test",
@@ -1326,7 +1678,10 @@
       "nesting": 2,
       "commits": 3,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T11:08:25+01:00",
+      "risk_score": 46
     },
     {
       "id": "message-format.test",
@@ -1342,7 +1697,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 16
     },
     {
       "id": "PromptAssembler.test",
@@ -1358,7 +1716,10 @@
       "nesting": 1,
       "commits": 4,
       "authors": 2,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-23T16:34:45+01:00",
+      "risk_score": 19
     },
     {
       "id": "providers-contract.test",
@@ -1374,7 +1735,10 @@
       "nesting": 2,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T00:42:23+01:00",
+      "risk_score": 14
     },
     {
       "id": "SessionStore.test",
@@ -1390,7 +1754,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-24T11:47:11+01:00",
+      "risk_score": 11
     },
     {
       "id": "SQLiteStore.test",
@@ -1406,7 +1773,10 @@
       "nesting": 1,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-24T11:47:11+01:00",
+      "risk_score": 15
     },
     {
       "id": "SupabaseStore.test",
@@ -1422,7 +1792,10 @@
       "nesting": 0,
       "commits": 1,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-24T11:47:11+01:00",
+      "risk_score": 10
     },
     {
       "id": "Whiteboard.test",
@@ -1438,834 +1811,672 @@
       "nesting": 2,
       "commits": 2,
       "authors": 1,
-      "bugs": 0
+      "bugs": 0,
+      "exports": [],
+      "last_modified": "2026-03-25T11:08:25+01:00",
+      "risk_score": 28
     }
   ],
   "edges": [
     {
       "source": "vitest.config",
-      "target": "config",
-      "type": "import"
+      "target": "config"
     },
     {
       "source": "server",
-      "target": "config",
-      "type": "import"
+      "target": "config"
     },
     {
       "source": "server",
-      "target": "auth",
-      "type": "import"
+      "target": "auth"
     },
     {
       "source": "server",
-      "target": "chat",
-      "type": "import"
+      "target": "chat"
     },
     {
       "source": "server",
-      "target": "flow",
-      "type": "import"
+      "target": "flow"
     },
     {
       "source": "server",
-      "target": "files",
-      "type": "import"
+      "target": "files"
     },
     {
       "source": "server",
-      "target": "sync",
-      "type": "import"
+      "target": "sync"
     },
     {
       "source": "server",
-      "target": "config",
-      "type": "import"
+      "target": "config"
     },
     {
       "source": "server",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "server",
-      "target": "PromptAssembler",
-      "type": "import"
+      "target": "PromptAssembler"
     },
     {
       "source": "server",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "server",
-      "target": "FlowEngine",
-      "type": "import"
+      "target": "FlowEngine"
     },
     {
       "source": "server",
-      "target": "CheckpointManager",
-      "type": "import"
+      "target": "CheckpointManager"
     },
     {
       "source": "server",
-      "target": "FileManager",
-      "type": "import"
+      "target": "FileManager"
     },
     {
       "source": "server",
-      "target": "GitSync",
-      "type": "import"
+      "target": "GitSync"
     },
     {
       "source": "server",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "server",
-      "target": "GroupChatEngine",
-      "type": "import"
+      "target": "GroupChatEngine"
     },
     {
       "source": "server",
-      "target": "groupchat",
-      "type": "import"
+      "target": "groupchat"
     },
     {
       "source": "server",
-      "target": "SessionStore",
-      "type": "import"
+      "target": "SessionStore"
     },
     {
       "source": "auth",
-      "target": "users",
-      "type": "import"
+      "target": "users"
     },
     {
       "source": "config",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "config",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "groupchat",
-      "target": "Whiteboard",
-      "type": "import"
+      "target": "Whiteboard"
     },
     {
       "source": "ApiRouter",
-      "target": "AnthropicProvider",
-      "type": "import"
+      "target": "AnthropicProvider"
     },
     {
       "source": "ApiRouter",
-      "target": "DeepSeekProvider",
-      "type": "import"
+      "target": "DeepSeekProvider"
     },
     {
       "source": "ApiRouter",
-      "target": "OpenAIProvider",
-      "type": "import"
+      "target": "OpenAIProvider"
     },
     {
       "source": "CheckpointManager",
-      "target": "types",
-      "type": "import"
+      "target": "types"
     },
     {
       "source": "ContextLoader",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "FlowEngine",
-      "target": "flows",
-      "type": "import"
+      "target": "flows"
     },
     {
       "source": "FlowEngine",
-      "target": "types",
-      "type": "import"
+      "target": "types"
     },
     {
       "source": "GroupChatEngine",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "PromptAssembler",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "PromptAssembler",
-      "target": "flows",
-      "type": "import"
+      "target": "flows"
     },
     {
       "source": "PromptAssembler",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "AnthropicProvider",
-      "target": "BaseProvider",
-      "type": "import"
+      "target": "BaseProvider"
     },
     {
       "source": "DeepSeekProvider",
-      "target": "OpenAICompatibleProvider",
-      "type": "import"
+      "target": "OpenAICompatibleProvider"
     },
     {
       "source": "OpenAICompatibleProvider",
-      "target": "BaseProvider",
-      "type": "import"
+      "target": "BaseProvider"
     },
     {
       "source": "OpenAIProvider",
-      "target": "OpenAICompatibleProvider",
-      "type": "import"
+      "target": "OpenAICompatibleProvider"
     },
     {
       "source": "App",
-      "target": "users",
-      "type": "import"
+      "target": "users"
     },
     {
       "source": "App",
-      "target": "Sidebar",
-      "type": "import"
+      "target": "Sidebar"
     },
     {
       "source": "App",
-      "target": "SyncBar",
-      "type": "import"
+      "target": "SyncBar"
     },
     {
       "source": "App",
-      "target": "ChatView",
-      "type": "import"
+      "target": "ChatView"
     },
     {
       "source": "App",
-      "target": "FlowView",
-      "type": "import"
+      "target": "FlowView"
     },
     {
       "source": "App",
-      "target": "StatusView",
-      "type": "import"
+      "target": "StatusView"
     },
     {
       "source": "App",
-      "target": "SupervisioneView",
-      "type": "import"
+      "target": "SupervisioneView"
     },
     {
       "source": "App",
-      "target": "BibliotecaView",
-      "type": "import"
+      "target": "BibliotecaView"
     },
     {
       "source": "App",
-      "target": "ConfigView",
-      "type": "import"
+      "target": "ConfigView"
     },
     {
       "source": "App",
-      "target": "GroupChatView",
-      "type": "import"
+      "target": "GroupChatView"
     },
     {
       "source": "main",
-      "target": "App",
-      "type": "import"
+      "target": "App"
     },
     {
       "source": "AgentBadge",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "Sidebar",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "Sidebar",
-      "target": "flows",
-      "type": "import"
+      "target": "flows"
     },
     {
       "source": "Sidebar",
-      "target": "users",
-      "type": "import"
+      "target": "users"
     },
     {
       "source": "Sidebar",
-      "target": "AgentBadge",
-      "type": "import"
+      "target": "AgentBadge"
     },
     {
       "source": "useAuth",
-      "target": "users",
-      "type": "import"
+      "target": "users"
     },
     {
       "source": "useAuth",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "useAuth",
-      "target": "flows",
-      "type": "import"
+      "target": "flows"
     },
     {
       "source": "BibliotecaView",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "ChatView",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "ChatView",
-      "target": "AgentBadge",
-      "type": "import"
+      "target": "AgentBadge"
     },
     {
       "source": "ChatView",
-      "target": "useChat",
-      "type": "import"
+      "target": "useChat"
     },
     {
       "source": "ConfigView",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "ConfigView",
-      "target": "AgentBadge",
-      "type": "import"
+      "target": "AgentBadge"
     },
     {
       "source": "FlowView",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "FlowView",
-      "target": "flows",
-      "type": "import"
+      "target": "flows"
     },
     {
       "source": "FlowView",
-      "target": "AgentBadge",
-      "type": "import"
+      "target": "AgentBadge"
     },
     {
       "source": "FlowView",
-      "target": "CheckpointDialog",
-      "type": "import"
+      "target": "CheckpointDialog"
     },
     {
       "source": "FlowView",
-      "target": "useFlow",
-      "type": "import"
+      "target": "useFlow"
     },
     {
       "source": "GroupChatView",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "GroupChatView",
-      "target": "users",
-      "type": "import"
+      "target": "users"
     },
     {
       "source": "GroupChatView",
-      "target": "AgentBadge",
-      "type": "import"
+      "target": "AgentBadge"
     },
     {
       "source": "GroupChatView",
-      "target": "WhiteboardPanel",
-      "type": "import"
+      "target": "WhiteboardPanel"
     },
     {
       "source": "GroupChatView",
-      "target": "useGroupChat",
-      "type": "import"
+      "target": "useGroupChat"
     },
     {
       "source": "GroupChatView.test",
-      "target": "useGroupChat",
-      "type": "import"
+      "target": "useGroupChat"
     },
     {
       "source": "GroupChatView.test",
-      "target": "GroupChatView",
-      "type": "import"
+      "target": "GroupChatView"
     },
     {
       "source": "groupchat-semi-manual.e2e",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "mockProvider",
-      "target": "BaseProvider",
-      "type": "import"
+      "target": "BaseProvider"
     },
     {
       "source": "testServer",
-      "target": "auth",
-      "type": "import"
+      "target": "auth"
     },
     {
       "source": "testServer",
-      "target": "chat",
-      "type": "import"
+      "target": "chat"
     },
     {
       "source": "testServer",
-      "target": "flow",
-      "type": "import"
+      "target": "flow"
     },
     {
       "source": "testServer",
-      "target": "files",
-      "type": "import"
+      "target": "files"
     },
     {
       "source": "testServer",
-      "target": "config",
-      "type": "import"
+      "target": "config"
     },
     {
       "source": "testServer",
-      "target": "groupchat",
-      "type": "import"
+      "target": "groupchat"
     },
     {
       "source": "testServer",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "testServer",
-      "target": "PromptAssembler",
-      "type": "import"
+      "target": "PromptAssembler"
     },
     {
       "source": "testServer",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "testServer",
-      "target": "FlowEngine",
-      "type": "import"
+      "target": "FlowEngine"
     },
     {
       "source": "testServer",
-      "target": "CheckpointManager",
-      "type": "import"
+      "target": "CheckpointManager"
     },
     {
       "source": "testServer",
-      "target": "FileManager",
-      "type": "import"
+      "target": "FileManager"
     },
     {
       "source": "testServer",
-      "target": "GroupChatEngine",
-      "type": "import"
+      "target": "GroupChatEngine"
     },
     {
       "source": "testServer",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "testServer",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "useGroupChat.test",
-      "target": "useGroupChat",
-      "type": "import"
+      "target": "useGroupChat"
     },
     {
       "source": "auth.middleware.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "chat-robustness.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "chat.route.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "config.route.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "files.route.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "flow.route.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "groupchat-human-loop.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "groupchat-semi-manual.test",
-      "target": "GroupChatEngine",
-      "type": "import"
+      "target": "GroupChatEngine"
     },
     {
       "source": "groupchat-semi-manual.test",
-      "target": "PromptAssembler",
-      "type": "import"
+      "target": "PromptAssembler"
     },
     {
       "source": "groupchat-semi-manual.test",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "groupchat-semi-manual.test",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "groupchat-semi-manual.test",
-      "target": "groupchat",
-      "type": "import"
+      "target": "groupchat"
     },
     {
       "source": "groupchat-semi-manual.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "groupchat-semi-manual.test",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "groupchat.route.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "2026-03-24_config-model-ids.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "2026-03-24_groupchat-provider-error.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "2026-03-24_model-catalog-ids.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "2026-03-24_provider-fallback.test",
-      "target": "testServer",
-      "type": "import"
+      "target": "testServer"
     },
     {
       "source": "2026-03-25_sessionstore-connected.test",
-      "target": "FlowEngine",
-      "type": "import"
+      "target": "FlowEngine"
     },
     {
       "source": "2026-03-25_sessionstore-connected.test",
-      "target": "SessionStore",
-      "type": "import"
+      "target": "SessionStore"
     },
     {
       "source": "ApiRouter.test",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "ApiRouter.test",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "CheckpointManager.test",
-      "target": "CheckpointManager",
-      "type": "import"
+      "target": "CheckpointManager"
     },
     {
       "source": "config-runtime-sync.test",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "config-runtime-sync.test",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "config-validation.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "ContextLoader.test",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "data-layer.test",
-      "target": "types",
-      "type": "import"
+      "target": "types"
     },
     {
       "source": "data-layer.test",
-      "target": "agents",
-      "type": "import"
+      "target": "agents"
     },
     {
       "source": "data-layer.test",
-      "target": "users",
-      "type": "import"
+      "target": "users"
     },
     {
       "source": "data-layer.test",
-      "target": "flows",
-      "type": "import"
+      "target": "flows"
     },
     {
       "source": "data-layer.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "FileManager.test",
-      "target": "FileManager",
-      "type": "import"
+      "target": "FileManager"
     },
     {
       "source": "FlowEngine.test",
-      "target": "FlowEngine",
-      "type": "import"
+      "target": "FlowEngine"
     },
     {
       "source": "FlowEngine.test",
-      "target": "CheckpointManager",
-      "type": "import"
+      "target": "CheckpointManager"
     },
     {
       "source": "FlowEngine.test",
-      "target": "PromptAssembler",
-      "type": "import"
+      "target": "PromptAssembler"
     },
     {
       "source": "FlowEngine.test",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "FlowEngine.test",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "FlowEngine.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "FlowEngine.test",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "GitSync.test",
-      "target": "GitSync",
-      "type": "import"
+      "target": "GitSync"
     },
     {
       "source": "GroupChatEngine.extended.test",
-      "target": "GroupChatEngine",
-      "type": "import"
+      "target": "GroupChatEngine"
     },
     {
       "source": "GroupChatEngine.extended.test",
-      "target": "Whiteboard",
-      "type": "import"
+      "target": "Whiteboard"
     },
     {
       "source": "GroupChatEngine.extended.test",
-      "target": "PromptAssembler",
-      "type": "import"
+      "target": "PromptAssembler"
     },
     {
       "source": "GroupChatEngine.extended.test",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "GroupChatEngine.extended.test",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "GroupChatEngine.extended.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "GroupChatEngine.extended.test",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "GroupChatEngine.semi-manual.test",
-      "target": "GroupChatEngine",
-      "type": "import"
+      "target": "GroupChatEngine"
     },
     {
       "source": "GroupChatEngine.semi-manual.test",
-      "target": "PromptAssembler",
-      "type": "import"
+      "target": "PromptAssembler"
     },
     {
       "source": "GroupChatEngine.semi-manual.test",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "GroupChatEngine.semi-manual.test",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "GroupChatEngine.semi-manual.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "GroupChatEngine.semi-manual.test",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "GroupChatEngine.test",
-      "target": "GroupChatEngine",
-      "type": "import"
+      "target": "GroupChatEngine"
     },
     {
       "source": "GroupChatEngine.test",
-      "target": "PromptAssembler",
-      "type": "import"
+      "target": "PromptAssembler"
     },
     {
       "source": "GroupChatEngine.test",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "GroupChatEngine.test",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "GroupChatEngine.test",
-      "target": "models",
-      "type": "import"
+      "target": "models"
     },
     {
       "source": "GroupChatEngine.test",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "message-format.test",
-      "target": "GroupChatEngine",
-      "type": "import"
+      "target": "GroupChatEngine"
     },
     {
       "source": "message-format.test",
-      "target": "ApiRouter",
-      "type": "import"
+      "target": "ApiRouter"
     },
     {
       "source": "message-format.test",
-      "target": "mockProvider",
-      "type": "import"
+      "target": "mockProvider"
     },
     {
       "source": "PromptAssembler.test",
-      "target": "PromptAssembler",
-      "type": "import"
+      "target": "PromptAssembler"
     },
     {
       "source": "PromptAssembler.test",
-      "target": "ContextLoader",
-      "type": "import"
+      "target": "ContextLoader"
     },
     {
       "source": "providers-contract.test",
-      "target": "AnthropicProvider",
-      "type": "import"
+      "target": "AnthropicProvider"
     },
     {
       "source": "providers-contract.test",
-      "target": "DeepSeekProvider",
-      "type": "import"
+      "target": "DeepSeekProvider"
     },
     {
       "source": "providers-contract.test",
-      "target": "OpenAIProvider",
-      "type": "import"
+      "target": "OpenAIProvider"
     },
     {
       "source": "SessionStore.test",
-      "target": "SessionStore",
-      "type": "import"
+      "target": "SessionStore"
     },
     {
       "source": "SQLiteStore.test",
-      "target": "SQLiteStore",
-      "type": "import"
+      "target": "SQLiteStore"
     },
     {
       "source": "Whiteboard.test",
-      "target": "Whiteboard",
-      "type": "import"
+      "target": "Whiteboard"
     }
   ]
 }
