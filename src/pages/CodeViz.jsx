@@ -109,15 +109,42 @@ export default function CodeViz() {
       .attr("stroke-opacity", 0.5)
       .attr("stroke-width", 1.5)
       .attr("marker-end", "url(#arrow-code)")
+      .attr("class", d => `link-${d.source.id || d.source} link-${d.target.id || d.target}`)
 
     // Nodes
     const node = g.append("g").attr("class", "nodes")
       .selectAll("g")
       .data(nodes).join("g")
+      .attr("class", d => `node-${d.id}`)
       .style("cursor", "pointer")
       .on("click", (event, d) => {
         event.stopPropagation()
         setSelected(prev => prev?.id === d.id ? null : CODE_GRAPH.nodes.find(n => n.id === d.id))
+      })
+      .on("mouseenter", (event, d) => {
+        // Highlight connected edges
+        link.attr("stroke-opacity", e => {
+          const src = typeof e.source === "object" ? e.source.id : e.source
+          const tgt = typeof e.target === "object" ? e.target.id : e.target
+          return (src === d.id || tgt === d.id) ? 1 : 0.1
+        }).attr("stroke-width", e => {
+          const src = typeof e.source === "object" ? e.source.id : e.source
+          const tgt = typeof e.target === "object" ? e.target.id : e.target
+          return (src === d.id || tgt === d.id) ? 2.5 : 1.5
+        })
+        // Highlight connected nodes
+        node.style("opacity", n => {
+          const isConnected = edges.some(e => {
+            const src = typeof e.source === "object" ? e.source.id : e.source
+            const tgt = typeof e.target === "object" ? e.target.id : e.target
+            return (src === d.id && tgt === n.id) || (tgt === d.id && src === n.id)
+          })
+          return (n.id === d.id || isConnected) ? 1 : 0.3
+        })
+      })
+      .on("mouseleave", () => {
+        link.attr("stroke-opacity", 0.5).attr("stroke-width", 1.5)
+        node.style("opacity", 1)
       })
       .call(d3.drag()
         .on("start", (event, d) => {
