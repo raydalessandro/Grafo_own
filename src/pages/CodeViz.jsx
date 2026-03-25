@@ -16,6 +16,7 @@ export default function CodeViz() {
   const simRef = useRef(null)
   const [selected, setSelected] = useState(null)
   const [selectedFunction, setSelectedFunction] = useState(null) // TIER 2: Function selection
+  const [expandedNodes, setExpandedNodes] = useState(new Set()) // TIER 2: Expanded nodes
   const [filter, setFilter] = useState("all")
   const [search, setSearch] = useState("")
   const [dims, setDims] = useState({ w: 900, h: 600 })
@@ -123,6 +124,19 @@ export default function CodeViz() {
         setSelected(prev => prev?.id === d.id ? null : CODE_GRAPH.nodes.find(n => n.id === d.id))
         setSelectedFunction(null) // Reset function selection when changing node
       })
+      .on("dblclick", (event, d) => {
+        event.stopPropagation()
+        // Toggle expand state
+        setExpandedNodes(prev => {
+          const next = new Set(prev)
+          if (next.has(d.id)) {
+            next.delete(d.id)
+          } else {
+            next.add(d.id)
+          }
+          return next
+        })
+      })
       .on("mouseenter", (event, d) => {
         // Highlight connected edges
         link.attr("stroke-opacity", e => {
@@ -194,6 +208,27 @@ export default function CodeViz() {
       .attr("fill", "#cbd5e1")
       .attr("font-family", "'JetBrains Mono', monospace")
       .text(d => d.id)
+
+    // Function count badge (if has functions)
+    node.filter(d => d.functions && d.functions.length > 0)
+      .append("circle")
+      .attr("cx", radius - 5)
+      .attr("cy", -radius + 5)
+      .attr("r", 8)
+      .attr("fill", "#3b82f6")
+      .attr("stroke", "#060d1a")
+      .attr("stroke-width", 1.5)
+
+    node.filter(d => d.functions && d.functions.length > 0)
+      .append("text")
+      .attr("x", radius - 5)
+      .attr("y", -radius + 5)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", 9)
+      .attr("font-weight", "700")
+      .attr("fill", "#fff")
+      .text(d => d.functions.length)
 
     simulation.on("tick", () => {
       link
@@ -292,10 +327,119 @@ export default function CodeViz() {
               <div style={{ fontSize: 10, color: LAYER_CONFIG[selected.layer]?.color, marginTop: 2 }}>
                 {LAYER_CONFIG[selected.layer]?.label} · {selected.role}
               </div>
+              {/* Expand hint */}
+              {selected.functions && selected.functions.length > 0 && !expandedNodes.has(selected.id) && (
+                <div style={{ fontSize: 8, color: "#64748b", marginTop: 6, fontStyle: "italic" }}>
+                  Double-click node to expand functions
+                </div>
+              )}
+              {expandedNodes.has(selected.id) && (
+                <div style={{ fontSize: 8, color: "#3b82f6", marginTop: 6, fontWeight: 600 }}>
+                  ✓ Expanded mode — showing {selected.functions?.length || 0} functions
+                </div>
+              )}
             </div>
 
             {/* Metrics */}
             <div style={{ flex: 1, overflowY: "auto", padding: "14px 16px" }}>
+              {/* Expanded mode: ONLY functions */}
+              {expandedNodes.has(selected.id) && selected.functions && selected.functions.length > 0 ? (
+                <div>
+                  {selected.functions.map((func, i) => {
+                    const isSelected = selectedFunction?.name === func.name
+                    const callsFrom = (CODE_GRAPH.function_calls || []).filter(c =>
+                      c.source_file === selected.id && c.source_function === func.name
+                    )
+                    const callsTo = (CODE_GRAPH.function_calls || []).filter(c =>
+                      c.target_file === selected.id && c.target_function === func.name
+                    )
+
+                    return (
+                      <div key={i}
+                        onClick={() => setSelectedFunction(isSelected ? null : {...func, calls_from: callsFrom, calls_to: callsTo})}
+                        style={{
+                          padding: "10px 12px", marginBottom: 6,
+                          background: isSelected ? "#1e3a5f" : "#0a1628",
+                          borderRadius: 6,
+                          border: `2px solid ${isSelected ? "#3b82f6" : "#0f2040"}`,
+                          cursor: "pointer",
+                          transition: "all 0.15s"
+                        }}
+                        onMouseEnter={e => { if (!isSelected) e.target.style.background = "#0f2040" }}
+                        onMouseLeave={e => { if (!isSelected) e.target.style.background = "#0a1628" }}
+                      >
+                        <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 3 }}>
+                          <span style={{ fontSize: 11, color: isSelected ? "#3b82f6" : "#10B981", fontWeight: 700, fontFamily: "monospace" }}>
+                            {func.name.split('.').pop()}
+                          </span>
+                          {func.is_async && (
+                            <span style={{ fontSize: 8, color: "#6366f1", background: "#1e1b4b", padding: "2px 5px", borderRadius: 3 }}>
+                              async
+                            </span>
+                          )}
+                          {callsFrom.length > 0 && (
+                            <span style={{ fontSize: 8, color: "#64748b", marginLeft: "auto" }}>
+                              → {callsFrom.length}
+                            </span>
+                          )}
+                        </div>
+                        <div style={{ fontSize: 10, color: "#64748b", fontFamily: "monospace" }}>
+                          ({func.params.join(', ')})
+                        </div>
+                        <div style={{ fontSize: 8, color: "#334155", marginTop: 3 }}>
+                          lines {func.line_start}-{func.line_end}
+                        </div>
+
+                        {/* Inline call graph when function selected */}
+                        {isSelected && (callsFrom.length > 0 || callsTo.length > 0) && (
+                          <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px solid #1e3a5f" }}>
+                            {callsFrom.length > 0 && (
+                              <div style={{ marginBottom: 6 }}>
+                                <div style={{ fontSize: 7, color: "#64748b", marginBottom: 3 }}>CALLS:</div>
+                                {callsFrom.slice(0, 5).map((call, j) => (
+                                  <div key={j} style={{
+                                    fontSize: 8, color: "#10B981", fontFamily: "monospace",
+                                    padding: "2px 4px", marginBottom: 1
+                                  }}>
+                                    {call.target_file !== selected.id && `${call.target_file}.`}
+                                    {call.target_function.split('.').pop()}
+                                  </div>
+                                ))}
+                                {callsFrom.length > 5 && (
+                                  <div style={{ fontSize: 7, color: "#64748b", marginTop: 2 }}>
+                                    +{callsFrom.length - 5} more
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                            {callsTo.length > 0 && (
+                              <div>
+                                <div style={{ fontSize: 7, color: "#64748b", marginBottom: 3 }}>CALLED BY:</div>
+                                {callsTo.slice(0, 3).map((call, j) => (
+                                  <div key={j} style={{
+                                    fontSize: 8, color: "#6366f1", fontFamily: "monospace",
+                                    padding: "2px 4px", marginBottom: 1
+                                  }}>
+                                    {call.source_file !== selected.id && `${call.source_file}.`}
+                                    {call.source_function.split('.').pop()}
+                                  </div>
+                                ))}
+                                {callsTo.length > 3 && (
+                                  <div style={{ fontSize: 7, color: "#64748b", marginTop: 2 }}>
+                                    +{callsTo.length - 3} more
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+              ) : (
+                /* Normal mode: all metrics + functions */
+                <>
               {/* Last Modified */}
               {selected.last_modified && (
                 <div style={{ marginBottom: 14, padding: "8px 10px", background: "#0a1628", borderRadius: 6, border: "1px solid #0f2040" }}>
@@ -465,7 +609,7 @@ export default function CodeViz() {
               )}
 
               {/* Connected files */}
-              {connectedNodes.length > 0 && (
+              {!expandedNodes.has(selected.id) && connectedNodes.length > 0 && (
                 <div style={{ marginTop: 8, paddingTop: 14, borderTop: "1px solid #0f2040" }}>
                   <div style={{ fontSize: 9, color: "#334155", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 8 }}>
                     IMPORT/EXPORT ({connectedNodes.length})
@@ -485,6 +629,8 @@ export default function CodeViz() {
                     </div>
                   ))}
                 </div>
+              )}
+              </>
               )}
             </div>
 
