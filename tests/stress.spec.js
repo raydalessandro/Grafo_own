@@ -10,12 +10,18 @@ import { test, expect } from '@playwright/test';
  * 4. Memory leaks (expand/collapse cycles)
  */
 
+// Helper: wait for D3 force simulation to stabilize
+async function waitForSimulation(page, timeout = 5000) {
+  await page.waitForSelector('svg[data-simulation-stable="true"]', { timeout });
+}
+
 test.describe('Code Visualization - Performance Tests', () => {
   test('should render 1000-node graph in <5 seconds', async ({ page }) => {
     const start = Date.now();
 
     // Navigate to large graph
     await page.goto('/#/code');
+    await waitForSimulation(page);
 
     // Wait for initial render
     await page.waitForSelector('svg circle', { timeout: 10000 });
@@ -42,6 +48,7 @@ test.describe('Code Visualization - Performance Tests', () => {
     // This test requires modifying CodeViz.jsx to accept query param for data source
     // For now, we'll test if the component can handle the data structure
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg', { timeout: 10000 });
 
     // Should not have critical errors
@@ -53,6 +60,7 @@ test.describe('Code Visualization - Performance Tests', () => {
 
   test('should handle rapid zoom in/out without crash', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     const svg = page.locator('svg').first();
@@ -72,6 +80,7 @@ test.describe('Code Visualization - Performance Tests', () => {
 
   test('should handle rapid pan without crash', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     const svg = page.locator('svg').first();
@@ -103,6 +112,7 @@ test.describe('Code Visualization - Edge Cases', () => {
     });
 
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg', { timeout: 10000 });
 
     // Should not crash
@@ -118,6 +128,7 @@ test.describe('Code Visualization - Edge Cases', () => {
 
   test('should render orphan nodes (no edges)', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Even if current graph has edges, test that orphan nodes render
@@ -137,6 +148,7 @@ test.describe('Code Visualization - Edge Cases', () => {
 
   test('should handle nodes without functions array', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Click a node to open detail panel
@@ -153,6 +165,7 @@ test.describe('Code Visualization - Edge Cases', () => {
 
   test('should handle search with no results', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Search for non-existent file
@@ -177,8 +190,9 @@ test.describe('Code Visualization - Edge Cases', () => {
 test.describe('Code Visualization - Interaction Bugs', () => {
   test('should handle click during force simulation', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
 
-    // Click immediately (before simulation settles)
+    // Click after simulation settles
     const node = page.locator('svg circle').first();
     await node.click({ timeout: 2000 });
 
@@ -189,6 +203,7 @@ test.describe('Code Visualization - Interaction Bugs', () => {
 
   test('should handle double-click spam (10 clicks in 1 second)', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     const node = page.locator('svg circle').first();
@@ -205,6 +220,7 @@ test.describe('Code Visualization - Interaction Bugs', () => {
 
   test('should handle rapid expand/collapse without crash', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Find nodes with functions
@@ -232,6 +248,7 @@ test.describe('Code Visualization - Interaction Bugs', () => {
     // This would require loading dense-functions.json fixture
     // For now, test with default graph
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Click node to select
@@ -252,6 +269,7 @@ test.describe('Code Visualization - Interaction Bugs', () => {
 
   test('should handle search while dragging node', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     const node = page.locator('svg circle').first();
@@ -275,6 +293,7 @@ test.describe('Code Visualization - Interaction Bugs', () => {
 
   test('should handle clicking function with many callers', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Click node to select
@@ -306,6 +325,7 @@ test.describe('Code Visualization - Memory Leaks', () => {
     await client.send('Performance.enable');
 
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Get initial memory
@@ -349,6 +369,7 @@ test.describe('Code Visualization - Memory Leaks', () => {
     await client.send('Performance.enable');
 
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Get initial memory
@@ -382,6 +403,7 @@ test.describe('Code Visualization - Memory Leaks', () => {
     await client.send('Performance.enable');
 
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     const searchInput = page.locator('input[placeholder="cerca file..."]');
@@ -415,6 +437,7 @@ test.describe('Code Visualization - Memory Leaks', () => {
 test.describe('Code Visualization - Rendering Issues', () => {
   test('should not have NaN positions for nodes', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Check first 10 nodes for valid positions
@@ -435,6 +458,7 @@ test.describe('Code Visualization - Rendering Issues', () => {
 
   test('should render edges with valid coordinates', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg line', { timeout: 10000 });
 
     // Check first 10 edges for valid positions
@@ -457,6 +481,7 @@ test.describe('Code Visualization - Rendering Issues', () => {
 
   test('should update node positions during simulation', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     const firstNode = page.locator('svg circle').first();
@@ -481,6 +506,7 @@ test.describe('Code Visualization - Rendering Issues', () => {
 
   test('should render all node labels', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     const nodes = page.locator('svg circle');
@@ -497,6 +523,7 @@ test.describe('Code Visualization - Rendering Issues', () => {
 test.describe('Code Visualization - Detail Panel', () => {
   test('should open and close detail panel', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Click node to open panel
@@ -520,6 +547,7 @@ test.describe('Code Visualization - Detail Panel', () => {
 
   test('should switch between nodes in detail panel', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Click first node
@@ -545,6 +573,7 @@ test.describe('Code Visualization - Detail Panel', () => {
 
   test('should deselect node by clicking background', async ({ page }) => {
     await page.goto('/#/code');
+    await waitForSimulation(page);
     await page.waitForSelector('svg circle', { timeout: 10000 });
 
     // Click node

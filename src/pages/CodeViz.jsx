@@ -252,6 +252,11 @@ export default function CodeViz() {
       node.attr("transform", d => `translate(${d.x},${d.y})`)
     })
 
+    // Mark simulation as stable for tests (Bug #6 additional fix)
+    simulation.on("end", () => {
+      svg.attr("data-simulation-stable", "true")
+    })
+
     // Bug #1 fix: Proper cleanup to prevent memory leak
     return () => {
       if (simRef.current) {

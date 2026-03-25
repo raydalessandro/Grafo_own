@@ -1,0 +1,352 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "OWN" [ref=e7] [cursor=pointer]:
+          - /url: "#/"
+        - text: CODE
+      - generic [ref=e8]: 89 file · 165 import · 9540 SLOC · 158 commit
+    - textbox "cerca file..." [ref=e9]
+    - generic [ref=e10]:
+      - button "tutti" [ref=e11] [cursor=pointer]
+      - button "⚙️ Service" [ref=e12] [cursor=pointer]
+      - button "🎨 UI" [ref=e13] [cursor=pointer]
+      - button "🧪 Test" [ref=e14] [cursor=pointer]
+      - button "🔧 Infra" [ref=e15] [cursor=pointer]
+      - button "📄 Other" [ref=e16] [cursor=pointer]
+    - generic [ref=e17]: scroll zoom · drag · click file
+  - img [ref=e20]:
+    - generic [ref=e189]:
+      - generic [ref=e190] [cursor=pointer]:
+        - generic: 📄
+        - generic: vitest.config
+      - generic [ref=e193] [cursor=pointer]:
+        - generic: 📄
+        - generic: server
+        - generic: "1"
+      - generic [ref=e197] [cursor=pointer]:
+        - generic: 🔧
+        - generic: models
+        - generic: "5"
+      - generic [ref=e201] [cursor=pointer]:
+        - generic: 📄
+        - generic: auth
+        - generic: "1"
+      - generic [ref=e205] [cursor=pointer]:
+        - generic: 📄
+        - generic: chat
+        - generic: "1"
+      - generic [ref=e209] [cursor=pointer]:
+        - generic: 📄
+        - generic: config
+        - generic: "1"
+      - generic [ref=e213] [cursor=pointer]:
+        - generic: 📄
+        - generic: files
+        - generic: "1"
+      - generic [ref=e217] [cursor=pointer]:
+        - generic: 📄
+        - generic: flow
+        - generic: "1"
+      - generic [ref=e221] [cursor=pointer]:
+        - generic: 📄
+        - generic: groupchat
+        - generic: "1"
+      - generic [ref=e225] [cursor=pointer]:
+        - generic: 📄
+        - generic: sync
+        - generic: "1"
+      - generic [ref=e229] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: ApiRouter
+        - generic: "4"
+      - generic [ref=e233] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: CheckpointManager
+        - generic: "2"
+      - generic [ref=e237] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: ContextLoader
+        - generic: "9"
+      - generic [ref=e241] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: FileManager
+        - generic: "5"
+      - generic [ref=e245] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: FlowEngine
+        - generic: "9"
+      - generic [ref=e249] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: GitSync
+        - generic: "6"
+      - generic [ref=e253] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: GroupChatEngine
+        - generic: "10"
+      - generic [ref=e257] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: PromptAssembler
+        - generic: "3"
+      - generic [ref=e261] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: SessionStore
+        - generic: "7"
+      - generic [ref=e265] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: Whiteboard
+        - generic: "8"
+      - generic [ref=e269] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: AnthropicProvider
+        - generic: "2"
+      - generic [ref=e273] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: BaseProvider
+        - generic: "1"
+      - generic [ref=e277] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: DeepSeekProvider
+        - generic: "1"
+      - generic [ref=e281] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: OpenAICompatibleProvider
+        - generic: "2"
+      - generic [ref=e285] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: OpenAIProvider
+        - generic: "1"
+      - generic [ref=e289] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: SQLiteStore
+        - generic: "6"
+      - generic [ref=e293] [cursor=pointer]:
+        - generic: ⚙️
+        - generic: SupabaseStore
+        - generic: "7"
+      - generic [ref=e297] [cursor=pointer]:
+        - generic: 📄
+        - generic: vite.config
+      - generic [ref=e300] [cursor=pointer]:
+        - generic: 📄
+        - generic: App
+        - generic: "3"
+      - generic [ref=e304] [cursor=pointer]:
+        - generic: 📄
+        - generic: main
+      - generic [ref=e307] [cursor=pointer]:
+        - generic: 🎨
+        - generic: AgentBadge
+        - generic: "1"
+      - generic [ref=e311] [cursor=pointer]:
+        - generic: 🎨
+        - generic: CheckpointDialog
+        - generic: "3"
+      - generic [ref=e315] [cursor=pointer]:
+        - generic: 🎨
+        - generic: Sidebar
+        - generic: "1"
+      - generic [ref=e319] [cursor=pointer]:
+        - generic: 🎨
+        - generic: SyncBar
+        - generic: "2"
+      - generic [ref=e323] [cursor=pointer]:
+        - generic: 🎨
+        - generic: WhiteboardPanel
+        - generic: "3"
+      - generic [ref=e327] [cursor=pointer]:
+        - generic: 🎨
+        - generic: useAuth
+        - generic: "1"
+      - generic [ref=e331] [cursor=pointer]:
+        - generic: 🎨
+        - generic: useChat
+        - generic: "2"
+      - generic [ref=e335] [cursor=pointer]:
+        - generic: 🎨
+        - generic: useFlow
+        - generic: "1"
+      - generic [ref=e339] [cursor=pointer]:
+        - generic: 🎨
+        - generic: useGroupChat
+        - generic: "1"
+      - generic [ref=e343] [cursor=pointer]:
+        - generic: 🎨
+        - generic: BibliotecaView
+        - generic: "1"
+      - generic [ref=e347] [cursor=pointer]:
+        - generic: 🎨
+        - generic: ChatView
+        - generic: "2"
+      - generic [ref=e351] [cursor=pointer]:
+        - generic: 🎨
+        - generic: ConfigView
+        - generic: "6"
+      - generic [ref=e355] [cursor=pointer]:
+        - generic: 🎨
+        - generic: FlowView
+        - generic: "2"
+      - generic [ref=e359] [cursor=pointer]:
+        - generic: 🎨
+        - generic: GroupChatView
+        - generic: "10"
+      - generic [ref=e363] [cursor=pointer]:
+        - generic: 🎨
+        - generic: StatusView
+        - generic: "1"
+      - generic [ref=e367] [cursor=pointer]:
+        - generic: 🎨
+        - generic: SupervisioneView
+        - generic: "1"
+      - generic [ref=e371] [cursor=pointer]:
+        - generic: 📄
+        - generic: agents
+      - generic [ref=e374] [cursor=pointer]:
+        - generic: 📄
+        - generic: flows
+      - generic [ref=e377] [cursor=pointer]:
+        - generic: 📄
+        - generic: types
+      - generic [ref=e380] [cursor=pointer]:
+        - generic: 📄
+        - generic: users
+      - generic [ref=e383] [cursor=pointer]:
+        - generic: 🧪
+        - generic: GroupChatView.test
+        - generic: "2"
+      - generic [ref=e387] [cursor=pointer]:
+        - generic: 🧪
+        - generic: groupchat-semi-manual.e2e
+      - generic [ref=e390] [cursor=pointer]:
+        - generic: 🧪
+        - generic: mockProvider
+        - generic: "14"
+      - generic [ref=e394] [cursor=pointer]:
+        - generic: 🧪
+        - generic: testServer
+        - generic: "2"
+      - generic [ref=e398] [cursor=pointer]:
+        - generic: 🧪
+        - generic: useGroupChat.test
+        - generic: "2"
+      - generic [ref=e402] [cursor=pointer]:
+        - generic: 🧪
+        - generic: auth.middleware.test
+      - generic [ref=e405] [cursor=pointer]:
+        - generic: 🧪
+        - generic: chat-robustness.test
+      - generic [ref=e408] [cursor=pointer]:
+        - generic: 🧪
+        - generic: chat.route.test
+      - generic [ref=e411] [cursor=pointer]:
+        - generic: 🧪
+        - generic: config.route.test
+      - generic [ref=e414] [cursor=pointer]:
+        - generic: 🧪
+        - generic: files.route.test
+      - generic [ref=e417] [cursor=pointer]:
+        - generic: 🧪
+        - generic: flow.route.test
+        - generic: "3"
+      - generic [ref=e421] [cursor=pointer]:
+        - generic: 🧪
+        - generic: groupchat-human-loop.test
+      - generic [ref=e424] [cursor=pointer]:
+        - generic: 🧪
+        - generic: groupchat-semi-manual.test
+        - generic: "1"
+      - generic [ref=e428] [cursor=pointer]:
+        - generic: 🧪
+        - generic: groupchat.route.test
+      - generic [ref=e431] [cursor=pointer]:
+        - generic: 🧪
+        - generic: 2026-03-24_config-model-ids.test
+      - generic [ref=e434] [cursor=pointer]:
+        - generic: 🧪
+        - generic: 2026-03-24_groupchat-provider-error.test
+        - generic: "1"
+      - generic [ref=e438] [cursor=pointer]:
+        - generic: 🧪
+        - generic: 2026-03-24_model-catalog-ids.test
+      - generic [ref=e441] [cursor=pointer]:
+        - generic: 🧪
+        - generic: 2026-03-24_provider-fallback.test
+      - generic [ref=e444] [cursor=pointer]:
+        - generic: 🧪
+        - generic: 2026-03-24_vite-config.test
+      - generic [ref=e447] [cursor=pointer]:
+        - generic: 🧪
+        - generic: 2026-03-25_sessionstore-connected.test
+      - generic [ref=e450] [cursor=pointer]:
+        - generic: 🧪
+        - generic: ApiRouter.test
+      - generic [ref=e453] [cursor=pointer]:
+        - generic: 🧪
+        - generic: CheckpointManager.test
+      - generic [ref=e456] [cursor=pointer]:
+        - generic: 🧪
+        - generic: config-runtime-sync.test
+      - generic [ref=e459] [cursor=pointer]:
+        - generic: 🧪
+        - generic: config-validation.test
+      - generic [ref=e462] [cursor=pointer]:
+        - generic: 🧪
+        - generic: ContextLoader.test
+      - generic [ref=e465] [cursor=pointer]:
+        - generic: 🧪
+        - generic: data-layer.test
+      - generic [ref=e468] [cursor=pointer]:
+        - generic: 🧪
+        - generic: FileManager.test
+      - generic [ref=e471] [cursor=pointer]:
+        - generic: 🧪
+        - generic: FlowEngine.test
+      - generic [ref=e474] [cursor=pointer]:
+        - generic: 🧪
+        - generic: GitSync.test
+      - generic [ref=e477] [cursor=pointer]:
+        - generic: 🧪
+        - generic: GroupChatEngine.extended.test
+        - generic: "3"
+      - generic [ref=e481] [cursor=pointer]:
+        - generic: 🧪
+        - generic: GroupChatEngine.semi-manual.test
+        - generic: "2"
+      - generic [ref=e485] [cursor=pointer]:
+        - generic: 🧪
+        - generic: GroupChatEngine.test
+        - generic: "2"
+      - generic [ref=e489] [cursor=pointer]:
+        - generic: 🧪
+        - generic: message-format.test
+      - generic [ref=e492] [cursor=pointer]:
+        - generic: 🧪
+        - generic: PromptAssembler.test
+      - generic [ref=e495] [cursor=pointer]:
+        - generic: 🧪
+        - generic: providers-contract.test
+      - generic [ref=e498] [cursor=pointer]:
+        - generic: 🧪
+        - generic: SessionStore.test
+        - generic: "1"
+      - generic [ref=e502] [cursor=pointer]:
+        - generic: 🧪
+        - generic: SQLiteStore.test
+        - generic: "1"
+      - generic [ref=e506] [cursor=pointer]:
+        - generic: 🧪
+        - generic: SupabaseStore.test
+      - generic [ref=e509] [cursor=pointer]:
+        - generic: 🧪
+        - generic: Whiteboard.test
+  - generic [ref=e512]:
+    - generic [ref=e515]: Service
+    - generic [ref=e518]: UI
+    - generic [ref=e521]: Test
+    - generic [ref=e524]: Infra
+    - generic [ref=e527]: Other
+    - generic [ref=e528]: own-hub-clean · javascript · 165 dependencies
+```
