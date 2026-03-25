@@ -7,6 +7,7 @@
     "total_sloc": 9540,
     "total_commits": 158,
     "total_bugs": 5,
+    "total_function_calls": 295,
     "files_by_layer": {
       "unknown": 16,
       "infra": 1,
@@ -10227,6 +10228,2368 @@
     {
       "source": "Whiteboard.test",
       "target": "Whiteboard"
+    }
+  ],
+  "function_calls": [
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "SessionStore",
+      "target_function": "createSessionStore",
+      "line": 44,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "chat",
+      "target_function": "createChatRoute",
+      "line": 48,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "flow",
+      "target_function": "createFlowRoute",
+      "line": 49,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "files",
+      "target_function": "createFilesRoute",
+      "line": 50,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "sync",
+      "target_function": "createSyncRoute",
+      "line": 51,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "config",
+      "target_function": "createConfigRoute",
+      "line": 52,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "groupchat",
+      "target_function": "createGroupChatRoute",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 57,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 57,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "server",
+      "source_function": "startServer",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 57,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "models",
+      "source_function": "setAgentModels",
+      "target_file": "models",
+      "target_function": "getAgentModels",
+      "line": 54,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "models",
+      "source_function": "getKeyStatus",
+      "target_file": "models",
+      "target_function": "getApiKeys",
+      "line": 86,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "chat",
+      "source_function": "createChatRoute",
+      "target_file": "PromptAssembler",
+      "target_function": "PromptAssembler.assembleForAgent",
+      "line": 15,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "chat",
+      "source_function": "createChatRoute",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter.chat",
+      "line": 21,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "chat",
+      "source_function": "createChatRoute",
+      "target_file": "AnthropicProvider",
+      "target_function": "AnthropicProvider.chat",
+      "line": 21,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "chat",
+      "source_function": "createChatRoute",
+      "target_file": "BaseProvider",
+      "target_function": "BaseProvider.chat",
+      "line": 21,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "chat",
+      "source_function": "createChatRoute",
+      "target_file": "OpenAICompatibleProvider",
+      "target_function": "OpenAICompatibleProvider.chat",
+      "line": 21,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "chat",
+      "source_function": "createChatRoute",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider.chat",
+      "line": 21,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 14,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 14,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 14,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "models",
+      "target_function": "getAgentModels",
+      "line": 15,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter.getAvailableProviders",
+      "line": 16,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 22,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 22,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 22,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "models",
+      "target_function": "setAgentModels",
+      "line": 37,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 41,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 41,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 41,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "models",
+      "target_function": "getKeyStatus",
+      "line": 42,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "models",
+      "target_function": "setApiKey",
+      "line": 49,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "models",
+      "target_function": "getKeyStatus",
+      "line": 50,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.delete",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.delete",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.delete",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "models",
+      "target_function": "setApiKey",
+      "line": 56,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "config",
+      "source_function": "createConfigRoute",
+      "target_file": "models",
+      "target_function": "getKeyStatus",
+      "line": 57,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "files",
+      "source_function": "createFilesRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 10,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "files",
+      "source_function": "createFilesRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 10,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "files",
+      "source_function": "createFilesRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 10,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "files",
+      "source_function": "createFilesRoute",
+      "target_file": "FileManager",
+      "target_function": "FileManager.listOutputs",
+      "line": 13,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "files",
+      "source_function": "createFilesRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 20,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "files",
+      "source_function": "createFilesRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 20,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "files",
+      "source_function": "createFilesRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 20,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.startFlow",
+      "line": 15,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "flow.route.test",
+      "target_function": "startFlow",
+      "line": 15,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.executeStep",
+      "line": 29,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "flow.route.test",
+      "target_function": "executeStep",
+      "line": 29,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.handleCheckpoint",
+      "line": 43,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.continueDiscussion",
+      "line": 57,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 65,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 65,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 65,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.getSession",
+      "line": 66,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "flow",
+      "source_function": "createFlowRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.getSession",
+      "line": 66,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.createSession",
+      "line": 23,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "2026-03-24_groupchat-provider-error.test",
+      "target_function": "createSession",
+      "line": 23,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "Whiteboard",
+      "target_function": "Whiteboard.getAll",
+      "line": 26,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.getSession",
+      "line": 42,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.getSession",
+      "line": 42,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.submitHumanMessage",
+      "line": 49,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.executeTurnFor",
+      "line": 68,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.submitHumanMessage",
+      "line": 83,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.generateSummary",
+      "line": 97,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.endSession",
+      "line": 109,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.cleanup",
+      "line": 110,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "testServer",
+      "target_function": "cleanup",
+      "line": 110,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 118,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 118,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 118,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.getSession",
+      "line": 119,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.getSession",
+      "line": 119,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 127,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 127,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 127,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.getSession",
+      "line": 128,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.getSession",
+      "line": 128,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "Whiteboard",
+      "target_function": "Whiteboard.getAll",
+      "line": 131,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.getSession",
+      "line": 136,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.getSession",
+      "line": 136,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "Whiteboard",
+      "target_function": "Whiteboard.addItem",
+      "line": 142,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.delete",
+      "line": 150,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.delete",
+      "line": 150,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.delete",
+      "line": 150,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.getSession",
+      "line": 151,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.getSession",
+      "line": 151,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat",
+      "source_function": "createGroupChatRoute",
+      "target_file": "Whiteboard",
+      "target_function": "Whiteboard.removeItem",
+      "line": 157,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "sync",
+      "source_function": "createSyncRoute",
+      "target_file": "GitSync",
+      "target_function": "GitSync.pull",
+      "line": 10,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "sync",
+      "source_function": "createSyncRoute",
+      "target_file": "GitSync",
+      "target_function": "GitSync.commitAndPush",
+      "line": 20,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter._getProvider",
+      "target_file": "models",
+      "target_function": "getApiKeys",
+      "line": 21,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter._getProvider",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 25,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter._getProvider",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 25,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter._getProvider",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 25,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter.getAvailableProviders",
+      "target_file": "models",
+      "target_function": "getApiKeys",
+      "line": 39,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter.chat",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter._getProvider",
+      "line": 54,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter.chat",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter.getAvailableProviders",
+      "line": 56,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter.chat",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter.chat",
+      "line": 70,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter.chat",
+      "target_file": "AnthropicProvider",
+      "target_function": "AnthropicProvider.chat",
+      "line": 70,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter.chat",
+      "target_file": "BaseProvider",
+      "target_function": "BaseProvider.chat",
+      "line": 70,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter.chat",
+      "target_file": "OpenAICompatibleProvider",
+      "target_function": "OpenAICompatibleProvider.chat",
+      "line": 70,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ApiRouter",
+      "source_function": "ApiRouter.chat",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider.chat",
+      "line": 70,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "CheckpointManager",
+      "source_function": "CheckpointManager.processAction",
+      "target_file": "FileManager",
+      "target_function": "FileManager.logDecision",
+      "line": 35,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader.loadGrafo",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader._loadFile",
+      "line": 14,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader.loadAgentDef",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader._loadFile",
+      "line": 18,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader.loadFaseAttuale",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader._loadFile",
+      "line": 31,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader.loadManifesto",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader._loadFile",
+      "line": 35,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader.loadPrompt",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader._loadFile",
+      "line": 39,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader.loadDocument",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader._loadFile",
+      "line": 46,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader._loadFile",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 58,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader._loadFile",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 58,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ContextLoader",
+      "source_function": "ContextLoader._loadFile",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 58,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FileManager",
+      "source_function": "FileManager.saveOutput",
+      "target_file": "FileManager",
+      "target_function": "FileManager._validatePath",
+      "line": 12,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FileManager",
+      "source_function": "FileManager.saveOutput",
+      "target_file": "FileManager",
+      "target_function": "FileManager._validatePath",
+      "line": 13,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine._persist",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.save",
+      "line": 20,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine._persist",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.save",
+      "line": 20,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine._persist",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.save",
+      "line": 20,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.startFlow",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._persist",
+      "line": 45,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._getOutputCategory",
+      "line": 66,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "FileManager",
+      "target_function": "FileManager.saveOutput",
+      "line": 68,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "PromptAssembler",
+      "target_function": "PromptAssembler.assembleForFlowStep",
+      "line": 77,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter.chat",
+      "line": 93,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "AnthropicProvider",
+      "target_function": "AnthropicProvider.chat",
+      "line": 93,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "BaseProvider",
+      "target_function": "BaseProvider.chat",
+      "line": 93,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "OpenAICompatibleProvider",
+      "target_function": "OpenAICompatibleProvider.chat",
+      "line": 93,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider.chat",
+      "line": 93,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.executeStep",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._persist",
+      "line": 108,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 117,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 117,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 117,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "PromptAssembler",
+      "target_function": "PromptAssembler.assembleForFlowStep",
+      "line": 127,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter.chat",
+      "line": 139,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "AnthropicProvider",
+      "target_function": "AnthropicProvider.chat",
+      "line": 139,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "BaseProvider",
+      "target_function": "BaseProvider.chat",
+      "line": 139,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "OpenAICompatibleProvider",
+      "target_function": "OpenAICompatibleProvider.chat",
+      "line": 139,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider.chat",
+      "line": 139,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.continueDiscussion",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._persist",
+      "line": 145,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 153,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 153,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 153,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "CheckpointManager",
+      "target_function": "CheckpointManager.processAction",
+      "line": 158,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._cleanupSession",
+      "line": 167,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._persist",
+      "line": 169,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._persist",
+      "line": 176,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._persist",
+      "line": 186,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._cleanupSession",
+      "line": 194,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.handleCheckpoint",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine._persist",
+      "line": 195,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.getSession",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 207,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.getSession",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 207,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine.getSession",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 207,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine._cleanupSession",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.delete",
+      "line": 215,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine._cleanupSession",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.delete",
+      "line": 215,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowEngine",
+      "source_function": "FlowEngine._cleanupSession",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.delete",
+      "line": 215,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GitSync",
+      "source_function": "GitSync.pull",
+      "target_file": "GitSync",
+      "target_function": "GitSync._exec",
+      "line": 12,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GitSync",
+      "source_function": "GitSync.commitAndPush",
+      "target_file": "GitSync",
+      "target_function": "GitSync._exec",
+      "line": 21,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GitSync",
+      "source_function": "GitSync.commitAndPush",
+      "target_file": "GitSync",
+      "target_function": "GitSync._buildCommitMessage",
+      "line": 26,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GitSync",
+      "source_function": "GitSync.commitAndPush",
+      "target_file": "GitSync",
+      "target_function": "GitSync._exec",
+      "line": 28,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GitSync",
+      "source_function": "GitSync.commitAndPush",
+      "target_file": "GitSync",
+      "target_function": "GitSync._exec",
+      "line": 29,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GitSync",
+      "source_function": "GitSync.commitAndPush",
+      "target_file": "GitSync",
+      "target_function": "GitSync._exec",
+      "line": 30,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GitSync",
+      "source_function": "GitSync.generateCommitMessage",
+      "target_file": "GitSync",
+      "target_function": "GitSync._exec",
+      "line": 39,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GitSync",
+      "source_function": "GitSync.generateCommitMessage",
+      "target_file": "GitSync",
+      "target_function": "GitSync._buildCommitMessage",
+      "line": 40,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.getSession",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 76,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.getSession",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 76,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.getSession",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 76,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 89,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 89,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 89,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine._buildGroupPrompt",
+      "line": 104,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine._buildMessageHistory",
+      "line": 105,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter.chat",
+      "line": 108,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "AnthropicProvider",
+      "target_function": "AnthropicProvider.chat",
+      "line": 108,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "BaseProvider",
+      "target_function": "BaseProvider.chat",
+      "line": 108,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "OpenAICompatibleProvider",
+      "target_function": "OpenAICompatibleProvider.chat",
+      "line": 108,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.executeTurnFor",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider.chat",
+      "line": 108,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.submitHumanMessage",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 142,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.submitHumanMessage",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 142,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.submitHumanMessage",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 142,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.endSession",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 172,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.endSession",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 172,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.endSession",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 172,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 187,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 187,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 187,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "ApiRouter",
+      "target_function": "ApiRouter.chat",
+      "line": 223,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "AnthropicProvider",
+      "target_function": "AnthropicProvider.chat",
+      "line": 223,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "BaseProvider",
+      "target_function": "BaseProvider.chat",
+      "line": 223,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "OpenAICompatibleProvider",
+      "target_function": "OpenAICompatibleProvider.chat",
+      "line": 223,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider.chat",
+      "line": 223,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.generateSummary",
+      "target_file": "FileManager",
+      "target_function": "FileManager.saveOutput",
+      "line": 231,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine._buildGroupPrompt",
+      "target_file": "PromptAssembler",
+      "target_function": "PromptAssembler.assembleForAgent",
+      "line": 280,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine._buildGroupPrompt",
+      "target_file": "Whiteboard",
+      "target_function": "Whiteboard.toPromptString",
+      "line": 303,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.cleanup",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.delete",
+      "line": 315,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.cleanup",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.delete",
+      "line": 315,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine",
+      "source_function": "GroupChatEngine.cleanup",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.delete",
+      "line": 315,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForAgent",
+      "target_file": "models",
+      "target_function": "getAgentModels",
+      "line": 22,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForAgent",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader.loadDocument",
+      "line": 29,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForAgent",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader.loadPrompt",
+      "line": 33,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForAgent",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader.loadGrafo",
+      "line": 37,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForAgent",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader.loadFaseAttuale",
+      "line": 41,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForAgent",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader.loadManifesto",
+      "line": 47,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForAgent",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader.loadDocument",
+      "line": 54,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForFlowStep",
+      "target_file": "PromptAssembler",
+      "target_function": "PromptAssembler.assembleForAgent",
+      "line": 81,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "PromptAssembler",
+      "source_function": "PromptAssembler.assembleForFlowStep",
+      "target_file": "ContextLoader",
+      "target_function": "ContextLoader.loadPrompt",
+      "line": 84,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.init",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.ping",
+      "line": 21,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.save",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.save",
+      "line": 44,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.save",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.save",
+      "line": 44,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.save",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.save",
+      "line": 44,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.get",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 52,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.get",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 52,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.get",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 52,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.delete",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.delete",
+      "line": 56,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.delete",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.delete",
+      "line": 56,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.delete",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.delete",
+      "line": 56,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.getByUser",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.getByUser",
+      "line": 60,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.getByUser",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.getByUser",
+      "line": 60,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "SessionStore.getByUser",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.getByUser",
+      "line": 60,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SessionStore",
+      "source_function": "createSessionStore",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.init",
+      "line": 80,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SQLiteStore",
+      "source_function": "SQLiteStore.get",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SQLiteStore",
+      "source_function": "SQLiteStore.get",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 53,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SQLiteStore",
+      "source_function": "SQLiteStore.get",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 53,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SQLiteStore",
+      "source_function": "SQLiteStore.get",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore._deserialize",
+      "line": 56,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SQLiteStore",
+      "source_function": "SQLiteStore.get",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore._deserialize",
+      "line": 56,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SQLiteStore",
+      "source_function": "SQLiteStore.getByUser",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore._deserialize",
+      "line": 65,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SQLiteStore",
+      "source_function": "SQLiteStore.getByUser",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore._deserialize",
+      "line": 65,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SupabaseStore",
+      "source_function": "SupabaseStore.get",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore._deserialize",
+      "line": 45,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SupabaseStore",
+      "source_function": "SupabaseStore.get",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore._deserialize",
+      "line": 45,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SupabaseStore",
+      "source_function": "SupabaseStore.delete",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.delete",
+      "line": 49,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SupabaseStore",
+      "source_function": "SupabaseStore.delete",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.delete",
+      "line": 49,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SupabaseStore",
+      "source_function": "SupabaseStore.delete",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.delete",
+      "line": 49,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SupabaseStore",
+      "source_function": "SupabaseStore.getByUser",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore._deserialize",
+      "line": 62,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "SupabaseStore",
+      "source_function": "SupabaseStore.getByUser",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore._deserialize",
+      "line": 62,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "App",
+      "source_function": "App",
+      "target_file": "App",
+      "target_function": "switchUser",
+      "line": 63,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "App",
+      "source_function": "App",
+      "target_file": "App",
+      "target_function": "renderMain",
+      "line": 88,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "CheckpointDialog",
+      "source_function": "CheckpointDialog",
+      "target_file": "CheckpointDialog",
+      "target_function": "sendDiscussMsg",
+      "line": 65,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "CheckpointDialog",
+      "source_function": "CheckpointDialog",
+      "target_file": "CheckpointDialog",
+      "target_function": "handleModify",
+      "line": 111,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SyncBar",
+      "source_function": "SyncBar",
+      "target_file": "SyncBar",
+      "target_function": "doSync",
+      "line": 32,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "SyncBar",
+      "source_function": "SyncBar",
+      "target_file": "SyncBar",
+      "target_function": "doSync",
+      "line": 43,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "WhiteboardPanel",
+      "source_function": "handleKeyDown",
+      "target_file": "WhiteboardPanel",
+      "target_function": "handleAdd",
+      "line": 31,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "useChat",
+      "source_function": "useChat",
+      "target_file": "useChat",
+      "target_function": "getStoreKey",
+      "line": 11,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "useChat",
+      "source_function": "useChat",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.get",
+      "line": 12,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "useChat",
+      "source_function": "useChat",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.get",
+      "line": 12,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "useChat",
+      "source_function": "useChat",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.get",
+      "line": 12,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ChatView",
+      "source_function": "ChatView",
+      "target_file": "useChat",
+      "target_function": "useChat",
+      "line": 8,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "ChatView",
+      "source_function": "ChatView",
+      "target_file": "ChatView",
+      "target_function": "handleSend",
+      "line": 79,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "ConfigView",
+      "target_file": "ConfigView",
+      "target_function": "loadConfig",
+      "line": 31,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "handleModelChange",
+      "target_file": "ConfigView",
+      "target_function": "getModelsForProvider",
+      "line": 42,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "handleModelChange",
+      "target_file": "ConfigView",
+      "target_function": "loadConfig",
+      "line": 64,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "handleSaveKey",
+      "target_file": "ConfigView",
+      "target_function": "loadConfig",
+      "line": 87,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "handleRemoveKey",
+      "target_file": "ConfigView",
+      "target_function": "loadConfig",
+      "line": 104,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "ConfigView",
+      "target_file": "ConfigView",
+      "target_function": "handleRemoveKey",
+      "line": 153,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "ConfigView",
+      "target_file": "ConfigView",
+      "target_function": "handleSaveKey",
+      "line": 166,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "ConfigView",
+      "target_file": "ConfigView",
+      "target_function": "handleSaveKey",
+      "line": 171,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "ConfigView",
+      "target_file": "ConfigView",
+      "target_function": "getModelsForProvider",
+      "line": 191,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "ConfigView",
+      "target_file": "ConfigView",
+      "target_function": "handleModelChange",
+      "line": 225,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "ConfigView",
+      "target_file": "ConfigView",
+      "target_function": "handleModelChange",
+      "line": 240,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "ConfigView",
+      "source_function": "ConfigView",
+      "target_file": "ConfigView",
+      "target_function": "handleModelChange",
+      "line": 257,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowView",
+      "source_function": "FlowView",
+      "target_file": "useFlow",
+      "target_function": "useFlow",
+      "line": 14,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowView",
+      "source_function": "handleStart",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.startFlow",
+      "line": 31,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowView",
+      "source_function": "handleStart",
+      "target_file": "flow.route.test",
+      "target_function": "startFlow",
+      "line": 31,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowView",
+      "source_function": "FlowView",
+      "target_file": "FlowView",
+      "target_function": "handleStart",
+      "line": 67,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "FlowView",
+      "source_function": "FlowView",
+      "target_file": "GroupChatView",
+      "target_function": "handleStart",
+      "line": 67,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowView",
+      "source_function": "FlowView",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.handleCheckpoint",
+      "line": 141,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowView",
+      "source_function": "FlowView",
+      "target_file": "FlowEngine",
+      "target_function": "FlowEngine.executeStep",
+      "line": 144,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "FlowView",
+      "source_function": "FlowView",
+      "target_file": "flow.route.test",
+      "target_function": "executeStep",
+      "line": 144,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "GroupChatView",
+      "target_file": "useGroupChat",
+      "target_function": "useGroupChat",
+      "line": 14,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "handleEnd",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.endSession",
+      "line": 77,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "handleSummary",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.generateSummary",
+      "line": 81,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "handleNewSession",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider.reset",
+      "line": 85,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "GroupChatView",
+      "target_file": "GroupChatView",
+      "target_function": "toggleAgent",
+      "line": 136,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "GroupChatView",
+      "target_file": "GroupChatView",
+      "target_function": "moveAgent",
+      "line": 167,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "GroupChatView",
+      "target_file": "GroupChatView",
+      "target_function": "moveAgent",
+      "line": 169,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "GroupChatView",
+      "target_file": "GroupChatView",
+      "target_function": "getParticipantColor",
+      "line": 281,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GroupChatView",
+      "source_function": "GroupChatView",
+      "target_file": "GroupChatView",
+      "target_function": "handleSubmitHuman",
+      "line": 352,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "mockProvider",
+      "source_function": "MockProvider.setAgentFailure",
+      "target_file": "SessionStore",
+      "target_function": "SessionStore.delete",
+      "line": 52,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "mockProvider",
+      "source_function": "MockProvider.setAgentFailure",
+      "target_file": "SQLiteStore",
+      "target_function": "SQLiteStore.delete",
+      "line": 52,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "mockProvider",
+      "source_function": "MockProvider.setAgentFailure",
+      "target_file": "SupabaseStore",
+      "target_function": "SupabaseStore.delete",
+      "line": 52,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "mockProvider",
+      "source_function": "MockProvider.chat",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider._detectAgent",
+      "line": 67,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "mockProvider",
+      "source_function": "MockProvider.getLastPromptForAgent",
+      "target_file": "mockProvider",
+      "target_function": "MockProvider.getCallsForAgent",
+      "line": 133,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "testServer",
+      "source_function": "createTestApp",
+      "target_file": "chat",
+      "target_function": "createChatRoute",
+      "line": 80,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "testServer",
+      "source_function": "createTestApp",
+      "target_file": "flow",
+      "target_function": "createFlowRoute",
+      "line": 81,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "testServer",
+      "source_function": "createTestApp",
+      "target_file": "files",
+      "target_function": "createFilesRoute",
+      "line": 82,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "testServer",
+      "source_function": "createTestApp",
+      "target_file": "config",
+      "target_function": "createConfigRoute",
+      "line": 83,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "testServer",
+      "source_function": "createTestApp",
+      "target_file": "groupchat",
+      "target_function": "createGroupChatRoute",
+      "line": 84,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "groupchat-semi-manual.test",
+      "source_function": "createGroupChatTestApp",
+      "target_file": "groupchat",
+      "target_function": "createGroupChatRoute",
+      "line": 34,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "2026-03-24_groupchat-provider-error.test",
+      "source_function": "createSession",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.createSession",
+      "line": 23,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "2026-03-24_groupchat-provider-error.test",
+      "source_function": "createSession",
+      "target_file": "2026-03-24_groupchat-provider-error.test",
+      "target_function": "createSession",
+      "line": 23,
+      "type": "intra-file"
+    },
+    {
+      "source_file": "GroupChatEngine.extended.test",
+      "source_function": "make3AgentSession",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.createSession",
+      "line": 40,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine.extended.test",
+      "source_function": "make3AgentSession",
+      "target_file": "2026-03-24_groupchat-provider-error.test",
+      "target_function": "createSession",
+      "line": 40,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine.extended.test",
+      "source_function": "make5AgentSession",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.createSession",
+      "line": 51,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine.extended.test",
+      "source_function": "make5AgentSession",
+      "target_file": "2026-03-24_groupchat-provider-error.test",
+      "target_function": "createSession",
+      "line": 51,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine.semi-manual.test",
+      "source_function": "makeSession",
+      "target_file": "GroupChatEngine",
+      "target_function": "GroupChatEngine.createSession",
+      "line": 26,
+      "type": "cross-file"
+    },
+    {
+      "source_file": "GroupChatEngine.semi-manual.test",
+      "source_function": "makeSession",
+      "target_file": "2026-03-24_groupchat-provider-error.test",
+      "target_function": "createSession",
+      "line": 26,
+      "type": "cross-file"
     }
   ]
 }

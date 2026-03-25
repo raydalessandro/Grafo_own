@@ -15,6 +15,7 @@ export default function CodeViz() {
   const containerRef = useRef(null)
   const simRef = useRef(null)
   const [selected, setSelected] = useState(null)
+  const [selectedFunction, setSelectedFunction] = useState(null) // TIER 2: Function selection
   const [filter, setFilter] = useState("all")
   const [search, setSearch] = useState("")
   const [dims, setDims] = useState({ w: 900, h: 600 })
@@ -120,6 +121,7 @@ export default function CodeViz() {
       .on("click", (event, d) => {
         event.stopPropagation()
         setSelected(prev => prev?.id === d.id ? null : CODE_GRAPH.nodes.find(n => n.id === d.id))
+        setSelectedFunction(null) // Reset function selection when changing node
       })
       .on("mouseenter", (event, d) => {
         // Highlight connected edges
@@ -353,30 +355,112 @@ export default function CodeViz() {
                   <div style={{ fontSize: 9, color: "#334155", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 8 }}>
                     FUNCTIONS ({selected.functions.length})
                   </div>
-                  {selected.functions.map((func, i) => (
-                    <div key={i} style={{
-                      padding: "8px 10px", marginBottom: 4,
-                      background: "#0a1628", borderRadius: 6,
-                      border: "1px solid #0f2040"
-                    }}>
-                      <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 2 }}>
-                        <span style={{ fontSize: 10, color: "#10B981", fontWeight: 600, fontFamily: "monospace" }}>
-                          {func.name.split('.').pop()}
-                        </span>
-                        {func.is_async && (
-                          <span style={{ fontSize: 8, color: "#6366f1", background: "#1e1b4b", padding: "1px 4px", borderRadius: 3 }}>
-                            async
+                  {selected.functions.map((func, i) => {
+                    const isSelected = selectedFunction?.name === func.name
+                    // Find calls from this function
+                    const callsFrom = (CODE_GRAPH.function_calls || []).filter(c =>
+                      c.source_file === selected.id && c.source_function === func.name
+                    )
+                    const callsTo = (CODE_GRAPH.function_calls || []).filter(c =>
+                      c.target_file === selected.id && c.target_function === func.name
+                    )
+
+                    return (
+                      <div key={i}
+                        onClick={() => setSelectedFunction(isSelected ? null : {...func, calls_from: callsFrom, calls_to: callsTo})}
+                        style={{
+                          padding: "8px 10px", marginBottom: 4,
+                          background: isSelected ? "#1e3a5f" : "#0a1628",
+                          borderRadius: 6,
+                          border: `1px solid ${isSelected ? "#3b82f6" : "#0f2040"}`,
+                          cursor: "pointer",
+                          transition: "all 0.15s"
+                        }}
+                        onMouseEnter={e => { if (!isSelected) e.target.style.background = "#0f2040" }}
+                        onMouseLeave={e => { if (!isSelected) e.target.style.background = "#0a1628" }}
+                      >
+                        <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 2 }}>
+                          <span style={{ fontSize: 10, color: isSelected ? "#3b82f6" : "#10B981", fontWeight: 600, fontFamily: "monospace" }}>
+                            {func.name.split('.').pop()}
                           </span>
-                        )}
+                          {func.is_async && (
+                            <span style={{ fontSize: 8, color: "#6366f1", background: "#1e1b4b", padding: "1px 4px", borderRadius: 3 }}>
+                              async
+                            </span>
+                          )}
+                          {callsFrom.length > 0 && (
+                            <span style={{ fontSize: 8, color: "#64748b", marginLeft: "auto" }}>
+                              → {callsFrom.length} calls
+                            </span>
+                          )}
+                        </div>
+                        <div style={{ fontSize: 9, color: "#64748b", fontFamily: "monospace" }}>
+                          ({func.params.join(', ')})
+                        </div>
+                        <div style={{ fontSize: 8, color: "#334155", marginTop: 3 }}>
+                          lines {func.line_start}-{func.line_end}
+                        </div>
                       </div>
-                      <div style={{ fontSize: 9, color: "#64748b", fontFamily: "monospace" }}>
-                        ({func.params.join(', ')})
-                      </div>
-                      <div style={{ fontSize: 8, color: "#334155", marginTop: 3 }}>
-                        lines {func.line_start}-{func.line_end}
-                      </div>
+                    )
+                  })}
+                </div>
+              )}
+
+              {/* Function Call Graph (TIER 2) */}
+              {selectedFunction && (
+                <div style={{ marginBottom: 14, paddingTop: 14, borderTop: "1px solid #0f2040" }}>
+                  <div style={{ fontSize: 9, color: "#334155", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 8 }}>
+                    CALL GRAPH: {selectedFunction.name.split('.').pop()}
+                  </div>
+
+                  {selectedFunction.calls_from && selectedFunction.calls_from.length > 0 && (
+                    <div style={{ marginBottom: 10 }}>
+                      <div style={{ fontSize: 8, color: "#64748b", marginBottom: 4 }}>Calls to:</div>
+                      {selectedFunction.calls_from.map((call, i) => (
+                        <div key={i} style={{
+                          padding: "5px 8px", marginBottom: 2,
+                          background: "#064e3b", borderRadius: 4,
+                          border: "1px solid #065f46"
+                        }}>
+                          <span style={{ fontSize: 9, color: "#10B981", fontFamily: "monospace" }}>
+                            {call.target_file !== selected.id && `${call.target_file}.`}
+                            {call.target_function.split('.').pop()}
+                          </span>
+                          <span style={{ fontSize: 8, color: "#334155", marginLeft: 4 }}>
+                            line {call.line}
+                          </span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  )}
+
+                  {selectedFunction.calls_to && selectedFunction.calls_to.length > 0 && (
+                    <div>
+                      <div style={{ fontSize: 8, color: "#64748b", marginBottom: 4 }}>Called by:</div>
+                      {selectedFunction.calls_to.map((call, i) => (
+                        <div key={i} style={{
+                          padding: "5px 8px", marginBottom: 2,
+                          background: "#1e1b4b", borderRadius: 4,
+                          border: "1px solid #312e81"
+                        }}>
+                          <span style={{ fontSize: 9, color: "#6366f1", fontFamily: "monospace" }}>
+                            {call.source_file !== selected.id && `${call.source_file}.`}
+                            {call.source_function.split('.').pop()}
+                          </span>
+                          <span style={{ fontSize: 8, color: "#334155", marginLeft: 4 }}>
+                            line {call.line}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {(!selectedFunction.calls_from || selectedFunction.calls_from.length === 0) &&
+                   (!selectedFunction.calls_to || selectedFunction.calls_to.length === 0) && (
+                    <div style={{ fontSize: 9, color: "#64748b", fontStyle: "italic" }}>
+                      No calls tracked for this function
+                    </div>
+                  )}
                 </div>
               )}
 
