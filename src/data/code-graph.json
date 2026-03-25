@@ -3,7 +3,7 @@
   "language": "javascript",
   "stats": {
     "total_nodes": 89,
-    "total_edges": 32,
+    "total_edges": 165,
     "total_sloc": 9540,
     "total_commits": 158,
     "total_bugs": 5,
@@ -41,7 +41,7 @@
       "methods": 1,
       "imports": 22,
       "fan_in": 0,
-      "fan_out": 1,
+      "fan_out": 18,
       "complexity": 3,
       "nesting": 1,
       "commits": 3,
@@ -56,7 +56,7 @@
       "sloc": 82,
       "methods": 5,
       "imports": 3,
-      "fan_in": 0,
+      "fan_in": 13,
       "fan_out": 0,
       "complexity": 7,
       "nesting": 1,
@@ -72,8 +72,8 @@
       "sloc": 11,
       "methods": 1,
       "imports": 1,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 2,
+      "fan_out": 1,
       "complexity": 1,
       "nesting": 1,
       "commits": 2,
@@ -88,7 +88,7 @@
       "sloc": 39,
       "methods": 1,
       "imports": 1,
-      "fan_in": 0,
+      "fan_in": 2,
       "fan_out": 0,
       "complexity": 7,
       "nesting": 2,
@@ -104,8 +104,8 @@
       "sloc": 51,
       "methods": 1,
       "imports": 3,
-      "fan_in": 2,
-      "fan_out": 0,
+      "fan_in": 4,
+      "fan_out": 2,
       "complexity": 8,
       "nesting": 2,
       "commits": 2,
@@ -120,7 +120,7 @@
       "sloc": 40,
       "methods": 1,
       "imports": 3,
-      "fan_in": 0,
+      "fan_in": 2,
       "fan_out": 0,
       "complexity": 4,
       "nesting": 2,
@@ -136,7 +136,7 @@
       "sloc": 66,
       "methods": 1,
       "imports": 1,
-      "fan_in": 0,
+      "fan_in": 2,
       "fan_out": 0,
       "complexity": 9,
       "nesting": 2,
@@ -152,8 +152,8 @@
       "sloc": 149,
       "methods": 1,
       "imports": 2,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 3,
+      "fan_out": 1,
       "complexity": 28,
       "nesting": 2,
       "commits": 4,
@@ -168,7 +168,7 @@
       "sloc": 23,
       "methods": 1,
       "imports": 1,
-      "fan_in": 0,
+      "fan_in": 1,
       "fan_out": 0,
       "complexity": 2,
       "nesting": 1,
@@ -184,8 +184,8 @@
       "sloc": 61,
       "methods": 0,
       "imports": 3,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 10,
+      "fan_out": 3,
       "complexity": 6,
       "nesting": 2,
       "commits": 2,
@@ -200,8 +200,8 @@
       "sloc": 35,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 4,
+      "fan_out": 1,
       "complexity": 7,
       "nesting": 2,
       "commits": 2,
@@ -216,8 +216,8 @@
       "sloc": 55,
       "methods": 0,
       "imports": 3,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 9,
+      "fan_out": 1,
       "complexity": 6,
       "nesting": 1,
       "commits": 2,
@@ -232,7 +232,7 @@
       "sloc": 64,
       "methods": 0,
       "imports": 2,
-      "fan_in": 0,
+      "fan_in": 3,
       "fan_out": 0,
       "complexity": 5,
       "nesting": 3,
@@ -248,8 +248,8 @@
       "sloc": 183,
       "methods": 0,
       "imports": 3,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 4,
+      "fan_out": 2,
       "complexity": 25,
       "nesting": 2,
       "commits": 4,
@@ -264,7 +264,7 @@
       "sloc": 57,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
+      "fan_in": 2,
       "fan_out": 0,
       "complexity": 16,
       "nesting": 2,
@@ -280,8 +280,8 @@
       "sloc": 269,
       "methods": 0,
       "imports": 2,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 7,
+      "fan_out": 1,
       "complexity": 27,
       "nesting": 2,
       "commits": 5,
@@ -296,8 +296,8 @@
       "sloc": 76,
       "methods": 0,
       "imports": 3,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 8,
+      "fan_out": 3,
       "complexity": 12,
       "nesting": 2,
       "commits": 3,
@@ -312,7 +312,7 @@
       "sloc": 71,
       "methods": 1,
       "imports": 0,
-      "fan_in": 0,
+      "fan_in": 3,
       "fan_out": 0,
       "complexity": 7,
       "nesting": 2,
@@ -328,7 +328,7 @@
       "sloc": 97,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
+      "fan_in": 3,
       "fan_out": 0,
       "complexity": 10,
       "nesting": 2,
@@ -344,8 +344,8 @@
       "sloc": 55,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 2,
+      "fan_out": 1,
       "complexity": 8,
       "nesting": 3,
       "commits": 2,
@@ -360,7 +360,7 @@
       "sloc": 6,
       "methods": 0,
       "imports": 0,
-      "fan_in": 0,
+      "fan_in": 3,
       "fan_out": 0,
       "complexity": 0,
       "nesting": 1,
@@ -376,8 +376,8 @@
       "sloc": 7,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 2,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 1,
       "commits": 2,
@@ -392,8 +392,8 @@
       "sloc": 54,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 2,
+      "fan_out": 1,
       "complexity": 9,
       "nesting": 2,
       "commits": 2,
@@ -408,8 +408,8 @@
       "sloc": 7,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 2,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 1,
       "commits": 2,
@@ -424,7 +424,7 @@
       "sloc": 75,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
+      "fan_in": 1,
       "fan_out": 0,
       "complexity": 3,
       "nesting": 2,
@@ -504,7 +504,7 @@
       "sloc": 15,
       "methods": 1,
       "imports": 2,
-      "fan_in": 4,
+      "fan_in": 5,
       "fan_out": 1,
       "complexity": 1,
       "nesting": 1,
@@ -568,7 +568,7 @@
       "sloc": 136,
       "methods": 1,
       "imports": 1,
-      "fan_in": 0,
+      "fan_in": 1,
       "fan_out": 0,
       "complexity": 4,
       "nesting": 6,
@@ -632,7 +632,7 @@
       "sloc": 180,
       "methods": 1,
       "imports": 1,
-      "fan_in": 0,
+      "fan_in": 3,
       "fan_out": 0,
       "complexity": 23,
       "nesting": 2,
@@ -712,8 +712,8 @@
       "sloc": 339,
       "methods": 1,
       "imports": 6,
-      "fan_in": 1,
-      "fan_out": 0,
+      "fan_in": 2,
+      "fan_out": 5,
       "complexity": 9,
       "nesting": 5,
       "commits": 4,
@@ -760,7 +760,7 @@
       "sloc": 66,
       "methods": 0,
       "imports": 0,
-      "fan_in": 7,
+      "fan_in": 13,
       "fan_out": 0,
       "complexity": 1,
       "nesting": 1,
@@ -776,7 +776,7 @@
       "sloc": 61,
       "methods": 0,
       "imports": 0,
-      "fan_in": 3,
+      "fan_in": 6,
       "fan_out": 0,
       "complexity": 1,
       "nesting": 1,
@@ -792,7 +792,7 @@
       "sloc": 20,
       "methods": 0,
       "imports": 0,
-      "fan_in": 0,
+      "fan_in": 3,
       "fan_out": 0,
       "complexity": 1,
       "nesting": 0,
@@ -808,7 +808,7 @@
       "sloc": 21,
       "methods": 0,
       "imports": 0,
-      "fan_in": 3,
+      "fan_in": 6,
       "fan_out": 0,
       "complexity": 0,
       "nesting": 1,
@@ -825,7 +825,7 @@
       "methods": 2,
       "imports": 5,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 2,
       "complexity": 0,
       "nesting": 1,
       "commits": 1,
@@ -841,7 +841,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 1,
       "nesting": 2,
       "commits": 1,
@@ -856,8 +856,8 @@
       "sloc": 154,
       "methods": 0,
       "imports": 1,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 9,
+      "fan_out": 1,
       "complexity": 23,
       "nesting": 2,
       "commits": 4,
@@ -872,8 +872,8 @@
       "sloc": 80,
       "methods": 1,
       "imports": 21,
-      "fan_in": 0,
-      "fan_out": 0,
+      "fan_in": 11,
+      "fan_out": 15,
       "complexity": 0,
       "nesting": 1,
       "commits": 2,
@@ -889,7 +889,7 @@
       "methods": 2,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 2,
       "commits": 1,
@@ -905,7 +905,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 1,
       "commits": 1,
@@ -921,7 +921,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 3,
       "nesting": 2,
       "commits": 1,
@@ -937,7 +937,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 1,
       "nesting": 2,
       "commits": 1,
@@ -953,7 +953,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 1,
       "nesting": 2,
       "commits": 1,
@@ -969,7 +969,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 1,
       "commits": 1,
@@ -985,7 +985,7 @@
       "methods": 3,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 1,
       "commits": 1,
@@ -1001,7 +1001,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 4,
       "nesting": 2,
       "commits": 2,
@@ -1017,7 +1017,7 @@
       "methods": 1,
       "imports": 13,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 7,
       "complexity": 1,
       "nesting": 2,
       "commits": 1,
@@ -1033,7 +1033,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 4,
       "nesting": 2,
       "commits": 2,
@@ -1049,7 +1049,7 @@
       "methods": 0,
       "imports": 2,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 7,
       "nesting": 2,
       "commits": 1,
@@ -1065,7 +1065,7 @@
       "methods": 1,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 2,
       "nesting": 2,
       "commits": 1,
@@ -1081,7 +1081,7 @@
       "methods": 0,
       "imports": 2,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 6,
       "nesting": 2,
       "commits": 1,
@@ -1097,7 +1097,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 4,
       "nesting": 2,
       "commits": 1,
@@ -1129,7 +1129,7 @@
       "methods": 0,
       "imports": 5,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 2,
       "complexity": 0,
       "nesting": 1,
       "commits": 1,
@@ -1145,7 +1145,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 2,
       "complexity": 7,
       "nesting": 1,
       "commits": 3,
@@ -1161,7 +1161,7 @@
       "methods": 0,
       "imports": 2,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 1,
       "commits": 2,
@@ -1177,7 +1177,7 @@
       "methods": 0,
       "imports": 6,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 2,
       "complexity": 4,
       "nesting": 1,
       "commits": 1,
@@ -1193,7 +1193,7 @@
       "methods": 0,
       "imports": 5,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 14,
       "nesting": 2,
       "commits": 1,
@@ -1209,7 +1209,7 @@
       "methods": 0,
       "imports": 3,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 1,
       "commits": 2,
@@ -1225,7 +1225,7 @@
       "methods": 0,
       "imports": 6,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 5,
       "complexity": 13,
       "nesting": 2,
       "commits": 3,
@@ -1241,7 +1241,7 @@
       "methods": 0,
       "imports": 5,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 2,
       "nesting": 1,
       "commits": 2,
@@ -1257,7 +1257,7 @@
       "methods": 0,
       "imports": 9,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 7,
       "complexity": 6,
       "nesting": 1,
       "commits": 4,
@@ -1273,7 +1273,7 @@
       "methods": 0,
       "imports": 2,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 0,
       "nesting": 1,
       "commits": 1,
@@ -1289,7 +1289,7 @@
       "methods": 3,
       "imports": 9,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 7,
       "complexity": 12,
       "nesting": 2,
       "commits": 2,
@@ -1305,7 +1305,7 @@
       "methods": 2,
       "imports": 8,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 6,
       "complexity": 0,
       "nesting": 2,
       "commits": 1,
@@ -1321,7 +1321,7 @@
       "methods": 2,
       "imports": 8,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 6,
       "complexity": 15,
       "nesting": 2,
       "commits": 3,
@@ -1337,7 +1337,7 @@
       "methods": 0,
       "imports": 4,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 3,
       "complexity": 2,
       "nesting": 2,
       "commits": 1,
@@ -1353,7 +1353,7 @@
       "methods": 0,
       "imports": 4,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 2,
       "complexity": 3,
       "nesting": 1,
       "commits": 4,
@@ -1369,7 +1369,7 @@
       "methods": 0,
       "imports": 4,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 3,
       "complexity": 1,
       "nesting": 2,
       "commits": 1,
@@ -1385,7 +1385,7 @@
       "methods": 1,
       "imports": 2,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 2,
       "nesting": 1,
       "commits": 1,
@@ -1401,7 +1401,7 @@
       "methods": 1,
       "imports": 2,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 4,
       "nesting": 1,
       "commits": 1,
@@ -1433,7 +1433,7 @@
       "methods": 0,
       "imports": 2,
       "fan_in": 0,
-      "fan_out": 0,
+      "fan_out": 1,
       "complexity": 7,
       "nesting": 2,
       "commits": 2,
@@ -1450,6 +1450,186 @@
     {
       "source": "server",
       "target": "config",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "auth",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "chat",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "flow",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "files",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "sync",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "config",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "PromptAssembler",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "FlowEngine",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "CheckpointManager",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "FileManager",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "GitSync",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "GroupChatEngine",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "groupchat",
+      "type": "import"
+    },
+    {
+      "source": "server",
+      "target": "SessionStore",
+      "type": "import"
+    },
+    {
+      "source": "auth",
+      "target": "users",
+      "type": "import"
+    },
+    {
+      "source": "config",
+      "target": "agents",
+      "type": "import"
+    },
+    {
+      "source": "config",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "groupchat",
+      "target": "Whiteboard",
+      "type": "import"
+    },
+    {
+      "source": "ApiRouter",
+      "target": "AnthropicProvider",
+      "type": "import"
+    },
+    {
+      "source": "ApiRouter",
+      "target": "DeepSeekProvider",
+      "type": "import"
+    },
+    {
+      "source": "ApiRouter",
+      "target": "OpenAIProvider",
+      "type": "import"
+    },
+    {
+      "source": "CheckpointManager",
+      "target": "types",
+      "type": "import"
+    },
+    {
+      "source": "ContextLoader",
+      "target": "agents",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine",
+      "target": "flows",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine",
+      "target": "types",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine",
+      "target": "agents",
+      "type": "import"
+    },
+    {
+      "source": "PromptAssembler",
+      "target": "agents",
+      "type": "import"
+    },
+    {
+      "source": "PromptAssembler",
+      "target": "flows",
+      "type": "import"
+    },
+    {
+      "source": "PromptAssembler",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "AnthropicProvider",
+      "target": "BaseProvider",
+      "type": "import"
+    },
+    {
+      "source": "DeepSeekProvider",
+      "target": "OpenAICompatibleProvider",
+      "type": "import"
+    },
+    {
+      "source": "OpenAICompatibleProvider",
+      "target": "BaseProvider",
+      "type": "import"
+    },
+    {
+      "source": "OpenAIProvider",
+      "target": "OpenAICompatibleProvider",
       "type": "import"
     },
     {
@@ -1600,6 +1780,491 @@
     {
       "source": "FlowView",
       "target": "useFlow",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatView",
+      "target": "agents",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatView",
+      "target": "users",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatView",
+      "target": "AgentBadge",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatView",
+      "target": "WhiteboardPanel",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatView",
+      "target": "useGroupChat",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatView.test",
+      "target": "useGroupChat",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatView.test",
+      "target": "GroupChatView",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-semi-manual.e2e",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "mockProvider",
+      "target": "BaseProvider",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "auth",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "chat",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "flow",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "files",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "config",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "groupchat",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "PromptAssembler",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "FlowEngine",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "CheckpointManager",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "FileManager",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "GroupChatEngine",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "testServer",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "useGroupChat.test",
+      "target": "useGroupChat",
+      "type": "import"
+    },
+    {
+      "source": "auth.middleware.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "chat-robustness.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "chat.route.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "config.route.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "files.route.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "flow.route.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-human-loop.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-semi-manual.test",
+      "target": "GroupChatEngine",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-semi-manual.test",
+      "target": "PromptAssembler",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-semi-manual.test",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-semi-manual.test",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-semi-manual.test",
+      "target": "groupchat",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-semi-manual.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "groupchat-semi-manual.test",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "groupchat.route.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "2026-03-24_config-model-ids.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "2026-03-24_groupchat-provider-error.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "2026-03-24_model-catalog-ids.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "2026-03-24_provider-fallback.test",
+      "target": "testServer",
+      "type": "import"
+    },
+    {
+      "source": "2026-03-25_sessionstore-connected.test",
+      "target": "FlowEngine",
+      "type": "import"
+    },
+    {
+      "source": "2026-03-25_sessionstore-connected.test",
+      "target": "SessionStore",
+      "type": "import"
+    },
+    {
+      "source": "ApiRouter.test",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "ApiRouter.test",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "CheckpointManager.test",
+      "target": "CheckpointManager",
+      "type": "import"
+    },
+    {
+      "source": "config-runtime-sync.test",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "config-runtime-sync.test",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "config-validation.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "ContextLoader.test",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "data-layer.test",
+      "target": "types",
+      "type": "import"
+    },
+    {
+      "source": "data-layer.test",
+      "target": "agents",
+      "type": "import"
+    },
+    {
+      "source": "data-layer.test",
+      "target": "users",
+      "type": "import"
+    },
+    {
+      "source": "data-layer.test",
+      "target": "flows",
+      "type": "import"
+    },
+    {
+      "source": "data-layer.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "FileManager.test",
+      "target": "FileManager",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine.test",
+      "target": "FlowEngine",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine.test",
+      "target": "CheckpointManager",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine.test",
+      "target": "PromptAssembler",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine.test",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine.test",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "FlowEngine.test",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "GitSync.test",
+      "target": "GitSync",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.extended.test",
+      "target": "GroupChatEngine",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.extended.test",
+      "target": "Whiteboard",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.extended.test",
+      "target": "PromptAssembler",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.extended.test",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.extended.test",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.extended.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.extended.test",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.semi-manual.test",
+      "target": "GroupChatEngine",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.semi-manual.test",
+      "target": "PromptAssembler",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.semi-manual.test",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.semi-manual.test",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.semi-manual.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.semi-manual.test",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.test",
+      "target": "GroupChatEngine",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.test",
+      "target": "PromptAssembler",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.test",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.test",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.test",
+      "target": "models",
+      "type": "import"
+    },
+    {
+      "source": "GroupChatEngine.test",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "message-format.test",
+      "target": "GroupChatEngine",
+      "type": "import"
+    },
+    {
+      "source": "message-format.test",
+      "target": "ApiRouter",
+      "type": "import"
+    },
+    {
+      "source": "message-format.test",
+      "target": "mockProvider",
+      "type": "import"
+    },
+    {
+      "source": "PromptAssembler.test",
+      "target": "PromptAssembler",
+      "type": "import"
+    },
+    {
+      "source": "PromptAssembler.test",
+      "target": "ContextLoader",
+      "type": "import"
+    },
+    {
+      "source": "providers-contract.test",
+      "target": "AnthropicProvider",
+      "type": "import"
+    },
+    {
+      "source": "providers-contract.test",
+      "target": "DeepSeekProvider",
+      "type": "import"
+    },
+    {
+      "source": "providers-contract.test",
+      "target": "OpenAIProvider",
+      "type": "import"
+    },
+    {
+      "source": "SessionStore.test",
+      "target": "SessionStore",
+      "type": "import"
+    },
+    {
+      "source": "SQLiteStore.test",
+      "target": "SQLiteStore",
+      "type": "import"
+    },
+    {
+      "source": "Whiteboard.test",
+      "target": "Whiteboard",
       "type": "import"
     }
   ]
