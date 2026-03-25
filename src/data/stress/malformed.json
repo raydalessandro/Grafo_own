@@ -1,0 +1,184 @@
+{
+  "name": "stress-malformed",
+  "language": "javascript",
+  "stats": {
+    "total_nodes": 3,
+    "total_edges": 2
+  },
+  "nodes": [
+    {
+      "id": "node1",
+      "file": "src/node1.js"
+    },
+    {
+      "id": "node2"
+    },
+    {
+      "id": "node3",
+      "file": "src/unknown/node3.js",
+      "layer": "unknown",
+      "role": "test",
+      "sloc": 70,
+      "methods": 11,
+      "imports": 13,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 14,
+      "nesting": 1,
+      "commits": 4,
+      "authors": 2,
+      "bugs": 1,
+      "exports": [
+        "function0",
+        "function1",
+        "function2",
+        "function3",
+        "function4",
+        "function5",
+        "function6",
+        "function7",
+        "function8",
+        "function9",
+        "function10"
+      ],
+      "last_modified": "2026-03-22T09:49:57.835Z",
+      "risk_score": 68,
+      "functions": [
+        {
+          "name": "node3.function0",
+          "params": [
+            "param0"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 10,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function1",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 21,
+          "line_end": 37,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function2",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 41,
+          "line_end": 49,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function3",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 61,
+          "line_end": 72,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function4",
+          "params": [
+            "param0"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 81,
+          "line_end": 99,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function5",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 101,
+          "line_end": 119,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function6",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 121,
+          "line_end": 126,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function7",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 141,
+          "line_end": 158,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function8",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 161,
+          "line_end": 172,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function9",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 181,
+          "line_end": 186,
+          "jsdoc": null
+        },
+        {
+          "name": "node3.function10",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 201,
+          "line_end": 217,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "node1",
+      "target": "node2"
+    },
+    {
+      "source": "node2"
+    }
+  ],
+  "function_calls": []
+}

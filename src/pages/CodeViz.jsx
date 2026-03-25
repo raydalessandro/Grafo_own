@@ -55,10 +55,21 @@ export default function CodeViz() {
     if (!svgRef.current || dims.w === 0) return
     const { w, h } = dims
 
+    // Bug #1 fix: Stop existing simulation before creating new one
+    if (simRef.current) {
+      simRef.current.stop()
+      simRef.current = null
+    }
+
     const svg = d3.select(svgRef.current)
     svg.selectAll("*").remove()
 
-    const nodes = filteredNodes.map(n => ({ ...n }))
+    // Initialize node positions to avoid NaN (Bug #2 fix)
+    const nodes = filteredNodes.map(n => ({
+      ...n,
+      x: n.x || Math.random() * w,
+      y: n.y || Math.random() * h
+    }))
     const nodeById = Object.fromEntries(nodes.map(n => [n.id, n]))
     const edges = filteredEdges.map(e => ({
       ...e,
@@ -86,8 +97,9 @@ export default function CodeViz() {
 
     svg.append("rect").attr("width", w).attr("height", h).attr("fill", "url(#grid-code)")
 
+    // Bug #7 fix: Extend zoom range for large graphs
     const zoom = d3.zoom()
-      .scaleExtent([0.2, 4])
+      .scaleExtent([0.05, 8])
       .on("zoom", e => g.attr("transform", e.transform))
     svg.call(zoom)
     svg.on("click.deselect", () => setSelected(null))
@@ -191,15 +203,16 @@ export default function CodeViz() {
       .attr("stroke", d => LAYER_CONFIG[d.layer]?.color || "#6B7280")
       .attr("stroke-width", d => d.commits > 0 ? 2 : 1.5)
 
-    // Emoji or icon
+    // Emoji or icon (Bug #6 fix: pointer-events none to avoid intercepting clicks)
     node.append("text")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "central")
       .attr("y", -2)
       .attr("font-size", 12)
+      .style("pointer-events", "none")
       .text(d => LAYER_CONFIG[d.layer]?.emoji || "📄")
 
-    // Label (filename)
+    // Label (filename) (Bug #6 fix: pointer-events none)
     node.append("text")
       .attr("text-anchor", "middle")
       .attr("y", radius + 12)
@@ -207,6 +220,7 @@ export default function CodeViz() {
       .attr("font-weight", "600")
       .attr("fill", "#cbd5e1")
       .attr("font-family", "'JetBrains Mono', monospace")
+      .style("pointer-events", "none")
       .text(d => d.id)
 
     // Function count badge (if has functions)
@@ -228,6 +242,7 @@ export default function CodeViz() {
       .attr("font-size", 9)
       .attr("font-weight", "700")
       .attr("fill", "#fff")
+      .style("pointer-events", "none")
       .text(d => d.functions.length)
 
     simulation.on("tick", () => {
@@ -237,7 +252,13 @@ export default function CodeViz() {
       node.attr("transform", d => `translate(${d.x},${d.y})`)
     })
 
-    return () => simulation.stop()
+    // Bug #1 fix: Proper cleanup to prevent memory leak
+    return () => {
+      if (simRef.current) {
+        simRef.current.stop()
+        simRef.current = null
+      }
+    }
   }, [filteredNodes, filteredEdges, dims])
 
   const connectedNodes = useMemo(() => {

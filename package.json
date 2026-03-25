@@ -6,7 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:stress": "playwright test tests/stress.spec.js",
+    "test:report": "playwright show-report",
+    "generate-fixtures": "node tests/generate-fixtures.js"
   },
   "dependencies": {
     "d3": "^7.9.0",
@@ -14,6 +20,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@vitejs/plugin-react": "^4.3.1",
     "vite": "^5.4.2"
   }

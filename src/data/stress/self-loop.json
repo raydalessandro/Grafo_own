@@ -1,0 +1,188 @@
+{
+  "name": "stress-self-loop",
+  "language": "javascript",
+  "stats": {
+    "total_nodes": 1,
+    "total_edges": 1,
+    "total_sloc": 23,
+    "total_commits": 12,
+    "total_bugs": 3,
+    "total_function_calls": 0
+  },
+  "nodes": [
+    {
+      "id": "self-loop",
+      "file": "src/ui/self-loop.js",
+      "layer": "ui",
+      "role": "test",
+      "sloc": 23,
+      "methods": 11,
+      "imports": 19,
+      "fan_in": 1,
+      "fan_out": 1,
+      "complexity": 4,
+      "nesting": 4,
+      "commits": 12,
+      "authors": 2,
+      "bugs": 3,
+      "exports": [
+        "function0",
+        "function1",
+        "function2",
+        "function3",
+        "function4",
+        "function5",
+        "function6",
+        "function7",
+        "function8",
+        "function9",
+        "function10"
+      ],
+      "last_modified": "2026-03-06T16:01:46.019Z",
+      "risk_score": 72,
+      "functions": [
+        {
+          "name": "self-loop.function0",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 7,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function1",
+          "params": [
+            "param0"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 21,
+          "line_end": 35,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function2",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 41,
+          "line_end": 46,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function3",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 61,
+          "line_end": 74,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function4",
+          "params": [
+            "param0"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 81,
+          "line_end": 88,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function5",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 101,
+          "line_end": 117,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function6",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 121,
+          "line_end": 134,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function7",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 141,
+          "line_end": 153,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function8",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 161,
+          "line_end": 180,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function9",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 181,
+          "line_end": 199,
+          "jsdoc": null
+        },
+        {
+          "name": "self-loop.function10",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 201,
+          "line_end": 208,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "self-loop",
+      "target": "self-loop"
+    }
+  ],
+  "function_calls": []
+}

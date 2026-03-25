@@ -1,0 +1,802 @@
+{
+  "name": "stress-orphan-nodes",
+  "language": "javascript",
+  "stats": {
+    "total_nodes": 10,
+    "total_edges": 0,
+    "total_sloc": 2396,
+    "total_commits": 65,
+    "total_bugs": 20,
+    "total_function_calls": 0
+  },
+  "nodes": [
+    {
+      "id": "orphan0",
+      "file": "src/ui/orphan0.js",
+      "layer": "ui",
+      "role": "component",
+      "sloc": 394,
+      "methods": 11,
+      "imports": 4,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 19,
+      "nesting": 3,
+      "commits": 13,
+      "authors": 1,
+      "bugs": 1,
+      "exports": [
+        "function0",
+        "function1",
+        "function2",
+        "function3",
+        "function4",
+        "function5",
+        "function6",
+        "function7",
+        "function8",
+        "function9",
+        "function10"
+      ],
+      "last_modified": "2026-02-06T03:46:44.335Z",
+      "risk_score": 20,
+      "functions": [
+        {
+          "name": "orphan0.function0",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 19,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function1",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 21,
+          "line_end": 28,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function2",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 41,
+          "line_end": 50,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function3",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 61,
+          "line_end": 78,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function4",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 81,
+          "line_end": 96,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function5",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 101,
+          "line_end": 115,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function6",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 121,
+          "line_end": 129,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function7",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 141,
+          "line_end": 158,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function8",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 161,
+          "line_end": 176,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function9",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 181,
+          "line_end": 189,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan0.function10",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 201,
+          "line_end": 210,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    },
+    {
+      "id": "orphan1",
+      "file": "src/ui/orphan1.js",
+      "layer": "ui",
+      "role": "config",
+      "sloc": 367,
+      "methods": 1,
+      "imports": 9,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 33,
+      "nesting": 5,
+      "commits": 3,
+      "authors": 1,
+      "bugs": 2,
+      "exports": [
+        "function0"
+      ],
+      "last_modified": "2026-02-18T11:08:36.468Z",
+      "risk_score": 69,
+      "functions": [
+        {
+          "name": "orphan1.function0",
+          "params": [
+            "param0"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 8,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    },
+    {
+      "id": "orphan2",
+      "file": "src/test/orphan2.js",
+      "layer": "test",
+      "role": "config",
+      "sloc": 137,
+      "methods": 0,
+      "imports": 17,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 5,
+      "nesting": 4,
+      "commits": 2,
+      "authors": 5,
+      "bugs": 3,
+      "exports": [],
+      "last_modified": "2026-01-12T13:56:22.320Z",
+      "risk_score": 79,
+      "functions": [],
+      "function_calls": []
+    },
+    {
+      "id": "orphan3",
+      "file": "src/service/orphan3.js",
+      "layer": "service",
+      "role": "config",
+      "sloc": 23,
+      "methods": 0,
+      "imports": 11,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 3,
+      "nesting": 2,
+      "commits": 14,
+      "authors": 4,
+      "bugs": 3,
+      "exports": [],
+      "last_modified": "2026-01-02T19:00:08.281Z",
+      "risk_score": 85,
+      "functions": [],
+      "function_calls": []
+    },
+    {
+      "id": "orphan4",
+      "file": "src/ui/orphan4.js",
+      "layer": "ui",
+      "role": "test",
+      "sloc": 379,
+      "methods": 4,
+      "imports": 5,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 22,
+      "nesting": 2,
+      "commits": 2,
+      "authors": 4,
+      "bugs": 3,
+      "exports": [
+        "function0",
+        "function1",
+        "function2",
+        "function3"
+      ],
+      "last_modified": "2026-03-10T22:31:33.546Z",
+      "risk_score": 3,
+      "functions": [
+        {
+          "name": "orphan4.function0",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 7,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan4.function1",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 21,
+          "line_end": 26,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan4.function2",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 41,
+          "line_end": 46,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan4.function3",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 61,
+          "line_end": 73,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    },
+    {
+      "id": "orphan5",
+      "file": "src/unknown/orphan5.js",
+      "layer": "unknown",
+      "role": "component",
+      "sloc": 131,
+      "methods": 9,
+      "imports": 12,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 26,
+      "nesting": 1,
+      "commits": 7,
+      "authors": 3,
+      "bugs": 1,
+      "exports": [
+        "function0",
+        "function1",
+        "function2",
+        "function3",
+        "function4",
+        "function5",
+        "function6",
+        "function7",
+        "function8"
+      ],
+      "last_modified": "2026-01-14T16:38:46.151Z",
+      "risk_score": 70,
+      "functions": [
+        {
+          "name": "orphan5.function0",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 20,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan5.function1",
+          "params": [
+            "param0"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 21,
+          "line_end": 37,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan5.function2",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 41,
+          "line_end": 52,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan5.function3",
+          "params": [
+            "param0"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 61,
+          "line_end": 69,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan5.function4",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 81,
+          "line_end": 89,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan5.function5",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 101,
+          "line_end": 119,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan5.function6",
+          "params": [
+            "param0"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 121,
+          "line_end": 130,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan5.function7",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 141,
+          "line_end": 145,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan5.function8",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 161,
+          "line_end": 166,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    },
+    {
+      "id": "orphan6",
+      "file": "src/unknown/orphan6.js",
+      "layer": "unknown",
+      "role": "test",
+      "sloc": 141,
+      "methods": 13,
+      "imports": 14,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 1,
+      "nesting": 1,
+      "commits": 1,
+      "authors": 1,
+      "bugs": 1,
+      "exports": [
+        "function0",
+        "function1",
+        "function2",
+        "function3",
+        "function4",
+        "function5",
+        "function6",
+        "function7",
+        "function8",
+        "function9",
+        "function10",
+        "function11",
+        "function12"
+      ],
+      "last_modified": "2025-12-30T22:24:04.548Z",
+      "risk_score": 41,
+      "functions": [
+        {
+          "name": "orphan6.function0",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 6,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function1",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 21,
+          "line_end": 32,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function2",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 41,
+          "line_end": 56,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function3",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 61,
+          "line_end": 72,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function4",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 81,
+          "line_end": 87,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function5",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 101,
+          "line_end": 107,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function6",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 121,
+          "line_end": 132,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function7",
+          "params": [
+            "param0"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 141,
+          "line_end": 156,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function8",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 161,
+          "line_end": 171,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function9",
+          "params": [
+            "param0",
+            "param1",
+            "param2",
+            "param3"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 181,
+          "line_end": 191,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function10",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 201,
+          "line_end": 214,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function11",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 221,
+          "line_end": 228,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan6.function12",
+          "params": [
+            "param0",
+            "param1"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 241,
+          "line_end": 253,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    },
+    {
+      "id": "orphan7",
+      "file": "src/ui/orphan7.js",
+      "layer": "ui",
+      "role": "test",
+      "sloc": 363,
+      "methods": 2,
+      "imports": 2,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 11,
+      "nesting": 2,
+      "commits": 18,
+      "authors": 2,
+      "bugs": 3,
+      "exports": [
+        "function0",
+        "function1"
+      ],
+      "last_modified": "2026-03-10T11:01:03.283Z",
+      "risk_score": 78,
+      "functions": [
+        {
+          "name": "orphan7.function0",
+          "params": [
+            "param0"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 8,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan7.function1",
+          "params": [
+            "param0"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 21,
+          "line_end": 36,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    },
+    {
+      "id": "orphan8",
+      "file": "src/test/orphan8.js",
+      "layer": "test",
+      "role": "component",
+      "sloc": 221,
+      "methods": 3,
+      "imports": 18,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 1,
+      "nesting": 2,
+      "commits": 3,
+      "authors": 1,
+      "bugs": 1,
+      "exports": [
+        "function0",
+        "function1",
+        "function2"
+      ],
+      "last_modified": "2026-02-11T16:28:16.422Z",
+      "risk_score": 49,
+      "functions": [
+        {
+          "name": "orphan8.function0",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 1,
+          "line_end": 5,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan8.function1",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 21,
+          "line_end": 27,
+          "jsdoc": null
+        },
+        {
+          "name": "orphan8.function2",
+          "params": [
+            "param0",
+            "param1",
+            "param2"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 41,
+          "line_end": 45,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
+    },
+    {
+      "id": "orphan9",
+      "file": "src/unknown/orphan9.js",
+      "layer": "unknown",
+      "role": "test",
+      "sloc": 240,
+      "methods": 0,
+      "imports": 5,
+      "fan_in": 0,
+      "fan_out": 0,
+      "complexity": 44,
+      "nesting": 5,
+      "commits": 2,
+      "authors": 2,
+      "bugs": 2,
+      "exports": [],
+      "last_modified": "2026-02-18T20:42:00.291Z",
+      "risk_score": 57,
+      "functions": [],
+      "function_calls": []
+    }
+  ],
+  "edges": [],
+  "function_calls": []
+}

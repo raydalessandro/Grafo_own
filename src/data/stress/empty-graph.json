@@ -1,0 +1,15 @@
+{
+  "name": "stress-empty-graph",
+  "language": "javascript",
+  "stats": {
+    "total_nodes": 0,
+    "total_edges": 0,
+    "total_sloc": 0,
+    "total_commits": 0,
+    "total_bugs": 0,
+    "total_function_calls": 0
+  },
+  "nodes": [],
+  "edges": [],
+  "function_calls": []
+}
