@@ -32,10 +32,12 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:defineConfig"
+        "default"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "server",
@@ -52,9 +54,171 @@
       "commits": 3,
       "authors": 2,
       "bugs": 1,
-      "exports": [],
+      "exports": [
+        "startServer"
+      ],
       "last_modified": "2026-03-25T10:33:07+01:00",
-      "risk_score": 32
+      "risk_score": 32,
+      "functions": [
+        {
+          "name": "startServer",
+          "params": [
+            "port"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 30,
+          "line_end": 68,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "startServer",
+          "to": "express",
+          "line": 31
+        },
+        {
+          "from": "startServer",
+          "to": "resolve",
+          "line": 32
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 34
+        },
+        {
+          "from": "startServer",
+          "to": "cors",
+          "line": 34
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 35
+        },
+        {
+          "from": "startServer",
+          "to": "json",
+          "line": 35
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 36
+        },
+        {
+          "from": "startServer",
+          "to": "createSessionStore",
+          "line": 44
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 48
+        },
+        {
+          "from": "startServer",
+          "to": "createChatRoute",
+          "line": 48
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 49
+        },
+        {
+          "from": "startServer",
+          "to": "createFlowRoute",
+          "line": 49
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 50
+        },
+        {
+          "from": "startServer",
+          "to": "createFilesRoute",
+          "line": 50
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 51
+        },
+        {
+          "from": "startServer",
+          "to": "createSyncRoute",
+          "line": 51
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 52
+        },
+        {
+          "from": "startServer",
+          "to": "createConfigRoute",
+          "line": 52
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 53
+        },
+        {
+          "from": "startServer",
+          "to": "createGroupChatRoute",
+          "line": 53
+        },
+        {
+          "from": "startServer",
+          "to": "join",
+          "line": 55
+        },
+        {
+          "from": "startServer",
+          "to": "use",
+          "line": 56
+        },
+        {
+          "from": "startServer",
+          "to": "static",
+          "line": 56
+        },
+        {
+          "from": "startServer",
+          "to": "get",
+          "line": 57
+        },
+        {
+          "from": "startServer",
+          "to": "startsWith",
+          "line": 58
+        },
+        {
+          "from": "startServer",
+          "to": "sendFile",
+          "line": 59
+        },
+        {
+          "from": "startServer",
+          "to": "join",
+          "line": 59
+        },
+        {
+          "from": "startServer",
+          "to": "listen",
+          "line": 63
+        },
+        {
+          "from": "startServer",
+          "to": "log",
+          "line": 64
+        }
+      ]
     },
     {
       "id": "models",
@@ -72,17 +236,156 @@
       "authors": 2,
       "bugs": 0,
       "exports": [
-        "setAgentModels",
-        "setApiKey",
-        "getKeyStatus",
+        "DEFAULTS",
         "MODEL_CATALOG",
-        "getApiKeys",
         "PROVIDER_CONFIGS",
         "getAgentModels",
-        "DEFAULTS"
+        "setAgentModels",
+        "getApiKeys",
+        "setApiKey",
+        "getKeyStatus"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 23
+      "risk_score": 23,
+      "functions": [
+        {
+          "name": "getAgentModels",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 44,
+          "line_end": 51,
+          "jsdoc": null
+        },
+        {
+          "name": "setAgentModels",
+          "params": [
+            "config"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 53,
+          "line_end": 58,
+          "jsdoc": null
+        },
+        {
+          "name": "getApiKeys",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 60,
+          "line_end": 72,
+          "jsdoc": null
+        },
+        {
+          "name": "setApiKey",
+          "params": [
+            "provider",
+            "key"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 74,
+          "line_end": 83,
+          "jsdoc": null
+        },
+        {
+          "name": "getKeyStatus",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 85,
+          "line_end": 92,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "getAgentModels",
+          "to": "existsSync",
+          "line": 46
+        },
+        {
+          "from": "getAgentModels",
+          "to": "parse",
+          "line": 47
+        },
+        {
+          "from": "getAgentModels",
+          "to": "readFileSync",
+          "line": 47
+        },
+        {
+          "from": "setAgentModels",
+          "to": "getAgentModels",
+          "line": 54
+        },
+        {
+          "from": "setAgentModels",
+          "to": "writeFileSync",
+          "line": 56
+        },
+        {
+          "from": "setAgentModels",
+          "to": "stringify",
+          "line": 56
+        },
+        {
+          "from": "getApiKeys",
+          "to": "existsSync",
+          "line": 63
+        },
+        {
+          "from": "getApiKeys",
+          "to": "parse",
+          "line": 64
+        },
+        {
+          "from": "getApiKeys",
+          "to": "readFileSync",
+          "line": 64
+        },
+        {
+          "from": "setApiKey",
+          "to": "existsSync",
+          "line": 77
+        },
+        {
+          "from": "setApiKey",
+          "to": "assign",
+          "line": 78
+        },
+        {
+          "from": "setApiKey",
+          "to": "parse",
+          "line": 78
+        },
+        {
+          "from": "setApiKey",
+          "to": "readFileSync",
+          "line": 78
+        },
+        {
+          "from": "setApiKey",
+          "to": "writeFileSync",
+          "line": 82
+        },
+        {
+          "from": "setApiKey",
+          "to": "stringify",
+          "line": 82
+        },
+        {
+          "from": "getKeyStatus",
+          "to": "getApiKeys",
+          "line": 86
+        },
+        {
+          "from": "getKeyStatus",
+          "to": "entries",
+          "line": 88
+        }
+      ]
     },
     {
       "id": "auth",
@@ -103,7 +406,39 @@
         "authMiddleware"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 11
+      "risk_score": 11,
+      "functions": [
+        {
+          "name": "authMiddleware",
+          "params": [
+            "req",
+            "res",
+            "next"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 5,
+          "line_end": 15,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "authMiddleware",
+          "to": "json",
+          "line": 10
+        },
+        {
+          "from": "authMiddleware",
+          "to": "status",
+          "line": 10
+        },
+        {
+          "from": "authMiddleware",
+          "to": "next",
+          "line": 14
+        }
+      ]
     },
     {
       "id": "chat",
@@ -124,7 +459,143 @@
         "createChatRoute"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 28
+      "risk_score": 28,
+      "functions": [
+        {
+          "name": "createChatRoute",
+          "params": [
+            "promptAssembler",
+            "apiRouter"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 5,
+          "line_end": 47,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createChatRoute",
+          "to": "Router",
+          "line": 6
+        },
+        {
+          "from": "createChatRoute",
+          "to": "post",
+          "line": 8
+        },
+        {
+          "from": "createChatRoute",
+          "to": "json",
+          "line": 12
+        },
+        {
+          "from": "createChatRoute",
+          "to": "status",
+          "line": 12
+        },
+        {
+          "from": "createChatRoute",
+          "to": "assembleForAgent",
+          "line": 15
+        },
+        {
+          "from": "createChatRoute",
+          "to": "setHeader",
+          "line": 17
+        },
+        {
+          "from": "createChatRoute",
+          "to": "setHeader",
+          "line": 18
+        },
+        {
+          "from": "createChatRoute",
+          "to": "setHeader",
+          "line": 19
+        },
+        {
+          "from": "createChatRoute",
+          "to": "chat",
+          "line": 21
+        },
+        {
+          "from": "createChatRoute",
+          "to": "write",
+          "line": 22
+        },
+        {
+          "from": "createChatRoute",
+          "to": "stringify",
+          "line": 22
+        },
+        {
+          "from": "createChatRoute",
+          "to": "write",
+          "line": 25
+        },
+        {
+          "from": "createChatRoute",
+          "to": "end",
+          "line": 26
+        },
+        {
+          "from": "createChatRoute",
+          "to": "setHeader",
+          "line": 31
+        },
+        {
+          "from": "createChatRoute",
+          "to": "setHeader",
+          "line": 32
+        },
+        {
+          "from": "createChatRoute",
+          "to": "write",
+          "line": 33
+        },
+        {
+          "from": "createChatRoute",
+          "to": "stringify",
+          "line": 33
+        },
+        {
+          "from": "createChatRoute",
+          "to": "write",
+          "line": 34
+        },
+        {
+          "from": "createChatRoute",
+          "to": "end",
+          "line": 35
+        },
+        {
+          "from": "createChatRoute",
+          "to": "json",
+          "line": 37
+        },
+        {
+          "from": "createChatRoute",
+          "to": "status",
+          "line": 37
+        },
+        {
+          "from": "createChatRoute",
+          "to": "write",
+          "line": 40
+        },
+        {
+          "from": "createChatRoute",
+          "to": "stringify",
+          "line": 40
+        },
+        {
+          "from": "createChatRoute",
+          "to": "end",
+          "line": 41
+        }
+      ]
     },
     {
       "id": "config",
@@ -145,7 +616,197 @@
         "createConfigRoute"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 30
+      "risk_score": 30,
+      "functions": [
+        {
+          "name": "createConfigRoute",
+          "params": [
+            "apiRouter"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 11,
+          "line_end": 61,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createConfigRoute",
+          "to": "Router",
+          "line": 12
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "get",
+          "line": 14
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "getAgentModels",
+          "line": 15
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "getAvailableProviders",
+          "line": 16
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "entries",
+          "line": 19
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "push",
+          "line": 20
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "get",
+          "line": 22
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 27
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "put",
+          "line": 30
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "entries",
+          "line": 32
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 33
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "status",
+          "line": 33
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 34
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "status",
+          "line": 34
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 35
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "status",
+          "line": 35
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "setAgentModels",
+          "line": 37
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 38
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "get",
+          "line": 41
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 42
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "getKeyStatus",
+          "line": 42
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "put",
+          "line": 45
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 47
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "status",
+          "line": 47
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 48
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "status",
+          "line": 48
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "setApiKey",
+          "line": 49
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 50
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "getKeyStatus",
+          "line": 50
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "delete",
+          "line": 53
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 55
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "status",
+          "line": 55
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "setApiKey",
+          "line": 56
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "json",
+          "line": 57
+        },
+        {
+          "from": "createConfigRoute",
+          "to": "getKeyStatus",
+          "line": 57
+        }
+      ]
     },
     {
       "id": "files",
@@ -166,7 +827,147 @@
         "createFilesRoute"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 22
+      "risk_score": 22,
+      "functions": [
+        {
+          "name": "createFilesRoute",
+          "params": [
+            "fileManager"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 7,
+          "line_end": 48,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createFilesRoute",
+          "to": "Router",
+          "line": 8
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "get",
+          "line": 10
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "listOutputs",
+          "line": 13
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "json",
+          "line": 14
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "json",
+          "line": 16
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "status",
+          "line": 16
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "get",
+          "line": 20
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "join",
+          "line": 22
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "existsSync",
+          "line": 23
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "json",
+          "line": 24
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "filter",
+          "line": 28
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "readdirSync",
+          "line": 28
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "isDirectory",
+          "line": 29
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "statSync",
+          "line": 29
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "join",
+          "line": 29
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "join",
+          "line": 33
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "filter",
+          "line": 34
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "readdirSync",
+          "line": 34
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "startsWith",
+          "line": 34
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "map",
+          "line": 35
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "statSync",
+          "line": 36
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "join",
+          "line": 36
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "json",
+          "line": 41
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "json",
+          "line": 43
+        },
+        {
+          "from": "createFilesRoute",
+          "to": "status",
+          "line": 43
+        }
+      ]
     },
     {
       "id": "flow",
@@ -187,7 +988,192 @@
         "createFlowRoute"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 32
+      "risk_score": 32,
+      "functions": [
+        {
+          "name": "createFlowRoute",
+          "params": [
+            "flowEngine"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 5,
+          "line_end": 74,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createFlowRoute",
+          "to": "Router",
+          "line": 6
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "post",
+          "line": 8
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 13
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 13
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "startFlow",
+          "line": 15
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 16
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 19
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 19
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "post",
+          "line": 23
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 27
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 27
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "executeStep",
+          "line": 29
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 30
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 33
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 33
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "post",
+          "line": 37
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 41
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 41
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "handleCheckpoint",
+          "line": 43
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 44
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 47
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 47
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "post",
+          "line": 51
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 55
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 55
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "continueDiscussion",
+          "line": 57
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 58
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 61
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 61
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "get",
+          "line": 65
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "getSession",
+          "line": 66
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 68
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "status",
+          "line": 68
+        },
+        {
+          "from": "createFlowRoute",
+          "to": "json",
+          "line": 70
+        }
+      ]
     },
     {
       "id": "groupchat",
@@ -208,7 +1194,442 @@
         "createGroupChatRoute"
       ],
       "last_modified": "2026-03-25T11:08:25+01:00",
-      "risk_score": 58
+      "risk_score": 58,
+      "functions": [
+        {
+          "name": "createGroupChatRoute",
+          "params": [
+            "groupChatEngine"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 15,
+          "line_end": 165,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createGroupChatRoute",
+          "to": "Router",
+          "line": 16
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "post",
+          "line": 19
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "createSession",
+          "line": 23
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 26
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "getAll",
+          "line": 26
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 28
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 28
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "post",
+          "line": 35
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 39
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 39
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "getSession",
+          "line": 42
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 44
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 44
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "submitHumanMessage",
+          "line": 49
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 50
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 54
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 54
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 57
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 57
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "post",
+          "line": 62
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 66
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 66
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "executeTurnFor",
+          "line": 68
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 69
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "includes",
+          "line": 71
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 72
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 72
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "post",
+          "line": 77
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 81
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 81
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "submitHumanMessage",
+          "line": 83
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 84
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 86
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 86
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "post",
+          "line": 91
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 95
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 95
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "generateSummary",
+          "line": 97
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 98
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 101
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 101
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "post",
+          "line": 106
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "endSession",
+          "line": 109
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "cleanup",
+          "line": 110
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 111
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 113
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 113
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "get",
+          "line": 118
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "getSession",
+          "line": 119
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 121
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 121
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 123
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "get",
+          "line": 127
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "getSession",
+          "line": 128
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 129
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 129
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 130
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 130
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 131
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "getAll",
+          "line": 131
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "post",
+          "line": 135
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "getSession",
+          "line": 136
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 137
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 137
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 138
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 138
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 141
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 141
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "addItem",
+          "line": 142
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 143
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 145
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 145
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "delete",
+          "line": 150
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "getSession",
+          "line": 151
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 152
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 152
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 153
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 153
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 156
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 156
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "removeItem",
+          "line": 157
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 158
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "json",
+          "line": 160
+        },
+        {
+          "from": "createGroupChatRoute",
+          "to": "status",
+          "line": 160
+        }
+      ]
     },
     {
       "id": "sync",
@@ -229,7 +1650,77 @@
         "createSyncRoute"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 13
+      "risk_score": 13,
+      "functions": [
+        {
+          "name": "createSyncRoute",
+          "params": [
+            "gitSync"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 5,
+          "line_end": 28,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createSyncRoute",
+          "to": "Router",
+          "line": 6
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "post",
+          "line": 8
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "pull",
+          "line": 10
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "json",
+          "line": 11
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "json",
+          "line": 13
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "status",
+          "line": 13
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "post",
+          "line": 17
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "commitAndPush",
+          "line": 20
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "json",
+          "line": 21
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "json",
+          "line": 23
+        },
+        {
+          "from": "createSyncRoute",
+          "to": "status",
+          "line": 23
+        }
+      ]
     },
     {
       "id": "ApiRouter",
@@ -250,7 +1741,126 @@
         "ApiRouter"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 26
+      "risk_score": 26,
+      "functions": [
+        {
+          "name": "ApiRouter.constructor",
+          "params": [
+            "getModelsConfig",
+            "getApiKeys"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 14,
+          "line_end": 18,
+          "jsdoc": null
+        },
+        {
+          "name": "ApiRouter._getProvider",
+          "params": [
+            "providerName"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 20,
+          "line_end": 36,
+          "jsdoc": null
+        },
+        {
+          "name": "ApiRouter.getAvailableProviders",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 38,
+          "line_end": 45,
+          "jsdoc": null
+        },
+        {
+          "name": "ApiRouter.chat",
+          "params": [
+            "agentId",
+            "messages",
+            "systemPrompt"
+          ],
+          "is_async": true,
+          "is_generator": true,
+          "line_start": 47,
+          "line_end": 71,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "ApiRouter._getProvider",
+          "to": "getApiKeys",
+          "line": 21
+        },
+        {
+          "from": "ApiRouter._getProvider",
+          "to": "get",
+          "line": 25
+        },
+        {
+          "from": "ApiRouter._getProvider",
+          "to": "set",
+          "line": 34
+        },
+        {
+          "from": "ApiRouter.getAvailableProviders",
+          "to": "getApiKeys",
+          "line": 39
+        },
+        {
+          "from": "ApiRouter.getAvailableProviders",
+          "to": "keys",
+          "line": 41
+        },
+        {
+          "from": "ApiRouter.getAvailableProviders",
+          "to": "set",
+          "line": 42
+        },
+        {
+          "from": "ApiRouter.chat",
+          "to": "getModelsConfig",
+          "line": 48
+        },
+        {
+          "from": "ApiRouter.chat",
+          "to": "_getProvider",
+          "line": 54
+        },
+        {
+          "from": "ApiRouter.chat",
+          "to": "map",
+          "line": 56
+        },
+        {
+          "from": "ApiRouter.chat",
+          "to": "filter",
+          "line": 56
+        },
+        {
+          "from": "ApiRouter.chat",
+          "to": "entries",
+          "line": 56
+        },
+        {
+          "from": "ApiRouter.chat",
+          "to": "getAvailableProviders",
+          "line": 56
+        },
+        {
+          "from": "ApiRouter.chat",
+          "to": "join",
+          "line": 61
+        },
+        {
+          "from": "ApiRouter.chat",
+          "to": "chat",
+          "line": 70
+        }
+      ]
     },
     {
       "id": "CheckpointManager",
@@ -271,7 +1881,55 @@
         "CheckpointManager"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 28
+      "risk_score": 28,
+      "functions": [
+        {
+          "name": "CheckpointManager.constructor",
+          "params": [
+            "fileManager"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 8,
+          "jsdoc": null
+        },
+        {
+          "name": "CheckpointManager.processAction",
+          "params": [
+            "action",
+            "stepOutput",
+            "userInput"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 10,
+          "line_end": 42,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "CheckpointManager.processAction",
+          "to": "values",
+          "line": 11
+        },
+        {
+          "from": "CheckpointManager.processAction",
+          "to": "includes",
+          "line": 12
+        },
+        {
+          "from": "CheckpointManager.processAction",
+          "to": "join",
+          "line": 13
+        },
+        {
+          "from": "CheckpointManager.processAction",
+          "to": "logDecision",
+          "line": 35
+        }
+      ]
     },
     {
       "id": "ContextLoader",
@@ -292,7 +1950,192 @@
         "ContextLoader"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 21
+      "risk_score": 21,
+      "functions": [
+        {
+          "name": "ContextLoader.constructor",
+          "params": [
+            "projectRoot"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 8,
+          "line_end": 11,
+          "jsdoc": null
+        },
+        {
+          "name": "ContextLoader.loadGrafo",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 13,
+          "line_end": 15,
+          "jsdoc": null
+        },
+        {
+          "name": "ContextLoader.loadAgentDef",
+          "params": [
+            "agentId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 17,
+          "line_end": 28,
+          "jsdoc": null
+        },
+        {
+          "name": "ContextLoader.loadFaseAttuale",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 30,
+          "line_end": 32,
+          "jsdoc": null
+        },
+        {
+          "name": "ContextLoader.loadManifesto",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 34,
+          "line_end": 36,
+          "jsdoc": null
+        },
+        {
+          "name": "ContextLoader.loadPrompt",
+          "params": [
+            "promptFile"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 38,
+          "line_end": 40,
+          "jsdoc": null
+        },
+        {
+          "name": "ContextLoader.loadDocument",
+          "params": [
+            "docRef"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 42,
+          "line_end": 47,
+          "jsdoc": null
+        },
+        {
+          "name": "ContextLoader.clearCache",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 49,
+          "line_end": 51,
+          "jsdoc": null
+        },
+        {
+          "name": "ContextLoader._loadFile",
+          "params": [
+            "relativePath"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 53,
+          "line_end": 69,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "ContextLoader.loadGrafo",
+          "to": "_loadFile",
+          "line": 14
+        },
+        {
+          "from": "ContextLoader.loadAgentDef",
+          "to": "_loadFile",
+          "line": 18
+        },
+        {
+          "from": "ContextLoader.loadAgentDef",
+          "to": "toUpperCase",
+          "line": 21
+        },
+        {
+          "from": "ContextLoader.loadAgentDef",
+          "to": "match",
+          "line": 24
+        },
+        {
+          "from": "ContextLoader.loadAgentDef",
+          "to": "trim",
+          "line": 27
+        },
+        {
+          "from": "ContextLoader.loadFaseAttuale",
+          "to": "_loadFile",
+          "line": 31
+        },
+        {
+          "from": "ContextLoader.loadManifesto",
+          "to": "_loadFile",
+          "line": 35
+        },
+        {
+          "from": "ContextLoader.loadPrompt",
+          "to": "_loadFile",
+          "line": 39
+        },
+        {
+          "from": "ContextLoader.loadPrompt",
+          "to": "join",
+          "line": 39
+        },
+        {
+          "from": "ContextLoader.loadDocument",
+          "to": "includes",
+          "line": 43
+        },
+        {
+          "from": "ContextLoader.loadDocument",
+          "to": "_loadFile",
+          "line": 46
+        },
+        {
+          "from": "ContextLoader.clearCache",
+          "to": "clear",
+          "line": 50
+        },
+        {
+          "from": "ContextLoader._loadFile",
+          "to": "includes",
+          "line": 54
+        },
+        {
+          "from": "ContextLoader._loadFile",
+          "to": "get",
+          "line": 58
+        },
+        {
+          "from": "ContextLoader._loadFile",
+          "to": "join",
+          "line": 61
+        },
+        {
+          "from": "ContextLoader._loadFile",
+          "to": "existsSync",
+          "line": 62
+        },
+        {
+          "from": "ContextLoader._loadFile",
+          "to": "readFileSync",
+          "line": 66
+        },
+        {
+          "from": "ContextLoader._loadFile",
+          "to": "set",
+          "line": 67
+        }
+      ]
     },
     {
       "id": "FileManager",
@@ -313,7 +2156,228 @@
         "FileManager"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 29
+      "risk_score": 29,
+      "functions": [
+        {
+          "name": "FileManager.constructor",
+          "params": [
+            "projectRoot"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 7,
+          "line_end": 9,
+          "jsdoc": null
+        },
+        {
+          "name": "FileManager.saveOutput",
+          "params": [
+            "category",
+            "description",
+            "content"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 11,
+          "line_end": 24,
+          "jsdoc": null
+        },
+        {
+          "name": "FileManager.listOutputs",
+          "params": [
+            "category"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 26,
+          "line_end": 58,
+          "jsdoc": null
+        },
+        {
+          "name": "FileManager.logDecision",
+          "params": [
+            "decision"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 60,
+          "line_end": 69,
+          "jsdoc": null
+        },
+        {
+          "name": "FileManager._validatePath",
+          "params": [
+            "segment"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 71,
+          "line_end": 78,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "FileManager.saveOutput",
+          "to": "_validatePath",
+          "line": 12
+        },
+        {
+          "from": "FileManager.saveOutput",
+          "to": "_validatePath",
+          "line": 13
+        },
+        {
+          "from": "FileManager.saveOutput",
+          "to": "join",
+          "line": 15
+        },
+        {
+          "from": "FileManager.saveOutput",
+          "to": "mkdirSync",
+          "line": 16
+        },
+        {
+          "from": "FileManager.saveOutput",
+          "to": "split",
+          "line": 18
+        },
+        {
+          "from": "FileManager.saveOutput",
+          "to": "toISOString",
+          "line": 18
+        },
+        {
+          "from": "FileManager.saveOutput",
+          "to": "join",
+          "line": 20
+        },
+        {
+          "from": "FileManager.saveOutput",
+          "to": "writeFileSync",
+          "line": 22
+        },
+        {
+          "from": "FileManager.saveOutput",
+          "to": "join",
+          "line": 23
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "join",
+          "line": 27
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "existsSync",
+          "line": 32
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "filter",
+          "line": 33
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "readdirSync",
+          "line": 33
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "isDirectory",
+          "line": 34
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "statSync",
+          "line": 34
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "join",
+          "line": 34
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "join",
+          "line": 39
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "existsSync",
+          "line": 40
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "filter",
+          "line": 42
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "readdirSync",
+          "line": 42
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "endsWith",
+          "line": 42
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "join",
+          "line": 44
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "statSync",
+          "line": 45
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "match",
+          "line": 46
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "push",
+          "line": 47
+        },
+        {
+          "from": "FileManager.listOutputs",
+          "to": "join",
+          "line": 49
+        },
+        {
+          "from": "FileManager.logDecision",
+          "to": "join",
+          "line": 61
+        },
+        {
+          "from": "FileManager.logDecision",
+          "to": "mkdirSync",
+          "line": 62
+        },
+        {
+          "from": "FileManager.logDecision",
+          "to": "join",
+          "line": 64
+        },
+        {
+          "from": "FileManager.logDecision",
+          "to": "toISOString",
+          "line": 65
+        },
+        {
+          "from": "FileManager.logDecision",
+          "to": "appendFileSync",
+          "line": 68
+        },
+        {
+          "from": "FileManager._validatePath",
+          "to": "includes",
+          "line": 75
+        }
+      ]
     },
     {
       "id": "FlowEngine",
@@ -334,7 +2398,288 @@
         "FlowEngine"
       ],
       "last_modified": "2026-03-24T11:47:11+01:00",
-      "risk_score": 73
+      "risk_score": 73,
+      "functions": [
+        {
+          "name": "FlowEngine.constructor",
+          "params": [
+            "promptAssembler",
+            "apiRouter",
+            "checkpointManager",
+            "fileManager",
+            "sessionStore"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 8,
+          "line_end": 15,
+          "jsdoc": null
+        },
+        {
+          "name": "FlowEngine._persist",
+          "params": [
+            "session"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 17,
+          "line_end": 25,
+          "jsdoc": null
+        },
+        {
+          "name": "FlowEngine.startFlow",
+          "params": [
+            "flowId",
+            "userId",
+            "input"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 27,
+          "line_end": 50,
+          "jsdoc": null
+        },
+        {
+          "name": "FlowEngine.executeStep",
+          "params": [
+            "sessionId",
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 52,
+          "line_end": 114,
+          "jsdoc": null
+        },
+        {
+          "name": "FlowEngine.continueDiscussion",
+          "params": [
+            "sessionId",
+            "message",
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 116,
+          "line_end": 150,
+          "jsdoc": null
+        },
+        {
+          "name": "FlowEngine.handleCheckpoint",
+          "params": [
+            "sessionId",
+            "action",
+            "data",
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 152,
+          "line_end": 204,
+          "jsdoc": null
+        },
+        {
+          "name": "FlowEngine.getSession",
+          "params": [
+            "sessionId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 206,
+          "line_end": 208,
+          "jsdoc": null
+        },
+        {
+          "name": "FlowEngine._getOutputCategory",
+          "params": [
+            "flowId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 210,
+          "line_end": 212,
+          "jsdoc": null
+        },
+        {
+          "name": "FlowEngine._cleanupSession",
+          "params": [
+            "sessionId",
+            "delayMs"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 214,
+          "line_end": 216,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "FlowEngine._persist",
+          "to": "save",
+          "line": 20
+        },
+        {
+          "from": "FlowEngine.startFlow",
+          "to": "randomUUID",
+          "line": 32
+        },
+        {
+          "from": "FlowEngine.startFlow",
+          "to": "toISOString",
+          "line": 41
+        },
+        {
+          "from": "FlowEngine.startFlow",
+          "to": "set",
+          "line": 44
+        },
+        {
+          "from": "FlowEngine.startFlow",
+          "to": "_persist",
+          "line": 45
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "get",
+          "line": 53
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "_getOutputCategory",
+          "line": 66
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "saveOutput",
+          "line": 68
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "slice",
+          "line": 70
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "toLowerCase",
+          "line": 70
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "replace",
+          "line": 70
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "assembleForFlowStep",
+          "line": 77
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "chat",
+          "line": 93
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "push",
+          "line": 106
+        },
+        {
+          "from": "FlowEngine.executeStep",
+          "to": "_persist",
+          "line": 108
+        },
+        {
+          "from": "FlowEngine.continueDiscussion",
+          "to": "get",
+          "line": 117
+        },
+        {
+          "from": "FlowEngine.continueDiscussion",
+          "to": "push",
+          "line": 125
+        },
+        {
+          "from": "FlowEngine.continueDiscussion",
+          "to": "assembleForFlowStep",
+          "line": 127
+        },
+        {
+          "from": "FlowEngine.continueDiscussion",
+          "to": "chat",
+          "line": 139
+        },
+        {
+          "from": "FlowEngine.continueDiscussion",
+          "to": "push",
+          "line": 143
+        },
+        {
+          "from": "FlowEngine.continueDiscussion",
+          "to": "_persist",
+          "line": 145
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "get",
+          "line": 153
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "processAction",
+          "line": 158
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "_cleanupSession",
+          "line": 167
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "_persist",
+          "line": 169
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "_persist",
+          "line": 176
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "pop",
+          "line": 183
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "_persist",
+          "line": 186
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "_cleanupSession",
+          "line": 194
+        },
+        {
+          "from": "FlowEngine.handleCheckpoint",
+          "to": "_persist",
+          "line": 195
+        },
+        {
+          "from": "FlowEngine.getSession",
+          "to": "get",
+          "line": 207
+        },
+        {
+          "from": "FlowEngine._cleanupSession",
+          "to": "setTimeout",
+          "line": 215
+        },
+        {
+          "from": "FlowEngine._cleanupSession",
+          "to": "delete",
+          "line": 215
+        }
+      ]
     },
     {
       "id": "GitSync",
@@ -355,7 +2700,221 @@
         "GitSync"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 46
+      "risk_score": 46,
+      "functions": [
+        {
+          "name": "GitSync.constructor",
+          "params": [
+            "repoPath"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 8,
+          "jsdoc": null
+        },
+        {
+          "name": "GitSync.pull",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 10,
+          "line_end": 17,
+          "jsdoc": null
+        },
+        {
+          "name": "GitSync.commitAndPush",
+          "params": [
+            "userName"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 19,
+          "line_end": 36,
+          "jsdoc": null
+        },
+        {
+          "name": "GitSync.generateCommitMessage",
+          "params": [
+            "userName"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 38,
+          "line_end": 41,
+          "jsdoc": null
+        },
+        {
+          "name": "GitSync._buildCommitMessage",
+          "params": [
+            "status",
+            "userName"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 43,
+          "line_end": 60,
+          "jsdoc": null
+        },
+        {
+          "name": "GitSync._exec",
+          "params": [
+            "cmd"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 62,
+          "line_end": 68,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "GitSync.pull",
+          "to": "_exec",
+          "line": 12
+        },
+        {
+          "from": "GitSync.commitAndPush",
+          "to": "_exec",
+          "line": 21
+        },
+        {
+          "from": "GitSync.commitAndPush",
+          "to": "trim",
+          "line": 22
+        },
+        {
+          "from": "GitSync.commitAndPush",
+          "to": "_buildCommitMessage",
+          "line": 26
+        },
+        {
+          "from": "GitSync.commitAndPush",
+          "to": "_exec",
+          "line": 28
+        },
+        {
+          "from": "GitSync.commitAndPush",
+          "to": "_exec",
+          "line": 29
+        },
+        {
+          "from": "GitSync.commitAndPush",
+          "to": "replace",
+          "line": 29
+        },
+        {
+          "from": "GitSync.commitAndPush",
+          "to": "_exec",
+          "line": 30
+        },
+        {
+          "from": "GitSync.generateCommitMessage",
+          "to": "_exec",
+          "line": 39
+        },
+        {
+          "from": "GitSync.generateCommitMessage",
+          "to": "_buildCommitMessage",
+          "line": 40
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "filter",
+          "line": 44
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "split",
+          "line": 44
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "trim",
+          "line": 44
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "slice",
+          "line": 48
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "startsWith",
+          "line": 49
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "add",
+          "line": 49
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "startsWith",
+          "line": 50
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "add",
+          "line": 50
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "startsWith",
+          "line": 51
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "add",
+          "line": 51
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "startsWith",
+          "line": 52
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "add",
+          "line": 52
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "startsWith",
+          "line": 53
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "add",
+          "line": 53
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "startsWith",
+          "line": 54
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "add",
+          "line": 54
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "add",
+          "line": 55
+        },
+        {
+          "from": "GitSync._buildCommitMessage",
+          "to": "join",
+          "line": 58
+        },
+        {
+          "from": "GitSync._exec",
+          "to": "execSync",
+          "line": 63
+        }
+      ]
     },
     {
       "id": "GroupChatEngine",
@@ -376,7 +2935,330 @@
         "GroupChatEngine"
       ],
       "last_modified": "2026-03-25T11:08:25+01:00",
-      "risk_score": 60
+      "risk_score": 60,
+      "functions": [
+        {
+          "name": "GroupChatEngine.constructor",
+          "params": [
+            "promptAssembler",
+            "apiRouter",
+            "fileManager"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 14,
+          "line_end": 19,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine.createSession",
+          "params": [
+            "config"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 33,
+          "line_end": 70,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine.getSession",
+          "params": [
+            "sessionId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 75,
+          "line_end": 77,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine.executeTurnFor",
+          "params": [
+            "sessionId",
+            "agentId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 88,
+          "line_end": 132,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine.submitHumanMessage",
+          "params": [
+            "sessionId",
+            "participantId",
+            "text"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 141,
+          "line_end": 166,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine.endSession",
+          "params": [
+            "sessionId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 171,
+          "line_end": 176,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine.generateSummary",
+          "params": [
+            "sessionId",
+            "summaryAgentId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 186,
+          "line_end": 235,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine._buildMessageHistory",
+          "params": [
+            "session",
+            "currentAgentId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 239,
+          "line_end": 274,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine._buildGroupPrompt",
+          "params": [
+            "session",
+            "participant"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 276,
+          "line_end": 311,
+          "jsdoc": null
+        },
+        {
+          "name": "GroupChatEngine.cleanup",
+          "params": [
+            "sessionId",
+            "delayMs"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 314,
+          "line_end": 316,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "GroupChatEngine.createSession",
+          "to": "randomUUID",
+          "line": 52
+        },
+        {
+          "from": "GroupChatEngine.createSession",
+          "to": "toISOString",
+          "line": 65
+        },
+        {
+          "from": "GroupChatEngine.createSession",
+          "to": "set",
+          "line": 68
+        },
+        {
+          "from": "GroupChatEngine.getSession",
+          "to": "get",
+          "line": 76
+        },
+        {
+          "from": "GroupChatEngine.executeTurnFor",
+          "to": "get",
+          "line": 89
+        },
+        {
+          "from": "GroupChatEngine.executeTurnFor",
+          "to": "find",
+          "line": 92
+        },
+        {
+          "from": "GroupChatEngine.executeTurnFor",
+          "to": "_buildGroupPrompt",
+          "line": 104
+        },
+        {
+          "from": "GroupChatEngine.executeTurnFor",
+          "to": "_buildMessageHistory",
+          "line": 105
+        },
+        {
+          "from": "GroupChatEngine.executeTurnFor",
+          "to": "chat",
+          "line": 108
+        },
+        {
+          "from": "GroupChatEngine.executeTurnFor",
+          "to": "randomUUID",
+          "line": 113
+        },
+        {
+          "from": "GroupChatEngine.executeTurnFor",
+          "to": "toISOString",
+          "line": 118
+        },
+        {
+          "from": "GroupChatEngine.executeTurnFor",
+          "to": "push",
+          "line": 122
+        },
+        {
+          "from": "GroupChatEngine.submitHumanMessage",
+          "to": "get",
+          "line": 142
+        },
+        {
+          "from": "GroupChatEngine.submitHumanMessage",
+          "to": "find",
+          "line": 149
+        },
+        {
+          "from": "GroupChatEngine.submitHumanMessage",
+          "to": "randomUUID",
+          "line": 153
+        },
+        {
+          "from": "GroupChatEngine.submitHumanMessage",
+          "to": "toISOString",
+          "line": 158
+        },
+        {
+          "from": "GroupChatEngine.submitHumanMessage",
+          "to": "push",
+          "line": 162
+        },
+        {
+          "from": "GroupChatEngine.endSession",
+          "to": "get",
+          "line": 172
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "get",
+          "line": 187
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "join",
+          "line": 190
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "map",
+          "line": 190
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "join",
+          "line": 194
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "join",
+          "line": 214
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "map",
+          "line": 214
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "chat",
+          "line": 223
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "slice",
+          "line": 230
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "toLowerCase",
+          "line": 230
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "replace",
+          "line": 230
+        },
+        {
+          "from": "GroupChatEngine.generateSummary",
+          "to": "saveOutput",
+          "line": 231
+        },
+        {
+          "from": "GroupChatEngine._buildMessageHistory",
+          "to": "map",
+          "line": 249
+        },
+        {
+          "from": "GroupChatEngine._buildMessageHistory",
+          "to": "push",
+          "line": 260
+        },
+        {
+          "from": "GroupChatEngine._buildMessageHistory",
+          "to": "unshift",
+          "line": 266
+        },
+        {
+          "from": "GroupChatEngine._buildMessageHistory",
+          "to": "map",
+          "line": 270
+        },
+        {
+          "from": "GroupChatEngine._buildGroupPrompt",
+          "to": "assembleForAgent",
+          "line": 280
+        },
+        {
+          "from": "GroupChatEngine._buildGroupPrompt",
+          "to": "join",
+          "line": 282
+        },
+        {
+          "from": "GroupChatEngine._buildGroupPrompt",
+          "to": "map",
+          "line": 282
+        },
+        {
+          "from": "GroupChatEngine._buildGroupPrompt",
+          "to": "join",
+          "line": 291
+        },
+        {
+          "from": "GroupChatEngine._buildGroupPrompt",
+          "to": "toPromptString",
+          "line": 303
+        },
+        {
+          "from": "GroupChatEngine.cleanup",
+          "to": "setTimeout",
+          "line": 315
+        },
+        {
+          "from": "GroupChatEngine.cleanup",
+          "to": "delete",
+          "line": 315
+        }
+      ]
     },
     {
       "id": "PromptAssembler",
@@ -397,7 +3279,187 @@
         "PromptAssembler"
       ],
       "last_modified": "2026-03-23T16:34:45+01:00",
-      "risk_score": 40
+      "risk_score": 40,
+      "functions": [
+        {
+          "name": "PromptAssembler.constructor",
+          "params": [
+            "contextLoader"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 8,
+          "line_end": 10,
+          "jsdoc": null
+        },
+        {
+          "name": "PromptAssembler.assembleForAgent",
+          "params": [
+            "agentId",
+            "options"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 12,
+          "line_end": 68,
+          "jsdoc": null
+        },
+        {
+          "name": "PromptAssembler.assembleForFlowStep",
+          "params": [
+            "flowId",
+            "stepIndex",
+            "previousOutputs"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 70,
+          "line_end": 98,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "push",
+          "line": 19
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "getAgentModels",
+          "line": 22
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "push",
+          "line": 25
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "loadDocument",
+          "line": 29
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "push",
+          "line": 30
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "loadPrompt",
+          "line": 33
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "push",
+          "line": 34
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "loadGrafo",
+          "line": 37
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "push",
+          "line": 38
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "loadFaseAttuale",
+          "line": 41
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "push",
+          "line": 42
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "includes",
+          "line": 46
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "loadManifesto",
+          "line": 47
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "push",
+          "line": 48
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "loadDocument",
+          "line": 54
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "push",
+          "line": 55
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "warn",
+          "line": 57
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "join",
+          "line": 61
+        },
+        {
+          "from": "PromptAssembler.assembleForAgent",
+          "to": "warn",
+          "line": 64
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "assembleForAgent",
+          "line": 81
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "loadPrompt",
+          "line": 84
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "push",
+          "line": 85
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "push",
+          "line": 87
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "push",
+          "line": 88
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "push",
+          "line": 91
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "forEach",
+          "line": 92
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "push",
+          "line": 93
+        },
+        {
+          "from": "PromptAssembler.assembleForFlowStep",
+          "to": "join",
+          "line": 97
+        }
+      ]
     },
     {
       "id": "SessionStore",
@@ -415,10 +3477,129 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "SessionStore"
+        "SessionStore",
+        "createSessionStore"
       ],
       "last_modified": "2026-03-24T11:47:11+01:00",
-      "risk_score": 26
+      "risk_score": 26,
+      "functions": [
+        {
+          "name": "SessionStore.constructor",
+          "params": [
+            "_"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 8,
+          "line_end": 12,
+          "jsdoc": null
+        },
+        {
+          "name": "SessionStore.init",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 18,
+          "line_end": 37,
+          "jsdoc": null
+        },
+        {
+          "name": "SessionStore.save",
+          "params": [
+            "session"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 42,
+          "line_end": 49,
+          "jsdoc": null
+        },
+        {
+          "name": "SessionStore.get",
+          "params": [
+            "sessionId",
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 51,
+          "line_end": 53,
+          "jsdoc": null
+        },
+        {
+          "name": "SessionStore.delete",
+          "params": [
+            "sessionId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 55,
+          "line_end": 57,
+          "jsdoc": null
+        },
+        {
+          "name": "SessionStore.getByUser",
+          "params": [
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 59,
+          "line_end": 61,
+          "jsdoc": null
+        },
+        {
+          "name": "createSessionStore",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 68,
+          "line_end": 82,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "SessionStore.init",
+          "to": "ping",
+          "line": 21
+        },
+        {
+          "from": "SessionStore.init",
+          "to": "warn",
+          "line": 25
+        },
+        {
+          "from": "SessionStore.save",
+          "to": "resolve",
+          "line": 44
+        },
+        {
+          "from": "SessionStore.save",
+          "to": "save",
+          "line": 44
+        },
+        {
+          "from": "SessionStore.get",
+          "to": "get",
+          "line": 52
+        },
+        {
+          "from": "SessionStore.delete",
+          "to": "delete",
+          "line": 56
+        },
+        {
+          "from": "SessionStore.getByUser",
+          "to": "getByUser",
+          "line": 60
+        },
+        {
+          "from": "createSessionStore",
+          "to": "init",
+          "line": 80
+        }
+      ]
     },
     {
       "id": "Whiteboard",
@@ -439,7 +3620,149 @@
         "Whiteboard"
       ],
       "last_modified": "2026-03-24T12:34:03+01:00",
-      "risk_score": 32
+      "risk_score": 32,
+      "functions": [
+        {
+          "name": "Whiteboard.constructor",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 19,
+          "line_end": 26,
+          "jsdoc": null
+        },
+        {
+          "name": "Whiteboard.addItem",
+          "params": [
+            "section",
+            "text",
+            "author"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 35,
+          "line_end": 47,
+          "jsdoc": null
+        },
+        {
+          "name": "Whiteboard.getSection",
+          "params": [
+            "section"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 50,
+          "line_end": 52,
+          "jsdoc": null
+        },
+        {
+          "name": "Whiteboard.getAll",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 55,
+          "line_end": 57,
+          "jsdoc": null
+        },
+        {
+          "name": "Whiteboard.removeItem",
+          "params": [
+            "section",
+            "itemId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 63,
+          "line_end": 68,
+          "jsdoc": null
+        },
+        {
+          "name": "Whiteboard.toPromptString",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 75,
+          "line_end": 86,
+          "jsdoc": null
+        },
+        {
+          "name": "Whiteboard.toJSON",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 89,
+          "line_end": 98,
+          "jsdoc": null
+        },
+        {
+          "name": "Whiteboard.fromJSON",
+          "params": [
+            "data"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 101,
+          "line_end": 107,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "Whiteboard.addItem",
+          "to": "includes",
+          "line": 36
+        },
+        {
+          "from": "Whiteboard.addItem",
+          "to": "join",
+          "line": 37
+        },
+        {
+          "from": "Whiteboard.addItem",
+          "to": "randomUUID",
+          "line": 40
+        },
+        {
+          "from": "Whiteboard.addItem",
+          "to": "toISOString",
+          "line": 43
+        },
+        {
+          "from": "Whiteboard.addItem",
+          "to": "push",
+          "line": 45
+        },
+        {
+          "from": "Whiteboard.removeItem",
+          "to": "findIndex",
+          "line": 65
+        },
+        {
+          "from": "Whiteboard.removeItem",
+          "to": "splice",
+          "line": 67
+        },
+        {
+          "from": "Whiteboard.toPromptString",
+          "to": "push",
+          "line": 80
+        },
+        {
+          "from": "Whiteboard.toPromptString",
+          "to": "push",
+          "line": 82
+        },
+        {
+          "from": "Whiteboard.toPromptString",
+          "to": "join",
+          "line": 85
+        },
+        {
+          "from": "Whiteboard.fromJSON",
+          "to": "map",
+          "line": 104
+        }
+      ]
     },
     {
       "id": "AnthropicProvider",
@@ -460,7 +3783,96 @@
         "AnthropicProvider"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 35
+      "risk_score": 35,
+      "functions": [
+        {
+          "name": "AnthropicProvider.constructor",
+          "params": [
+            "apiKey",
+            "baseUrl"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 10,
+          "jsdoc": null
+        },
+        {
+          "name": "AnthropicProvider.chat",
+          "params": [
+            "model",
+            "messages",
+            "systemPrompt"
+          ],
+          "is_async": true,
+          "is_generator": true,
+          "line_start": 12,
+          "line_end": 64,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "map",
+          "line": 17
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "fetch",
+          "line": 24
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "stringify",
+          "line": 31
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "text",
+          "line": 35
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "getReader",
+          "line": 39
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "read",
+          "line": 44
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "decode",
+          "line": 47
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "split",
+          "line": 48
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "pop",
+          "line": 49
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "startsWith",
+          "line": 52
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "slice",
+          "line": 53
+        },
+        {
+          "from": "AnthropicProvider.chat",
+          "to": "parse",
+          "line": 57
+        }
+      ]
     },
     {
       "id": "BaseProvider",
@@ -481,7 +3893,23 @@
         "BaseProvider"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [
+        {
+          "name": "BaseProvider.chat",
+          "params": [
+            "model",
+            "messages",
+            "systemPrompt"
+          ],
+          "is_async": true,
+          "is_generator": true,
+          "line_start": 4,
+          "line_end": 6,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
     },
     {
       "id": "DeepSeekProvider",
@@ -502,7 +3930,22 @@
         "DeepSeekProvider"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [
+        {
+          "name": "DeepSeekProvider.constructor",
+          "params": [
+            "apiKey",
+            "baseUrl"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 8,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
     },
     {
       "id": "OpenAICompatibleProvider",
@@ -523,7 +3966,96 @@
         "OpenAICompatibleProvider"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 32
+      "risk_score": 32,
+      "functions": [
+        {
+          "name": "OpenAICompatibleProvider.constructor",
+          "params": [
+            "apiKey",
+            "baseUrl"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 10,
+          "jsdoc": null
+        },
+        {
+          "name": "OpenAICompatibleProvider.chat",
+          "params": [
+            "model",
+            "messages",
+            "systemPrompt"
+          ],
+          "is_async": true,
+          "is_generator": true,
+          "line_start": 12,
+          "line_end": 63,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "map",
+          "line": 17
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "fetch",
+          "line": 25
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "stringify",
+          "line": 31
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "text",
+          "line": 35
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "getReader",
+          "line": 39
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "read",
+          "line": 44
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "decode",
+          "line": 47
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "split",
+          "line": 48
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "pop",
+          "line": 49
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "startsWith",
+          "line": 52
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "slice",
+          "line": 53
+        },
+        {
+          "from": "OpenAICompatibleProvider.chat",
+          "to": "parse",
+          "line": 57
+        }
+      ]
     },
     {
       "id": "OpenAIProvider",
@@ -544,7 +4076,22 @@
         "OpenAIProvider"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [
+        {
+          "name": "OpenAIProvider.constructor",
+          "params": [
+            "apiKey",
+            "baseUrl"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 8,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
     },
     {
       "id": "SQLiteStore",
@@ -565,7 +4112,163 @@
         "SQLiteStore"
       ],
       "last_modified": "2026-03-24T11:47:11+01:00",
-      "risk_score": 18
+      "risk_score": 18,
+      "functions": [
+        {
+          "name": "SQLiteStore.constructor",
+          "params": [
+            "dbPath"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 20,
+          "line_end": 23,
+          "jsdoc": null
+        },
+        {
+          "name": "SQLiteStore.save",
+          "params": [
+            "session"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 25,
+          "line_end": 50,
+          "jsdoc": null
+        },
+        {
+          "name": "SQLiteStore.get",
+          "params": [
+            "sessionId",
+            "userId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 52,
+          "line_end": 57,
+          "jsdoc": null
+        },
+        {
+          "name": "SQLiteStore.delete",
+          "params": [
+            "sessionId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 59,
+          "line_end": 61,
+          "jsdoc": null
+        },
+        {
+          "name": "SQLiteStore.getByUser",
+          "params": [
+            "userId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 63,
+          "line_end": 66,
+          "jsdoc": null
+        },
+        {
+          "name": "SQLiteStore._deserialize",
+          "params": [
+            "row"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 68,
+          "line_end": 82,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "SQLiteStore.constructor",
+          "to": "exec",
+          "line": 22
+        },
+        {
+          "from": "SQLiteStore.save",
+          "to": "prepare",
+          "line": 26
+        },
+        {
+          "from": "SQLiteStore.save",
+          "to": "run",
+          "line": 37
+        },
+        {
+          "from": "SQLiteStore.save",
+          "to": "stringify",
+          "line": 44
+        },
+        {
+          "from": "SQLiteStore.save",
+          "to": "stringify",
+          "line": 45
+        },
+        {
+          "from": "SQLiteStore.save",
+          "to": "toISOString",
+          "line": 48
+        },
+        {
+          "from": "SQLiteStore.get",
+          "to": "get",
+          "line": 53
+        },
+        {
+          "from": "SQLiteStore.get",
+          "to": "prepare",
+          "line": 53
+        },
+        {
+          "from": "SQLiteStore.get",
+          "to": "_deserialize",
+          "line": 56
+        },
+        {
+          "from": "SQLiteStore.delete",
+          "to": "run",
+          "line": 60
+        },
+        {
+          "from": "SQLiteStore.delete",
+          "to": "prepare",
+          "line": 60
+        },
+        {
+          "from": "SQLiteStore.getByUser",
+          "to": "all",
+          "line": 64
+        },
+        {
+          "from": "SQLiteStore.getByUser",
+          "to": "prepare",
+          "line": 64
+        },
+        {
+          "from": "SQLiteStore.getByUser",
+          "to": "map",
+          "line": 65
+        },
+        {
+          "from": "SQLiteStore.getByUser",
+          "to": "_deserialize",
+          "line": 65
+        },
+        {
+          "from": "SQLiteStore._deserialize",
+          "to": "parse",
+          "line": 76
+        },
+        {
+          "from": "SQLiteStore._deserialize",
+          "to": "parse",
+          "line": 77
+        }
+      ]
     },
     {
       "id": "SupabaseStore",
@@ -586,7 +4289,188 @@
         "SupabaseStore"
       ],
       "last_modified": "2026-03-24T11:47:11+01:00",
-      "risk_score": 25
+      "risk_score": 25,
+      "functions": [
+        {
+          "name": "SupabaseStore.constructor",
+          "params": [
+            "url",
+            "anonKey"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 5,
+          "line_end": 7,
+          "jsdoc": null
+        },
+        {
+          "name": "SupabaseStore.ping",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 9,
+          "line_end": 13,
+          "jsdoc": null
+        },
+        {
+          "name": "SupabaseStore.save",
+          "params": [
+            "session"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 15,
+          "line_end": 30,
+          "jsdoc": null
+        },
+        {
+          "name": "SupabaseStore.get",
+          "params": [
+            "sessionId",
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 32,
+          "line_end": 46,
+          "jsdoc": null
+        },
+        {
+          "name": "SupabaseStore.delete",
+          "params": [
+            "sessionId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 48,
+          "line_end": 54,
+          "jsdoc": null
+        },
+        {
+          "name": "SupabaseStore.getByUser",
+          "params": [
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 56,
+          "line_end": 63,
+          "jsdoc": null
+        },
+        {
+          "name": "SupabaseStore._deserialize",
+          "params": [
+            "row"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 65,
+          "line_end": 79,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "SupabaseStore.constructor",
+          "to": "createClient",
+          "line": 6
+        },
+        {
+          "from": "SupabaseStore.ping",
+          "to": "limit",
+          "line": 10
+        },
+        {
+          "from": "SupabaseStore.ping",
+          "to": "select",
+          "line": 10
+        },
+        {
+          "from": "SupabaseStore.ping",
+          "to": "from",
+          "line": 10
+        },
+        {
+          "from": "SupabaseStore.save",
+          "to": "upsert",
+          "line": 16
+        },
+        {
+          "from": "SupabaseStore.save",
+          "to": "from",
+          "line": 16
+        },
+        {
+          "from": "SupabaseStore.save",
+          "to": "toISOString",
+          "line": 27
+        },
+        {
+          "from": "SupabaseStore.get",
+          "to": "single",
+          "line": 33
+        },
+        {
+          "from": "SupabaseStore.get",
+          "to": "eq",
+          "line": 33
+        },
+        {
+          "from": "SupabaseStore.get",
+          "to": "select",
+          "line": 33
+        },
+        {
+          "from": "SupabaseStore.get",
+          "to": "from",
+          "line": 33
+        },
+        {
+          "from": "SupabaseStore.get",
+          "to": "_deserialize",
+          "line": 45
+        },
+        {
+          "from": "SupabaseStore.delete",
+          "to": "eq",
+          "line": 49
+        },
+        {
+          "from": "SupabaseStore.delete",
+          "to": "delete",
+          "line": 49
+        },
+        {
+          "from": "SupabaseStore.delete",
+          "to": "from",
+          "line": 49
+        },
+        {
+          "from": "SupabaseStore.getByUser",
+          "to": "eq",
+          "line": 57
+        },
+        {
+          "from": "SupabaseStore.getByUser",
+          "to": "select",
+          "line": 57
+        },
+        {
+          "from": "SupabaseStore.getByUser",
+          "to": "from",
+          "line": 57
+        },
+        {
+          "from": "SupabaseStore.getByUser",
+          "to": "map",
+          "line": 62
+        },
+        {
+          "from": "SupabaseStore.getByUser",
+          "to": "_deserialize",
+          "line": 62
+        }
+      ]
     },
     {
       "id": "vite.config",
@@ -604,10 +4488,12 @@
       "authors": 2,
       "bugs": 0,
       "exports": [
-        "default:defineConfig"
+        "default"
       ],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "App",
@@ -625,10 +4511,103 @@
       "authors": 2,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:App"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 38
+      "risk_score": 38,
+      "functions": [
+        {
+          "name": "App",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 13,
+          "line_end": 92,
+          "jsdoc": null
+        },
+        {
+          "name": "switchUser",
+          "params": [
+            "u"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 19,
+          "line_end": 24,
+          "jsdoc": null
+        },
+        {
+          "name": "renderMain",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 26,
+          "line_end": 43,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "App",
+          "to": "useState",
+          "line": 14
+        },
+        {
+          "from": "App",
+          "to": "useState",
+          "line": 15
+        },
+        {
+          "from": "App",
+          "to": "useState",
+          "line": 16
+        },
+        {
+          "from": "App",
+          "to": "useState",
+          "line": 17
+        },
+        {
+          "from": "switchUser",
+          "to": "setUser",
+          "line": 20
+        },
+        {
+          "from": "switchUser",
+          "to": "setActiveAgent",
+          "line": 21
+        },
+        {
+          "from": "switchUser",
+          "to": "setActiveFlow",
+          "line": 22
+        },
+        {
+          "from": "switchUser",
+          "to": "setView",
+          "line": 23
+        },
+        {
+          "from": "App",
+          "to": "map",
+          "line": 60
+        },
+        {
+          "from": "App",
+          "to": "entries",
+          "line": 60
+        },
+        {
+          "from": "App",
+          "to": "switchUser",
+          "line": 63
+        },
+        {
+          "from": "App",
+          "to": "renderMain",
+          "line": 88
+        }
+      ]
     },
     {
       "id": "main",
@@ -647,7 +4626,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "AgentBadge",
@@ -665,10 +4646,24 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:AgentBadge"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [
+        {
+          "name": "AgentBadge",
+          "params": [
+            "{agentId, size}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 4,
+          "line_end": 16,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": []
     },
     {
       "id": "CheckpointDialog",
@@ -686,10 +4681,158 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:CheckpointDialog"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 33
+      "risk_score": 33,
+      "functions": [
+        {
+          "name": "CheckpointDialog",
+          "params": [
+            "{step, agent, onAction, isDiscussing, discussMessages, onSendDiscussMessage, isLoading}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 3,
+          "line_end": 130,
+          "jsdoc": null
+        },
+        {
+          "name": "sendDiscussMsg",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 16,
+          "line_end": 20,
+          "jsdoc": null
+        },
+        {
+          "name": "handleModify",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 22,
+          "line_end": 27,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "CheckpointDialog",
+          "to": "useState",
+          "line": 12
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "useState",
+          "line": 13
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "useState",
+          "line": 14
+        },
+        {
+          "from": "sendDiscussMsg",
+          "to": "trim",
+          "line": 17
+        },
+        {
+          "from": "sendDiscussMsg",
+          "to": "onSendDiscussMessage",
+          "line": 18
+        },
+        {
+          "from": "sendDiscussMsg",
+          "to": "setDiscussInput",
+          "line": 19
+        },
+        {
+          "from": "handleModify",
+          "to": "trim",
+          "line": 23
+        },
+        {
+          "from": "handleModify",
+          "to": "onAction",
+          "line": 24
+        },
+        {
+          "from": "handleModify",
+          "to": "setModifyInput",
+          "line": 25
+        },
+        {
+          "from": "handleModify",
+          "to": "setShowModifyInput",
+          "line": 26
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "map",
+          "line": 39
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "setDiscussInput",
+          "line": 64
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "sendDiscussMsg",
+          "line": 65
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "onAction",
+          "line": 79
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "onAction",
+          "line": 82
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "onAction",
+          "line": 95
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "onAction",
+          "line": 98
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "setShowModifyInput",
+          "line": 102
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "setModifyInput",
+          "line": 110
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "handleModify",
+          "line": 111
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "setShowModifyInput",
+          "line": 119
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "setModifyInput",
+          "line": 119
+        },
+        {
+          "from": "CheckpointDialog",
+          "to": "onAction",
+          "line": 124
+        }
+      ]
     },
     {
       "id": "Sidebar",
@@ -707,10 +4850,180 @@
       "authors": 2,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:Sidebar"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 29
+      "risk_score": 29,
+      "functions": [
+        {
+          "name": "Sidebar",
+          "params": [
+            "{user, activeAgent, setActiveAgent, activeFlow, setActiveFlow, setView, currentView}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 7,
+          "line_end": 146,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "Sidebar",
+          "to": "filter",
+          "line": 8
+        },
+        {
+          "from": "Sidebar",
+          "to": "entries",
+          "line": 8
+        },
+        {
+          "from": "Sidebar",
+          "to": "includes",
+          "line": 8
+        },
+        {
+          "from": "Sidebar",
+          "to": "filter",
+          "line": 9
+        },
+        {
+          "from": "Sidebar",
+          "to": "entries",
+          "line": 9
+        },
+        {
+          "from": "Sidebar",
+          "to": "includes",
+          "line": 9
+        },
+        {
+          "from": "Sidebar",
+          "to": "map",
+          "line": 30
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveAgent",
+          "line": 33
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveFlow",
+          "line": 33
+        },
+        {
+          "from": "Sidebar",
+          "to": "setView",
+          "line": 33
+        },
+        {
+          "from": "Sidebar",
+          "to": "map",
+          "line": 52
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveFlow",
+          "line": 55
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveAgent",
+          "line": 55
+        },
+        {
+          "from": "Sidebar",
+          "to": "setView",
+          "line": 55
+        },
+        {
+          "from": "Sidebar",
+          "to": "join",
+          "line": 66
+        },
+        {
+          "from": "Sidebar",
+          "to": "map",
+          "line": 66
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveAgent",
+          "line": 78
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveFlow",
+          "line": 78
+        },
+        {
+          "from": "Sidebar",
+          "to": "setView",
+          "line": 78
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveAgent",
+          "line": 92
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveFlow",
+          "line": 92
+        },
+        {
+          "from": "Sidebar",
+          "to": "setView",
+          "line": 92
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveAgent",
+          "line": 107
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveFlow",
+          "line": 107
+        },
+        {
+          "from": "Sidebar",
+          "to": "setView",
+          "line": 107
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveAgent",
+          "line": 116
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveFlow",
+          "line": 116
+        },
+        {
+          "from": "Sidebar",
+          "to": "setView",
+          "line": 116
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveAgent",
+          "line": 125
+        },
+        {
+          "from": "Sidebar",
+          "to": "setActiveFlow",
+          "line": 125
+        },
+        {
+          "from": "Sidebar",
+          "to": "setView",
+          "line": 125
+        }
+      ]
     },
     {
       "id": "SyncBar",
@@ -728,10 +5041,104 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:SyncBar"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 23
+      "risk_score": 23,
+      "functions": [
+        {
+          "name": "SyncBar",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 3,
+          "line_end": 57,
+          "jsdoc": null
+        },
+        {
+          "name": "doSync",
+          "params": [
+            "direction"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 7,
+          "line_end": 23,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "SyncBar",
+          "to": "useState",
+          "line": 4
+        },
+        {
+          "from": "SyncBar",
+          "to": "useState",
+          "line": 5
+        },
+        {
+          "from": "doSync",
+          "to": "setSyncState",
+          "line": 8
+        },
+        {
+          "from": "doSync",
+          "to": "fetch",
+          "line": 11
+        },
+        {
+          "from": "doSync",
+          "to": "json",
+          "line": 12
+        },
+        {
+          "from": "doSync",
+          "to": "setSyncState",
+          "line": 14
+        },
+        {
+          "from": "doSync",
+          "to": "setLastSync",
+          "line": 15
+        },
+        {
+          "from": "doSync",
+          "to": "toLocaleTimeString",
+          "line": 15
+        },
+        {
+          "from": "doSync",
+          "to": "setTimeout",
+          "line": 16
+        },
+        {
+          "from": "doSync",
+          "to": "setSyncState",
+          "line": 16
+        },
+        {
+          "from": "doSync",
+          "to": "setSyncState",
+          "line": 18
+        },
+        {
+          "from": "doSync",
+          "to": "setSyncState",
+          "line": 21
+        },
+        {
+          "from": "SyncBar",
+          "to": "doSync",
+          "line": 32
+        },
+        {
+          "from": "SyncBar",
+          "to": "doSync",
+          "line": 43
+        }
+      ]
     },
     {
       "id": "WhiteboardPanel",
@@ -749,10 +5156,125 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:WhiteboardPanel"
       ],
       "last_modified": "2026-03-24T13:31:28+01:00",
-      "risk_score": 40
+      "risk_score": 40,
+      "functions": [
+        {
+          "name": "WhiteboardPanel",
+          "params": [
+            "{whiteboard, onAddItem, onRemoveItem, isOpen, onToggle, user}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 20,
+          "line_end": 147,
+          "jsdoc": null
+        },
+        {
+          "name": "handleAdd",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 24,
+          "line_end": 28,
+          "jsdoc": null
+        },
+        {
+          "name": "handleKeyDown",
+          "params": [
+            "e"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 30,
+          "line_end": 32,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "WhiteboardPanel",
+          "to": "useState",
+          "line": 21
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "useState",
+          "line": 22
+        },
+        {
+          "from": "handleAdd",
+          "to": "trim",
+          "line": 25
+        },
+        {
+          "from": "handleAdd",
+          "to": "onAddItem",
+          "line": 26
+        },
+        {
+          "from": "handleAdd",
+          "to": "trim",
+          "line": 26
+        },
+        {
+          "from": "handleAdd",
+          "to": "setNewText",
+          "line": 27
+        },
+        {
+          "from": "handleKeyDown",
+          "to": "handleAdd",
+          "line": 31
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "reduce",
+          "line": 35
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "values",
+          "line": 35
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "map",
+          "line": 76
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "map",
+          "line": 83
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "onRemoveItem",
+          "line": 96
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "setNewSection",
+          "line": 121
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "map",
+          "line": 124
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "setNewText",
+          "line": 131
+        },
+        {
+          "from": "WhiteboardPanel",
+          "to": "trim",
+          "line": 138
+        }
+      ]
     },
     {
       "id": "useAuth",
@@ -770,10 +5292,68 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:useAuth"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [
+        {
+          "name": "useAuth",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 27,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "useAuth",
+          "to": "useState",
+          "line": 7
+        },
+        {
+          "from": "useAuth",
+          "to": "useCallback",
+          "line": 9
+        },
+        {
+          "from": "useAuth",
+          "to": "includes",
+          "line": 10
+        },
+        {
+          "from": "useAuth",
+          "to": "filter",
+          "line": 13
+        },
+        {
+          "from": "useAuth",
+          "to": "entries",
+          "line": 13
+        },
+        {
+          "from": "useAuth",
+          "to": "includes",
+          "line": 14
+        },
+        {
+          "from": "useAuth",
+          "to": "filter",
+          "line": 16
+        },
+        {
+          "from": "useAuth",
+          "to": "entries",
+          "line": 16
+        },
+        {
+          "from": "useAuth",
+          "to": "includes",
+          "line": 17
+        }
+      ]
     },
     {
       "id": "useChat",
@@ -791,10 +5371,218 @@
       "authors": 2,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:useChat"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 48
+      "risk_score": 48,
+      "functions": [
+        {
+          "name": "getStoreKey",
+          "params": [
+            "agentId",
+            "userId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 8,
+          "jsdoc": null
+        },
+        {
+          "name": "useChat",
+          "params": [
+            "agentId",
+            "userId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 10,
+          "line_end": 115,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "useChat",
+          "to": "getStoreKey",
+          "line": 11
+        },
+        {
+          "from": "useChat",
+          "to": "useState",
+          "line": 12
+        },
+        {
+          "from": "useChat",
+          "to": "get",
+          "line": 12
+        },
+        {
+          "from": "useChat",
+          "to": "useState",
+          "line": 13
+        },
+        {
+          "from": "useChat",
+          "to": "useRef",
+          "line": 14
+        },
+        {
+          "from": "useChat",
+          "to": "useRef",
+          "line": 15
+        },
+        {
+          "from": "useChat",
+          "to": "useCallback",
+          "line": 19
+        },
+        {
+          "from": "useChat",
+          "to": "setMessages",
+          "line": 20
+        },
+        {
+          "from": "useChat",
+          "to": "updater",
+          "line": 21
+        },
+        {
+          "from": "useChat",
+          "to": "set",
+          "line": 23
+        },
+        {
+          "from": "useChat",
+          "to": "useCallback",
+          "line": 28
+        },
+        {
+          "from": "useChat",
+          "to": "toISOString",
+          "line": 29
+        },
+        {
+          "from": "useChat",
+          "to": "updateMessages",
+          "line": 30
+        },
+        {
+          "from": "useChat",
+          "to": "setIsStreaming",
+          "line": 31
+        },
+        {
+          "from": "useChat",
+          "to": "fetch",
+          "line": 34
+        },
+        {
+          "from": "useChat",
+          "to": "stringify",
+          "line": 40
+        },
+        {
+          "from": "useChat",
+          "to": "catch",
+          "line": 48
+        },
+        {
+          "from": "useChat",
+          "to": "json",
+          "line": 48
+        },
+        {
+          "from": "useChat",
+          "to": "updateMessages",
+          "line": 53
+        },
+        {
+          "from": "useChat",
+          "to": "getReader",
+          "line": 55
+        },
+        {
+          "from": "useChat",
+          "to": "read",
+          "line": 62
+        },
+        {
+          "from": "useChat",
+          "to": "decode",
+          "line": 65
+        },
+        {
+          "from": "useChat",
+          "to": "split",
+          "line": 66
+        },
+        {
+          "from": "useChat",
+          "to": "pop",
+          "line": 67
+        },
+        {
+          "from": "useChat",
+          "to": "startsWith",
+          "line": 70
+        },
+        {
+          "from": "useChat",
+          "to": "trim",
+          "line": 71
+        },
+        {
+          "from": "useChat",
+          "to": "slice",
+          "line": 71
+        },
+        {
+          "from": "useChat",
+          "to": "parse",
+          "line": 78
+        },
+        {
+          "from": "useChat",
+          "to": "updateMessages",
+          "line": 81
+        },
+        {
+          "from": "useChat",
+          "to": "updateMessages",
+          "line": 89
+        },
+        {
+          "from": "useChat",
+          "to": "updateMessages",
+          "line": 101
+        },
+        {
+          "from": "useChat",
+          "to": "filter",
+          "line": 101
+        },
+        {
+          "from": "useChat",
+          "to": "updateMessages",
+          "line": 104
+        },
+        {
+          "from": "useChat",
+          "to": "setIsStreaming",
+          "line": 106
+        },
+        {
+          "from": "useChat",
+          "to": "useCallback",
+          "line": 110
+        },
+        {
+          "from": "useChat",
+          "to": "updateMessages",
+          "line": 111
+        }
+      ]
     },
     {
       "id": "useFlow",
@@ -812,10 +5600,345 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:useFlow"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 52
+      "risk_score": 52,
+      "functions": [
+        {
+          "name": "useFlow",
+          "params": [
+            "flowId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 3,
+          "line_end": 153,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "useFlow",
+          "to": "useState",
+          "line": 4
+        },
+        {
+          "from": "useFlow",
+          "to": "useState",
+          "line": 5
+        },
+        {
+          "from": "useFlow",
+          "to": "useState",
+          "line": 6
+        },
+        {
+          "from": "useFlow",
+          "to": "useState",
+          "line": 7
+        },
+        {
+          "from": "useFlow",
+          "to": "useState",
+          "line": 8
+        },
+        {
+          "from": "useFlow",
+          "to": "useState",
+          "line": 9
+        },
+        {
+          "from": "useFlow",
+          "to": "useState",
+          "line": 10
+        },
+        {
+          "from": "useFlow",
+          "to": "useState",
+          "line": 11
+        },
+        {
+          "from": "useFlow",
+          "to": "useCallback",
+          "line": 13
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsLoading",
+          "line": 14
+        },
+        {
+          "from": "useFlow",
+          "to": "setError",
+          "line": 15
+        },
+        {
+          "from": "useFlow",
+          "to": "fetch",
+          "line": 17
+        },
+        {
+          "from": "useFlow",
+          "to": "stringify",
+          "line": 20
+        },
+        {
+          "from": "useFlow",
+          "to": "json",
+          "line": 22
+        },
+        {
+          "from": "useFlow",
+          "to": "setSession",
+          "line": 24
+        },
+        {
+          "from": "useFlow",
+          "to": "setCurrentStep",
+          "line": 25
+        },
+        {
+          "from": "useFlow",
+          "to": "setStepOutputs",
+          "line": 26
+        },
+        {
+          "from": "useFlow",
+          "to": "setError",
+          "line": 29
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsLoading",
+          "line": 31
+        },
+        {
+          "from": "useFlow",
+          "to": "useCallback",
+          "line": 35
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsLoading",
+          "line": 37
+        },
+        {
+          "from": "useFlow",
+          "to": "setError",
+          "line": 38
+        },
+        {
+          "from": "useFlow",
+          "to": "fetch",
+          "line": 40
+        },
+        {
+          "from": "useFlow",
+          "to": "stringify",
+          "line": 43
+        },
+        {
+          "from": "useFlow",
+          "to": "json",
+          "line": 45
+        },
+        {
+          "from": "useFlow",
+          "to": "setStepOutput",
+          "line": 47
+        },
+        {
+          "from": "useFlow",
+          "to": "setStepOutputs",
+          "line": 49
+        },
+        {
+          "from": "useFlow",
+          "to": "setError",
+          "line": 53
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsLoading",
+          "line": 55
+        },
+        {
+          "from": "useFlow",
+          "to": "useCallback",
+          "line": 59
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsLoading",
+          "line": 61
+        },
+        {
+          "from": "useFlow",
+          "to": "setError",
+          "line": 62
+        },
+        {
+          "from": "useFlow",
+          "to": "fetch",
+          "line": 64
+        },
+        {
+          "from": "useFlow",
+          "to": "stringify",
+          "line": 67
+        },
+        {
+          "from": "useFlow",
+          "to": "json",
+          "line": 69
+        },
+        {
+          "from": "useFlow",
+          "to": "setCurrentStep",
+          "line": 73
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsDiscussing",
+          "line": 74
+        },
+        {
+          "from": "useFlow",
+          "to": "setDiscussMessages",
+          "line": 75
+        },
+        {
+          "from": "useFlow",
+          "to": "setStepOutput",
+          "line": 76
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsDiscussing",
+          "line": 78
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsDiscussing",
+          "line": 81
+        },
+        {
+          "from": "useFlow",
+          "to": "setDiscussMessages",
+          "line": 82
+        },
+        {
+          "from": "useFlow",
+          "to": "setStepOutput",
+          "line": 83
+        },
+        {
+          "from": "useFlow",
+          "to": "setSession",
+          "line": 86
+        },
+        {
+          "from": "useFlow",
+          "to": "setSession",
+          "line": 90
+        },
+        {
+          "from": "useFlow",
+          "to": "setError",
+          "line": 95
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsLoading",
+          "line": 97
+        },
+        {
+          "from": "useFlow",
+          "to": "useCallback",
+          "line": 101
+        },
+        {
+          "from": "useFlow",
+          "to": "setDiscussMessages",
+          "line": 105
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsLoading",
+          "line": 106
+        },
+        {
+          "from": "useFlow",
+          "to": "fetch",
+          "line": 109
+        },
+        {
+          "from": "useFlow",
+          "to": "stringify",
+          "line": 112
+        },
+        {
+          "from": "useFlow",
+          "to": "json",
+          "line": 114
+        },
+        {
+          "from": "useFlow",
+          "to": "setDiscussMessages",
+          "line": 118
+        },
+        {
+          "from": "useFlow",
+          "to": "setDiscussMessages",
+          "line": 121
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsLoading",
+          "line": 123
+        },
+        {
+          "from": "useFlow",
+          "to": "useCallback",
+          "line": 127
+        },
+        {
+          "from": "useFlow",
+          "to": "setSession",
+          "line": 128
+        },
+        {
+          "from": "useFlow",
+          "to": "setCurrentStep",
+          "line": 129
+        },
+        {
+          "from": "useFlow",
+          "to": "setStepOutputs",
+          "line": 130
+        },
+        {
+          "from": "useFlow",
+          "to": "setStepOutput",
+          "line": 131
+        },
+        {
+          "from": "useFlow",
+          "to": "setIsDiscussing",
+          "line": 132
+        },
+        {
+          "from": "useFlow",
+          "to": "setDiscussMessages",
+          "line": 133
+        },
+        {
+          "from": "useFlow",
+          "to": "setError",
+          "line": 134
+        }
+      ]
     },
     {
       "id": "useGroupChat",
@@ -833,10 +5956,375 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:useGroupChat"
       ],
       "last_modified": "2026-03-24T20:16:22+01:00",
-      "risk_score": 56
+      "risk_score": 56,
+      "functions": [
+        {
+          "name": "useGroupChat",
+          "params": [
+            "user"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 10,
+          "line_end": 193,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "useGroupChat",
+          "to": "useState",
+          "line": 11
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useState",
+          "line": 12
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useState",
+          "line": 13
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useState",
+          "line": 14
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useState",
+          "line": 15
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useState",
+          "line": 16
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useCallback",
+          "line": 18
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setIsLoading",
+          "line": 19
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 20
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setSummary",
+          "line": 21
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setMessages",
+          "line": 22
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setWhiteboard",
+          "line": 23
+        },
+        {
+          "from": "useGroupChat",
+          "to": "fetch",
+          "line": 25
+        },
+        {
+          "from": "useGroupChat",
+          "to": "stringify",
+          "line": 28
+        },
+        {
+          "from": "useGroupChat",
+          "to": "json",
+          "line": 30
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setSession",
+          "line": 32
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setWhiteboard",
+          "line": 33
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 36
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setIsLoading",
+          "line": 38
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useCallback",
+          "line": 42
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setIsLoading",
+          "line": 44
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 45
+        },
+        {
+          "from": "useGroupChat",
+          "to": "fetch",
+          "line": 47
+        },
+        {
+          "from": "useGroupChat",
+          "to": "stringify",
+          "line": 50
+        },
+        {
+          "from": "useGroupChat",
+          "to": "json",
+          "line": 52
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setMessages",
+          "line": 56
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setSession",
+          "line": 59
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 63
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setIsLoading",
+          "line": 65
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useCallback",
+          "line": 69
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setIsLoading",
+          "line": 71
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 72
+        },
+        {
+          "from": "useGroupChat",
+          "to": "fetch",
+          "line": 74
+        },
+        {
+          "from": "useGroupChat",
+          "to": "stringify",
+          "line": 77
+        },
+        {
+          "from": "useGroupChat",
+          "to": "json",
+          "line": 83
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setMessages",
+          "line": 86
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 90
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setIsLoading",
+          "line": 92
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useCallback",
+          "line": 96
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setIsLoading",
+          "line": 98
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 99
+        },
+        {
+          "from": "useGroupChat",
+          "to": "fetch",
+          "line": 101
+        },
+        {
+          "from": "useGroupChat",
+          "to": "stringify",
+          "line": 104
+        },
+        {
+          "from": "useGroupChat",
+          "to": "json",
+          "line": 106
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setSummary",
+          "line": 108
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 111
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setIsLoading",
+          "line": 113
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useCallback",
+          "line": 117
+        },
+        {
+          "from": "useGroupChat",
+          "to": "fetch",
+          "line": 120
+        },
+        {
+          "from": "useGroupChat",
+          "to": "stringify",
+          "line": 123
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setSession",
+          "line": 125
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useCallback",
+          "line": 129
+        },
+        {
+          "from": "useGroupChat",
+          "to": "fetch",
+          "line": 132
+        },
+        {
+          "from": "useGroupChat",
+          "to": "stringify",
+          "line": 135
+        },
+        {
+          "from": "useGroupChat",
+          "to": "json",
+          "line": 137
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setWhiteboard",
+          "line": 139
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 144
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useCallback",
+          "line": 148
+        },
+        {
+          "from": "useGroupChat",
+          "to": "fetch",
+          "line": 151
+        },
+        {
+          "from": "useGroupChat",
+          "to": "stringify",
+          "line": 154
+        },
+        {
+          "from": "useGroupChat",
+          "to": "json",
+          "line": 156
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setWhiteboard",
+          "line": 158
+        },
+        {
+          "from": "useGroupChat",
+          "to": "filter",
+          "line": 160
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 163
+        },
+        {
+          "from": "useGroupChat",
+          "to": "useCallback",
+          "line": 167
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setSession",
+          "line": 168
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setMessages",
+          "line": 169
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setSummary",
+          "line": 170
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setError",
+          "line": 171
+        },
+        {
+          "from": "useGroupChat",
+          "to": "setWhiteboard",
+          "line": 172
+        }
+      ]
     },
     {
       "id": "BibliotecaView",
@@ -854,10 +6342,165 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:BibliotecaView"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 34
+      "risk_score": 34,
+      "functions": [
+        {
+          "name": "BibliotecaView",
+          "params": [
+            "{user}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 12,
+          "line_end": 129,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "BibliotecaView",
+          "to": "useState",
+          "line": 13
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "useState",
+          "line": 14
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "useState",
+          "line": 15
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "useState",
+          "line": 16
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "useEffect",
+          "line": 18
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "catch",
+          "line": 19
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "then",
+          "line": 19
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "then",
+          "line": 19
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "fetch",
+          "line": 19
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "json",
+          "line": 20
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setCategories",
+          "line": 21
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "reduce",
+          "line": 26
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "values",
+          "line": 26
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "filter",
+          "line": 27
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "entries",
+          "line": 27
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "includes",
+          "line": 27
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "map",
+          "line": 42
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "entries",
+          "line": 42
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setActiveCat",
+          "line": 45
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setSelDoc",
+          "line": 45
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "map",
+          "line": 67
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setSelDoc",
+          "line": 70
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setSelDoc",
+          "line": 80
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setInjectTarget",
+          "line": 80
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "map",
+          "line": 98
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setInjectTarget",
+          "line": 101
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setInjectTarget",
+          "line": 115
+        },
+        {
+          "from": "BibliotecaView",
+          "to": "setInjectTarget",
+          "line": 118
+        }
+      ]
     },
     {
       "id": "ChatView",
@@ -875,10 +6518,84 @@
       "authors": 2,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:ChatView"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 28
+      "risk_score": 28,
+      "functions": [
+        {
+          "name": "ChatView",
+          "params": [
+            "{agentId, user}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 6,
+          "line_end": 97,
+          "jsdoc": null
+        },
+        {
+          "name": "handleSend",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 16,
+          "line_end": 20,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "ChatView",
+          "to": "useChat",
+          "line": 8
+        },
+        {
+          "from": "ChatView",
+          "to": "useState",
+          "line": 9
+        },
+        {
+          "from": "ChatView",
+          "to": "useRef",
+          "line": 10
+        },
+        {
+          "from": "ChatView",
+          "to": "useEffect",
+          "line": 12
+        },
+        {
+          "from": "handleSend",
+          "to": "trim",
+          "line": 17
+        },
+        {
+          "from": "handleSend",
+          "to": "sendMessage",
+          "line": 18
+        },
+        {
+          "from": "handleSend",
+          "to": "setInputVal",
+          "line": 19
+        },
+        {
+          "from": "ChatView",
+          "to": "map",
+          "line": 46
+        },
+        {
+          "from": "ChatView",
+          "to": "setInputVal",
+          "line": 78
+        },
+        {
+          "from": "ChatView",
+          "to": "handleSend",
+          "line": 79
+        }
+      ]
     },
     {
       "id": "ConfigView",
@@ -896,10 +6613,428 @@
       "authors": 2,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:ConfigView"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 54
+      "risk_score": 54,
+      "functions": [
+        {
+          "name": "ConfigView",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 11,
+          "line_end": 279,
+          "jsdoc": null
+        },
+        {
+          "name": "loadConfig",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 20,
+          "line_end": 29,
+          "jsdoc": null
+        },
+        {
+          "name": "getModelsForProvider",
+          "params": [
+            "providerId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 33,
+          "line_end": 36,
+          "jsdoc": null
+        },
+        {
+          "name": "handleModelChange",
+          "params": [
+            "agentId",
+            "field",
+            "value"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 39,
+          "line_end": 68,
+          "jsdoc": null
+        },
+        {
+          "name": "handleSaveKey",
+          "params": [
+            "providerId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 71,
+          "line_end": 91,
+          "jsdoc": null
+        },
+        {
+          "name": "handleRemoveKey",
+          "params": [
+            "providerId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 93,
+          "line_end": 108,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "ConfigView",
+          "to": "useState",
+          "line": 12
+        },
+        {
+          "from": "ConfigView",
+          "to": "useState",
+          "line": 13
+        },
+        {
+          "from": "ConfigView",
+          "to": "useState",
+          "line": 14
+        },
+        {
+          "from": "ConfigView",
+          "to": "useState",
+          "line": 15
+        },
+        {
+          "from": "ConfigView",
+          "to": "useState",
+          "line": 16
+        },
+        {
+          "from": "ConfigView",
+          "to": "useState",
+          "line": 17
+        },
+        {
+          "from": "ConfigView",
+          "to": "useState",
+          "line": 18
+        },
+        {
+          "from": "loadConfig",
+          "to": "catch",
+          "line": 21
+        },
+        {
+          "from": "loadConfig",
+          "to": "then",
+          "line": 21
+        },
+        {
+          "from": "loadConfig",
+          "to": "all",
+          "line": 21
+        },
+        {
+          "from": "loadConfig",
+          "to": "then",
+          "line": 22
+        },
+        {
+          "from": "loadConfig",
+          "to": "fetch",
+          "line": 22
+        },
+        {
+          "from": "loadConfig",
+          "to": "json",
+          "line": 22
+        },
+        {
+          "from": "loadConfig",
+          "to": "then",
+          "line": 23
+        },
+        {
+          "from": "loadConfig",
+          "to": "fetch",
+          "line": 23
+        },
+        {
+          "from": "loadConfig",
+          "to": "json",
+          "line": 23
+        },
+        {
+          "from": "loadConfig",
+          "to": "setConfig",
+          "line": 25
+        },
+        {
+          "from": "loadConfig",
+          "to": "setProviders",
+          "line": 26
+        },
+        {
+          "from": "loadConfig",
+          "to": "setKeyStatus",
+          "line": 27
+        },
+        {
+          "from": "ConfigView",
+          "to": "useEffect",
+          "line": 31
+        },
+        {
+          "from": "ConfigView",
+          "to": "loadConfig",
+          "line": 31
+        },
+        {
+          "from": "getModelsForProvider",
+          "to": "find",
+          "line": 34
+        },
+        {
+          "from": "handleModelChange",
+          "to": "getModelsForProvider",
+          "line": 42
+        },
+        {
+          "from": "handleModelChange",
+          "to": "setConfig",
+          "line": 48
+        },
+        {
+          "from": "handleModelChange",
+          "to": "setSaving",
+          "line": 49
+        },
+        {
+          "from": "handleModelChange",
+          "to": "setSaved",
+          "line": 50
+        },
+        {
+          "from": "handleModelChange",
+          "to": "fetch",
+          "line": 53
+        },
+        {
+          "from": "handleModelChange",
+          "to": "stringify",
+          "line": 56
+        },
+        {
+          "from": "handleModelChange",
+          "to": "json",
+          "line": 58
+        },
+        {
+          "from": "handleModelChange",
+          "to": "json",
+          "line": 59
+        },
+        {
+          "from": "handleModelChange",
+          "to": "setConfig",
+          "line": 60
+        },
+        {
+          "from": "handleModelChange",
+          "to": "setSaved",
+          "line": 61
+        },
+        {
+          "from": "handleModelChange",
+          "to": "setTimeout",
+          "line": 62
+        },
+        {
+          "from": "handleModelChange",
+          "to": "setSaved",
+          "line": 62
+        },
+        {
+          "from": "handleModelChange",
+          "to": "loadConfig",
+          "line": 64
+        },
+        {
+          "from": "handleModelChange",
+          "to": "setSaving",
+          "line": 66
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "setSavingKey",
+          "line": 75
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "fetch",
+          "line": 77
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "stringify",
+          "line": 80
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "trim",
+          "line": 80
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "json",
+          "line": 82
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "json",
+          "line": 83
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "setKeyStatus",
+          "line": 84
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "setKeyInputs",
+          "line": 85
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "loadConfig",
+          "line": 87
+        },
+        {
+          "from": "handleSaveKey",
+          "to": "setSavingKey",
+          "line": 89
+        },
+        {
+          "from": "handleRemoveKey",
+          "to": "setSavingKey",
+          "line": 94
+        },
+        {
+          "from": "handleRemoveKey",
+          "to": "fetch",
+          "line": 96
+        },
+        {
+          "from": "handleRemoveKey",
+          "to": "stringify",
+          "line": 99
+        },
+        {
+          "from": "handleRemoveKey",
+          "to": "json",
+          "line": 101
+        },
+        {
+          "from": "handleRemoveKey",
+          "to": "json",
+          "line": 102
+        },
+        {
+          "from": "handleRemoveKey",
+          "to": "setKeyStatus",
+          "line": 103
+        },
+        {
+          "from": "handleRemoveKey",
+          "to": "loadConfig",
+          "line": 104
+        },
+        {
+          "from": "handleRemoveKey",
+          "to": "setSavingKey",
+          "line": 106
+        },
+        {
+          "from": "ConfigView",
+          "to": "map",
+          "line": 131
+        },
+        {
+          "from": "ConfigView",
+          "to": "entries",
+          "line": 131
+        },
+        {
+          "from": "ConfigView",
+          "to": "repeat",
+          "line": 150
+        },
+        {
+          "from": "ConfigView",
+          "to": "handleRemoveKey",
+          "line": 153
+        },
+        {
+          "from": "ConfigView",
+          "to": "setKeyInputs",
+          "line": 165
+        },
+        {
+          "from": "ConfigView",
+          "to": "handleSaveKey",
+          "line": 166
+        },
+        {
+          "from": "ConfigView",
+          "to": "handleSaveKey",
+          "line": 171
+        },
+        {
+          "from": "ConfigView",
+          "to": "map",
+          "line": 189
+        },
+        {
+          "from": "ConfigView",
+          "to": "entries",
+          "line": 189
+        },
+        {
+          "from": "ConfigView",
+          "to": "getModelsForProvider",
+          "line": 191
+        },
+        {
+          "from": "ConfigView",
+          "to": "handleModelChange",
+          "line": 225
+        },
+        {
+          "from": "ConfigView",
+          "to": "map",
+          "line": 228
+        },
+        {
+          "from": "ConfigView",
+          "to": "entries",
+          "line": 228
+        },
+        {
+          "from": "ConfigView",
+          "to": "handleModelChange",
+          "line": 240
+        },
+        {
+          "from": "ConfigView",
+          "to": "map",
+          "line": 243
+        },
+        {
+          "from": "ConfigView",
+          "to": "handleModelChange",
+          "line": 257
+        }
+      ]
     },
     {
       "id": "FlowView",
@@ -917,10 +7052,124 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:FlowView"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 52
+      "risk_score": 52,
+      "functions": [
+        {
+          "name": "FlowView",
+          "params": [
+            "{flowId, user}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 8,
+          "line_end": 189,
+          "jsdoc": null
+        },
+        {
+          "name": "handleStart",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 29,
+          "line_end": 33,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "FlowView",
+          "to": "useFlow",
+          "line": 14
+        },
+        {
+          "from": "FlowView",
+          "to": "useState",
+          "line": 16
+        },
+        {
+          "from": "FlowView",
+          "to": "useState",
+          "line": 17
+        },
+        {
+          "from": "FlowView",
+          "to": "map",
+          "line": 18
+        },
+        {
+          "from": "FlowView",
+          "to": "useEffect",
+          "line": 21
+        },
+        {
+          "from": "FlowView",
+          "to": "setStepStates",
+          "line": 22
+        },
+        {
+          "from": "FlowView",
+          "to": "map",
+          "line": 22
+        },
+        {
+          "from": "handleStart",
+          "to": "trim",
+          "line": 30
+        },
+        {
+          "from": "handleStart",
+          "to": "startFlow",
+          "line": 31
+        },
+        {
+          "from": "handleStart",
+          "to": "setInputVal",
+          "line": 32
+        },
+        {
+          "from": "FlowView",
+          "to": "join",
+          "line": 47
+        },
+        {
+          "from": "FlowView",
+          "to": "map",
+          "line": 47
+        },
+        {
+          "from": "FlowView",
+          "to": "setInputVal",
+          "line": 66
+        },
+        {
+          "from": "FlowView",
+          "to": "handleStart",
+          "line": 67
+        },
+        {
+          "from": "FlowView",
+          "to": "map",
+          "line": 86
+        },
+        {
+          "from": "FlowView",
+          "to": "map",
+          "line": 109
+        },
+        {
+          "from": "FlowView",
+          "to": "handleCheckpoint",
+          "line": 141
+        },
+        {
+          "from": "FlowView",
+          "to": "executeStep",
+          "line": 144
+        }
+      ]
     },
     {
       "id": "GroupChatView",
@@ -938,10 +7187,391 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:GroupChatView"
       ],
       "last_modified": "2026-03-25T10:43:18+01:00",
-      "risk_score": 51
+      "risk_score": 51,
+      "functions": [
+        {
+          "name": "GroupChatView",
+          "params": [
+            "{user}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 8,
+          "line_end": 382,
+          "jsdoc": null
+        },
+        {
+          "name": "toggleAgent",
+          "params": [
+            "id"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 34,
+          "line_end": 38,
+          "jsdoc": null
+        },
+        {
+          "name": "moveAgent",
+          "params": [
+            "idx",
+            "direction"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 40,
+          "line_end": 48,
+          "jsdoc": null
+        },
+        {
+          "name": "handleStart",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 50,
+          "line_end": 66,
+          "jsdoc": null
+        },
+        {
+          "name": "handleSubmitHuman",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 70,
+          "line_end": 74,
+          "jsdoc": null
+        },
+        {
+          "name": "handleEnd",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 76,
+          "line_end": 78,
+          "jsdoc": null
+        },
+        {
+          "name": "handleSummary",
+          "params": [],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 80,
+          "line_end": 82,
+          "jsdoc": null
+        },
+        {
+          "name": "handleNewSession",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 84,
+          "line_end": 90,
+          "jsdoc": null
+        },
+        {
+          "name": "handleAddWhiteboardItem",
+          "params": [
+            "section",
+            "text"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 92,
+          "line_end": 95,
+          "jsdoc": null
+        },
+        {
+          "name": "getParticipantColor",
+          "params": [
+            "msg"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 98,
+          "line_end": 103,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "GroupChatView",
+          "to": "useGroupChat",
+          "line": 14
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useState",
+          "line": 16
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useState",
+          "line": 19
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useState",
+          "line": 20
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useState",
+          "line": 21
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useState",
+          "line": 22
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useState",
+          "line": 23
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useState",
+          "line": 24
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useRef",
+          "line": 26
+        },
+        {
+          "from": "GroupChatView",
+          "to": "useEffect",
+          "line": 28
+        },
+        {
+          "from": "toggleAgent",
+          "to": "setSelectedAgents",
+          "line": 35
+        },
+        {
+          "from": "toggleAgent",
+          "to": "includes",
+          "line": 36
+        },
+        {
+          "from": "toggleAgent",
+          "to": "filter",
+          "line": 36
+        },
+        {
+          "from": "moveAgent",
+          "to": "setSelectedAgents",
+          "line": 41
+        },
+        {
+          "from": "handleStart",
+          "to": "trim",
+          "line": 51
+        },
+        {
+          "from": "handleStart",
+          "to": "map",
+          "line": 53
+        },
+        {
+          "from": "handleStart",
+          "to": "push",
+          "line": 58
+        },
+        {
+          "from": "handleStart",
+          "to": "startSession",
+          "line": 65
+        },
+        {
+          "from": "handleSubmitHuman",
+          "to": "trim",
+          "line": 71
+        },
+        {
+          "from": "handleSubmitHuman",
+          "to": "submitMessage",
+          "line": 72
+        },
+        {
+          "from": "handleSubmitHuman",
+          "to": "setHumanInput",
+          "line": 73
+        },
+        {
+          "from": "handleEnd",
+          "to": "endSession",
+          "line": 77
+        },
+        {
+          "from": "handleSummary",
+          "to": "generateSummary",
+          "line": 81
+        },
+        {
+          "from": "handleNewSession",
+          "to": "reset",
+          "line": 85
+        },
+        {
+          "from": "handleNewSession",
+          "to": "setTopic",
+          "line": 86
+        },
+        {
+          "from": "handleNewSession",
+          "to": "setSelectedAgents",
+          "line": 87
+        },
+        {
+          "from": "handleNewSession",
+          "to": "setRules",
+          "line": 88
+        },
+        {
+          "from": "handleNewSession",
+          "to": "setIsWhiteboardOpen",
+          "line": 89
+        },
+        {
+          "from": "handleAddWhiteboardItem",
+          "to": "addWhiteboardItem",
+          "line": 94
+        },
+        {
+          "from": "GroupChatView",
+          "to": "setTopic",
+          "line": 123
+        },
+        {
+          "from": "GroupChatView",
+          "to": "map",
+          "line": 133
+        },
+        {
+          "from": "GroupChatView",
+          "to": "entries",
+          "line": 133
+        },
+        {
+          "from": "GroupChatView",
+          "to": "toggleAgent",
+          "line": 136
+        },
+        {
+          "from": "GroupChatView",
+          "to": "includes",
+          "line": 138
+        },
+        {
+          "from": "GroupChatView",
+          "to": "includes",
+          "line": 148
+        },
+        {
+          "from": "GroupChatView",
+          "to": "indexOf",
+          "line": 149
+        },
+        {
+          "from": "GroupChatView",
+          "to": "map",
+          "line": 162
+        },
+        {
+          "from": "GroupChatView",
+          "to": "moveAgent",
+          "line": 167
+        },
+        {
+          "from": "GroupChatView",
+          "to": "moveAgent",
+          "line": 169
+        },
+        {
+          "from": "GroupChatView",
+          "to": "setIncludeHuman",
+          "line": 181
+        },
+        {
+          "from": "GroupChatView",
+          "to": "setMaxTurns",
+          "line": 193
+        },
+        {
+          "from": "GroupChatView",
+          "to": "parseInt",
+          "line": 193
+        },
+        {
+          "from": "GroupChatView",
+          "to": "setRules",
+          "line": 204
+        },
+        {
+          "from": "GroupChatView",
+          "to": "trim",
+          "line": 214
+        },
+        {
+          "from": "GroupChatView",
+          "to": "join",
+          "line": 237
+        },
+        {
+          "from": "GroupChatView",
+          "to": "map",
+          "line": 237
+        },
+        {
+          "from": "GroupChatView",
+          "to": "map",
+          "line": 270
+        },
+        {
+          "from": "GroupChatView",
+          "to": "getParticipantColor",
+          "line": 281
+        },
+        {
+          "from": "GroupChatView",
+          "to": "map",
+          "line": 328
+        },
+        {
+          "from": "GroupChatView",
+          "to": "filter",
+          "line": 328
+        },
+        {
+          "from": "GroupChatView",
+          "to": "executeAgentTurn",
+          "line": 333
+        },
+        {
+          "from": "GroupChatView",
+          "to": "setHumanInput",
+          "line": 351
+        },
+        {
+          "from": "GroupChatView",
+          "to": "handleSubmitHuman",
+          "line": 352
+        },
+        {
+          "from": "GroupChatView",
+          "to": "trim",
+          "line": 358
+        },
+        {
+          "from": "GroupChatView",
+          "to": "setIsWhiteboardOpen",
+          "line": 375
+        }
+      ]
     },
     {
       "id": "StatusView",
@@ -959,10 +7589,85 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:StatusView"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 19
+      "risk_score": 19,
+      "functions": [
+        {
+          "name": "StatusView",
+          "params": [
+            "{user}"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 3,
+          "line_end": 46,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "StatusView",
+          "to": "useState",
+          "line": 4
+        },
+        {
+          "from": "StatusView",
+          "to": "useEffect",
+          "line": 6
+        },
+        {
+          "from": "StatusView",
+          "to": "catch",
+          "line": 7
+        },
+        {
+          "from": "StatusView",
+          "to": "then",
+          "line": 7
+        },
+        {
+          "from": "StatusView",
+          "to": "then",
+          "line": 7
+        },
+        {
+          "from": "StatusView",
+          "to": "fetch",
+          "line": 7
+        },
+        {
+          "from": "StatusView",
+          "to": "json",
+          "line": 8
+        },
+        {
+          "from": "StatusView",
+          "to": "setOutputs",
+          "line": 9
+        },
+        {
+          "from": "StatusView",
+          "to": "filter",
+          "line": 13
+        },
+        {
+          "from": "StatusView",
+          "to": "filter",
+          "line": 14
+        },
+        {
+          "from": "StatusView",
+          "to": "map",
+          "line": 25
+        },
+        {
+          "from": "StatusView",
+          "to": "map",
+          "line": 35
+        }
+      ]
     },
     {
       "id": "SupervisioneView",
@@ -980,10 +7685,98 @@
       "authors": 1,
       "bugs": 0,
       "exports": [
-        "default:function"
+        "default:SupervisioneView"
       ],
       "last_modified": "2026-03-21T00:28:26+01:00",
-      "risk_score": 21
+      "risk_score": 21,
+      "functions": [
+        {
+          "name": "SupervisioneView",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 3,
+          "line_end": 54,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "SupervisioneView",
+          "to": "useState",
+          "line": 4
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "useEffect",
+          "line": 6
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "catch",
+          "line": 7
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "then",
+          "line": 7
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "then",
+          "line": 7
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "fetch",
+          "line": 7
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "json",
+          "line": 8
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "setOutputs",
+          "line": 9
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "map",
+          "line": 26
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "String",
+          "line": 27
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "String",
+          "line": 28
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "keys",
+          "line": 28
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "map",
+          "line": 41
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "entries",
+          "line": 41
+        },
+        {
+          "from": "SupervisioneView",
+          "to": "keys",
+          "line": 47
+        }
+      ]
     },
     {
       "id": "agents",
@@ -1004,7 +7797,9 @@
         "AGENTS"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 11
+      "risk_score": 11,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "flows",
@@ -1025,7 +7820,9 @@
         "FLOWS"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 11
+      "risk_score": 11,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "types",
@@ -1043,12 +7840,14 @@
       "authors": 2,
       "bugs": 0,
       "exports": [
-        "FlowStatus",
         "CheckpointAction",
+        "FlowStatus",
         "ViewType"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 6
+      "risk_score": 6,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "users",
@@ -1069,7 +7868,9 @@
         "USERS"
       ],
       "last_modified": "2026-03-23T14:42:38+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "GroupChatView.test",
@@ -1088,7 +7889,39 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-24T20:16:22+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [
+        {
+          "name": "setActiveSession",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 71,
+          "line_end": 80,
+          "jsdoc": null
+        },
+        {
+          "name": "setNoSession",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 82,
+          "line_end": 90,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "setActiveSession",
+          "to": "mockReturnValue",
+          "line": 79
+        },
+        {
+          "from": "setNoSession",
+          "to": "mockReturnValue",
+          "line": 89
+        }
+      ]
     },
     {
       "id": "groupchat-semi-manual.e2e",
@@ -1107,7 +7940,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-24T20:16:22+01:00",
-      "risk_score": 14
+      "risk_score": 14,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "mockProvider",
@@ -1128,7 +7963,261 @@
         "MockProvider"
       ],
       "last_modified": "2026-03-24T20:16:22+01:00",
-      "risk_score": 73
+      "risk_score": 73,
+      "functions": [
+        {
+          "name": "MockProvider.constructor",
+          "params": [
+            "responses"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 12,
+          "line_end": 22,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.setFailure",
+          "params": [
+            "shouldFail"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 26,
+          "line_end": 28,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.setFailureHandler",
+          "params": [
+            "fn"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 30,
+          "line_end": 32,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.setAgentResponse",
+          "params": [
+            "agentId",
+            "response"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 40,
+          "line_end": 42,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.setAgentFailure",
+          "params": [
+            "agentId",
+            "shouldFail"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 48,
+          "line_end": 54,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.setDelay",
+          "params": [
+            "ms"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 59,
+          "line_end": 61,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.chat",
+          "params": [
+            "model",
+            "messages",
+            "systemPrompt"
+          ],
+          "is_async": true,
+          "is_generator": true,
+          "line_start": 65,
+          "line_end": 107,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.getLastCall",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 111,
+          "line_end": 113,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.getCallCount",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 115,
+          "line_end": 117,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.getCallsForAgent",
+          "params": [
+            "agentId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 124,
+          "line_end": 126,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.getLastPromptForAgent",
+          "params": [
+            "agentId"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 132,
+          "line_end": 135,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.getCalledAgents",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 141,
+          "line_end": 143,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider.reset",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 145,
+          "line_end": 152,
+          "jsdoc": null
+        },
+        {
+          "name": "MockProvider._detectAgent",
+          "params": [
+            "systemPrompt"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 160,
+          "line_end": 181,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "MockProvider.setAgentFailure",
+          "to": "add",
+          "line": 50
+        },
+        {
+          "from": "MockProvider.setAgentFailure",
+          "to": "delete",
+          "line": 52
+        },
+        {
+          "from": "MockProvider.chat",
+          "to": "_detectAgent",
+          "line": 67
+        },
+        {
+          "from": "MockProvider.chat",
+          "to": "now",
+          "line": 74
+        },
+        {
+          "from": "MockProvider.chat",
+          "to": "push",
+          "line": 76
+        },
+        {
+          "from": "MockProvider.chat",
+          "to": "has",
+          "line": 79
+        },
+        {
+          "from": "MockProvider.chat",
+          "to": "_failureHandler",
+          "line": 84
+        },
+        {
+          "from": "MockProvider.chat",
+          "to": "setTimeout",
+          "line": 91
+        },
+        {
+          "from": "MockProvider.chat",
+          "to": "match",
+          "line": 103
+        },
+        {
+          "from": "MockProvider.getCallsForAgent",
+          "to": "filter",
+          "line": 125
+        },
+        {
+          "from": "MockProvider.getLastPromptForAgent",
+          "to": "getCallsForAgent",
+          "line": 133
+        },
+        {
+          "from": "MockProvider.getCalledAgents",
+          "to": "filter",
+          "line": 142
+        },
+        {
+          "from": "MockProvider.getCalledAgents",
+          "to": "map",
+          "line": 142
+        },
+        {
+          "from": "MockProvider.reset",
+          "to": "clear",
+          "line": 150
+        },
+        {
+          "from": "MockProvider._detectAgent",
+          "to": "toLowerCase",
+          "line": 162
+        },
+        {
+          "from": "MockProvider._detectAgent",
+          "to": "includes",
+          "line": 167
+        },
+        {
+          "from": "MockProvider._detectAgent",
+          "to": "includes",
+          "line": 168
+        },
+        {
+          "from": "MockProvider._detectAgent",
+          "to": "includes",
+          "line": 169
+        },
+        {
+          "from": "MockProvider._detectAgent",
+          "to": "includes",
+          "line": 170
+        },
+        {
+          "from": "MockProvider._detectAgent",
+          "to": "includes",
+          "line": 177
+        }
+      ]
     },
     {
       "id": "testServer",
@@ -1149,7 +8238,186 @@
         "createTestApp"
       ],
       "last_modified": "2026-03-24T20:16:22+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [
+        {
+          "name": "createTestApp",
+          "params": [
+            "mockResponses"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 47,
+          "line_end": 91,
+          "jsdoc": null
+        },
+        {
+          "name": "cleanup",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 86,
+          "line_end": 88,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createTestApp",
+          "to": "mkdtempSync",
+          "line": 49
+        },
+        {
+          "from": "createTestApp",
+          "to": "join",
+          "line": 49
+        },
+        {
+          "from": "createTestApp",
+          "to": "tmpdir",
+          "line": 49
+        },
+        {
+          "from": "createTestApp",
+          "to": "mkdirSync",
+          "line": 50
+        },
+        {
+          "from": "createTestApp",
+          "to": "join",
+          "line": 50
+        },
+        {
+          "from": "createTestApp",
+          "to": "mkdirSync",
+          "line": 51
+        },
+        {
+          "from": "createTestApp",
+          "to": "join",
+          "line": 51
+        },
+        {
+          "from": "createTestApp",
+          "to": "mkdirSync",
+          "line": 52
+        },
+        {
+          "from": "createTestApp",
+          "to": "join",
+          "line": 52
+        },
+        {
+          "from": "createTestApp",
+          "to": "mkdirSync",
+          "line": 53
+        },
+        {
+          "from": "createTestApp",
+          "to": "join",
+          "line": 53
+        },
+        {
+          "from": "createTestApp",
+          "to": "set",
+          "line": 68
+        },
+        {
+          "from": "createTestApp",
+          "to": "set",
+          "line": 69
+        },
+        {
+          "from": "createTestApp",
+          "to": "set",
+          "line": 70
+        },
+        {
+          "from": "createTestApp",
+          "to": "express",
+          "line": 76
+        },
+        {
+          "from": "createTestApp",
+          "to": "use",
+          "line": 77
+        },
+        {
+          "from": "createTestApp",
+          "to": "cors",
+          "line": 77
+        },
+        {
+          "from": "createTestApp",
+          "to": "use",
+          "line": 78
+        },
+        {
+          "from": "createTestApp",
+          "to": "json",
+          "line": 78
+        },
+        {
+          "from": "createTestApp",
+          "to": "use",
+          "line": 79
+        },
+        {
+          "from": "createTestApp",
+          "to": "use",
+          "line": 80
+        },
+        {
+          "from": "createTestApp",
+          "to": "createChatRoute",
+          "line": 80
+        },
+        {
+          "from": "createTestApp",
+          "to": "use",
+          "line": 81
+        },
+        {
+          "from": "createTestApp",
+          "to": "createFlowRoute",
+          "line": 81
+        },
+        {
+          "from": "createTestApp",
+          "to": "use",
+          "line": 82
+        },
+        {
+          "from": "createTestApp",
+          "to": "createFilesRoute",
+          "line": 82
+        },
+        {
+          "from": "createTestApp",
+          "to": "use",
+          "line": 83
+        },
+        {
+          "from": "createTestApp",
+          "to": "createConfigRoute",
+          "line": 83
+        },
+        {
+          "from": "createTestApp",
+          "to": "use",
+          "line": 84
+        },
+        {
+          "from": "createTestApp",
+          "to": "createGroupChatRoute",
+          "line": 84
+        },
+        {
+          "from": "cleanup",
+          "to": "rmSync",
+          "line": 87
+        }
+      ]
     },
     {
       "id": "useGroupChat.test",
@@ -1168,7 +8436,44 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-24T20:16:22+01:00",
-      "risk_score": 12
+      "risk_score": 12,
+      "functions": [
+        {
+          "name": "mockSuccess",
+          "params": [
+            "data"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 13,
+          "line_end": 18,
+          "jsdoc": null
+        },
+        {
+          "name": "mockError",
+          "params": [
+            "status",
+            "data"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 20,
+          "line_end": 26,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "mockSuccess",
+          "to": "mockResolvedValueOnce",
+          "line": 14
+        },
+        {
+          "from": "mockError",
+          "to": "mockResolvedValueOnce",
+          "line": 21
+        }
+      ]
     },
     {
       "id": "auth.middleware.test",
@@ -1187,7 +8492,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "chat-robustness.test",
@@ -1206,7 +8513,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 18
+      "risk_score": 18,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "chat.route.test",
@@ -1225,7 +8534,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 14
+      "risk_score": 14,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "config.route.test",
@@ -1244,7 +8555,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 14
+      "risk_score": 14,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "files.route.test",
@@ -1263,7 +8576,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "flow.route.test",
@@ -1282,7 +8597,113 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [
+        {
+          "name": "startFlow",
+          "params": [
+            "app",
+            "flowId",
+            "input",
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 7,
+          "line_end": 13,
+          "jsdoc": null
+        },
+        {
+          "name": "executeStep",
+          "params": [
+            "app",
+            "sessionId",
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 16,
+          "line_end": 21,
+          "jsdoc": null
+        },
+        {
+          "name": "checkpoint",
+          "params": [
+            "app",
+            "sessionId",
+            "action",
+            "data",
+            "userId"
+          ],
+          "is_async": true,
+          "is_generator": false,
+          "line_start": 24,
+          "line_end": 29,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "startFlow",
+          "to": "send",
+          "line": 8
+        },
+        {
+          "from": "startFlow",
+          "to": "set",
+          "line": 8
+        },
+        {
+          "from": "startFlow",
+          "to": "post",
+          "line": 8
+        },
+        {
+          "from": "startFlow",
+          "to": "request",
+          "line": 8
+        },
+        {
+          "from": "executeStep",
+          "to": "send",
+          "line": 17
+        },
+        {
+          "from": "executeStep",
+          "to": "set",
+          "line": 17
+        },
+        {
+          "from": "executeStep",
+          "to": "post",
+          "line": 17
+        },
+        {
+          "from": "executeStep",
+          "to": "request",
+          "line": 17
+        },
+        {
+          "from": "checkpoint",
+          "to": "send",
+          "line": 25
+        },
+        {
+          "from": "checkpoint",
+          "to": "set",
+          "line": 25
+        },
+        {
+          "from": "checkpoint",
+          "to": "post",
+          "line": 25
+        },
+        {
+          "from": "checkpoint",
+          "to": "request",
+          "line": 25
+        }
+      ]
     },
     {
       "id": "groupchat-human-loop.test",
@@ -1301,7 +8722,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T11:08:25+01:00",
-      "risk_score": 22
+      "risk_score": 22,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "groupchat-semi-manual.test",
@@ -1320,7 +8743,65 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-24T20:16:22+01:00",
-      "risk_score": 14
+      "risk_score": 14,
+      "functions": [
+        {
+          "name": "createGroupChatTestApp",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 22,
+          "line_end": 37,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createGroupChatTestApp",
+          "to": "set",
+          "line": 27
+        },
+        {
+          "from": "createGroupChatTestApp",
+          "to": "set",
+          "line": 28
+        },
+        {
+          "from": "createGroupChatTestApp",
+          "to": "express",
+          "line": 31
+        },
+        {
+          "from": "createGroupChatTestApp",
+          "to": "use",
+          "line": 32
+        },
+        {
+          "from": "createGroupChatTestApp",
+          "to": "cors",
+          "line": 32
+        },
+        {
+          "from": "createGroupChatTestApp",
+          "to": "use",
+          "line": 33
+        },
+        {
+          "from": "createGroupChatTestApp",
+          "to": "json",
+          "line": 33
+        },
+        {
+          "from": "createGroupChatTestApp",
+          "to": "use",
+          "line": 34
+        },
+        {
+          "from": "createGroupChatTestApp",
+          "to": "createGroupChatRoute",
+          "line": 34
+        }
+      ]
     },
     {
       "id": "groupchat.route.test",
@@ -1339,7 +8820,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T11:08:25+01:00",
-      "risk_score": 22
+      "risk_score": 22,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "2026-03-24_config-model-ids.test",
@@ -1358,7 +8841,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 26
+      "risk_score": 26,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "2026-03-24_groupchat-provider-error.test",
@@ -1377,7 +8862,25 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 16
+      "risk_score": 16,
+      "functions": [
+        {
+          "name": "createSession",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 22,
+          "line_end": 31,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "createSession",
+          "to": "createSession",
+          "line": 23
+        }
+      ]
     },
     {
       "id": "2026-03-24_model-catalog-ids.test",
@@ -1396,7 +8899,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 24
+      "risk_score": 24,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "2026-03-24_provider-fallback.test",
@@ -1415,7 +8920,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 20
+      "risk_score": 20,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "2026-03-24_vite-config.test",
@@ -1434,7 +8941,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "2026-03-25_sessionstore-connected.test",
@@ -1453,7 +8962,9 @@
       "bugs": 1,
       "exports": [],
       "last_modified": "2026-03-25T10:33:07+01:00",
-      "risk_score": 22
+      "risk_score": 22,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "ApiRouter.test",
@@ -1472,7 +8983,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 25
+      "risk_score": 25,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "CheckpointManager.test",
@@ -1491,7 +9004,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "config-runtime-sync.test",
@@ -1510,7 +9025,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 15
+      "risk_score": 15,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "config-validation.test",
@@ -1529,7 +9046,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 40
+      "risk_score": 40,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "ContextLoader.test",
@@ -1548,7 +9067,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 9
+      "risk_score": 9,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "data-layer.test",
@@ -1567,7 +9088,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 42
+      "risk_score": 42,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "FileManager.test",
@@ -1586,7 +9109,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 13
+      "risk_score": 13,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "FlowEngine.test",
@@ -1605,7 +9130,9 @@
       "bugs": 1,
       "exports": [],
       "last_modified": "2026-03-24T11:47:11+01:00",
-      "risk_score": 40
+      "risk_score": 40,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "GitSync.test",
@@ -1624,7 +9151,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:03:05+01:00",
-      "risk_score": 7
+      "risk_score": 7,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "GroupChatEngine.extended.test",
@@ -1643,7 +9172,62 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T11:08:25+01:00",
-      "risk_score": 38
+      "risk_score": 38,
+      "functions": [
+        {
+          "name": "makeEngine",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 28,
+          "line_end": 37,
+          "jsdoc": null
+        },
+        {
+          "name": "make3AgentSession",
+          "params": [
+            "engine"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 39,
+          "line_end": 48,
+          "jsdoc": null
+        },
+        {
+          "name": "make5AgentSession",
+          "params": [
+            "engine"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 50,
+          "line_end": 61,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "makeEngine",
+          "to": "set",
+          "line": 33
+        },
+        {
+          "from": "makeEngine",
+          "to": "set",
+          "line": 34
+        },
+        {
+          "from": "make3AgentSession",
+          "to": "createSession",
+          "line": 40
+        },
+        {
+          "from": "make5AgentSession",
+          "to": "createSession",
+          "line": 51
+        }
+      ]
     },
     {
       "id": "GroupChatEngine.semi-manual.test",
@@ -1662,7 +9246,47 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-24T20:16:22+01:00",
-      "risk_score": 12
+      "risk_score": 12,
+      "functions": [
+        {
+          "name": "makeEngine",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 14,
+          "line_end": 23,
+          "jsdoc": null
+        },
+        {
+          "name": "makeSession",
+          "params": [
+            "engine",
+            "overrides"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 25,
+          "line_end": 35,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "makeEngine",
+          "to": "set",
+          "line": 19
+        },
+        {
+          "from": "makeEngine",
+          "to": "set",
+          "line": 20
+        },
+        {
+          "from": "makeSession",
+          "to": "createSession",
+          "line": 26
+        }
+      ]
     },
     {
       "id": "GroupChatEngine.test",
@@ -1681,7 +9305,43 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T11:08:25+01:00",
-      "risk_score": 46
+      "risk_score": 46,
+      "functions": [
+        {
+          "name": "makeEngine",
+          "params": [],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 15,
+          "line_end": 24,
+          "jsdoc": null
+        },
+        {
+          "name": "makeMsg",
+          "params": [
+            "participantId",
+            "participantName",
+            "text"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 26,
+          "line_end": 28,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "makeEngine",
+          "to": "set",
+          "line": 20
+        },
+        {
+          "from": "makeEngine",
+          "to": "set",
+          "line": 21
+        }
+      ]
     },
     {
       "id": "message-format.test",
@@ -1700,7 +9360,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 16
+      "risk_score": 16,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "PromptAssembler.test",
@@ -1719,7 +9381,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-23T16:34:45+01:00",
-      "risk_score": 19
+      "risk_score": 19,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "providers-contract.test",
@@ -1738,7 +9402,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T00:42:23+01:00",
-      "risk_score": 14
+      "risk_score": 14,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "SessionStore.test",
@@ -1757,7 +9423,47 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-24T11:47:11+01:00",
-      "risk_score": 11
+      "risk_score": 11,
+      "functions": [
+        {
+          "name": "makeMockStore",
+          "params": [
+            "overrides"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 5,
+          "line_end": 13,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "makeMockStore",
+          "to": "mockResolvedValue",
+          "line": 7
+        },
+        {
+          "from": "makeMockStore",
+          "to": "fn",
+          "line": 7
+        },
+        {
+          "from": "makeMockStore",
+          "to": "fn",
+          "line": 8
+        },
+        {
+          "from": "makeMockStore",
+          "to": "fn",
+          "line": 9
+        },
+        {
+          "from": "makeMockStore",
+          "to": "fn",
+          "line": 10
+        }
+      ]
     },
     {
       "id": "SQLiteStore.test",
@@ -1776,7 +9482,47 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-24T11:47:11+01:00",
-      "risk_score": 15
+      "risk_score": 15,
+      "functions": [
+        {
+          "name": "makeSession",
+          "params": [
+            "overrides"
+          ],
+          "is_async": false,
+          "is_generator": false,
+          "line_start": 5,
+          "line_end": 20,
+          "jsdoc": null
+        }
+      ],
+      "function_calls": [
+        {
+          "from": "makeSession",
+          "to": "slice",
+          "line": 7
+        },
+        {
+          "from": "makeSession",
+          "to": "toString",
+          "line": 7
+        },
+        {
+          "from": "makeSession",
+          "to": "random",
+          "line": 7
+        },
+        {
+          "from": "makeSession",
+          "to": "toISOString",
+          "line": 16
+        },
+        {
+          "from": "makeSession",
+          "to": "toISOString",
+          "line": 17
+        }
+      ]
     },
     {
       "id": "SupabaseStore.test",
@@ -1795,7 +9541,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-24T11:47:11+01:00",
-      "risk_score": 10
+      "risk_score": 10,
+      "functions": [],
+      "function_calls": []
     },
     {
       "id": "Whiteboard.test",
@@ -1814,7 +9562,9 @@
       "bugs": 0,
       "exports": [],
       "last_modified": "2026-03-25T11:08:25+01:00",
-      "risk_score": 28
+      "risk_score": 28,
+      "functions": [],
+      "function_calls": []
     }
   ],
   "edges": [

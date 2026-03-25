@@ -347,6 +347,39 @@ export default function CodeViz() {
                 <Metric label="Bugs" value={selected.bugs} color={selected.bugs > 0 ? "#EF4444" : null} />
               </div>
 
+              {/* Functions (TIER 2) */}
+              {selected.functions && selected.functions.length > 0 && (
+                <div style={{ marginBottom: 14, paddingTop: 14, borderTop: "1px solid #0f2040" }}>
+                  <div style={{ fontSize: 9, color: "#334155", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 8 }}>
+                    FUNCTIONS ({selected.functions.length})
+                  </div>
+                  {selected.functions.map((func, i) => (
+                    <div key={i} style={{
+                      padding: "8px 10px", marginBottom: 4,
+                      background: "#0a1628", borderRadius: 6,
+                      border: "1px solid #0f2040"
+                    }}>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 2 }}>
+                        <span style={{ fontSize: 10, color: "#10B981", fontWeight: 600, fontFamily: "monospace" }}>
+                          {func.name.split('.').pop()}
+                        </span>
+                        {func.is_async && (
+                          <span style={{ fontSize: 8, color: "#6366f1", background: "#1e1b4b", padding: "1px 4px", borderRadius: 3 }}>
+                            async
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ fontSize: 9, color: "#64748b", fontFamily: "monospace" }}>
+                        ({func.params.join(', ')})
+                      </div>
+                      <div style={{ fontSize: 8, color: "#334155", marginTop: 3 }}>
+                        lines {func.line_start}-{func.line_end}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {/* Connected files */}
               {connectedNodes.length > 0 && (
                 <div style={{ marginTop: 8, paddingTop: 14, borderTop: "1px solid #0f2040" }}>
