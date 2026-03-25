@@ -101,13 +101,14 @@ export default function CodeViz() {
 
     simRef.current = simulation
 
-    // Edges
+    // Edges (differentiate import vs coupling)
     const link = g.append("g").attr("class", "links")
       .selectAll("line")
       .data(edges).join("line")
-      .attr("stroke", "#1e3a5f")
-      .attr("stroke-opacity", 0.4)
-      .attr("stroke-width", 1.5)
+      .attr("stroke", d => d.type === "import" ? "#3B82F6" : "#10B981")
+      .attr("stroke-opacity", d => d.type === "import" ? 0.6 : 0.3)
+      .attr("stroke-width", d => d.type === "import" ? 2 : Math.min(d.weight * 0.3, 1.5))
+      .attr("stroke-dasharray", d => d.type === "coupling" ? "2 2" : null)
       .attr("marker-end", "url(#arrow-code)")
 
     // Nodes
@@ -330,8 +331,17 @@ export default function CodeViz() {
             <span style={{ fontSize: 9, color: "#334155" }}>{v.label}</span>
           </div>
         ))}
+        <div style={{ height: 12, width: 1, background: "#0f2040", margin: "0 8px" }} />
+        <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
+          <div style={{ width: 16, height: 2, background: "#3B82F6" }} />
+          <span style={{ fontSize: 9, color: "#334155" }}>Import</span>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
+          <div style={{ width: 16, height: 2, background: "#10B981", borderTop: "2px dashed #10B981" }} />
+          <span style={{ fontSize: 9, color: "#334155" }}>Coupling</span>
+        </div>
         <span style={{ fontSize: 9, color: "#1e3a5f", marginLeft: "auto" }}>
-          {CODE_GRAPH.name} · {CODE_GRAPH.language}
+          {CODE_GRAPH.name} · {CODE_GRAPH.language} · {CODE_GRAPH.stats?.total_edges_import || 0} import · {CODE_GRAPH.stats?.total_edges_coupling || 0} coupling
         </span>
       </div>
     </div>
